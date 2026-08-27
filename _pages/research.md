@@ -28,10 +28,10 @@ fear learning and hypervigilance.
 Fatigue has become a substantial strand of this line. It has traditionally been studied either
 as (psycho)physiological dysfunction — of the stress response, immune and central nervous
 systems — or, in health psychology, as distorted perception of bodily sensations; we integrate
-the two, since neither alone explains why fatigue is experienced as severely as it is. This
-yields subgroups in myalgic encephalomyelitis/chronic fatigue syndrome intended to predict
-rehabilitation response, and work on the gut-immune-brain axis in inflammatory bowel disease,
-where half of patients in remission remain fatigued despite anti-inflammatory treatment.
+the two, since neither alone explains why fatigue is experienced as severely as it is. We pursue
+this through the gut-immune-brain axis in both myalgic encephalomyelitis/chronic fatigue
+syndrome and inflammatory bowel disease, where half of patients in remission remain fatigued
+despite anti-inflammatory treatment.
 
 Related work examines the bidirectional sleep-pain relationship in chronic low back pain.
 
