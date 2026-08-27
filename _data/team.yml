@@ -5,6 +5,12 @@
 # back to an initials avatar, so adding a photo is a one-line change.
 # `focus` is filled in only where it is supported by first-authored work;
 # entries marked TODO are left for the lab to complete.
+#
+# `kuleuven_id` is the 8-digit KU Leuven person number. The Team page turns it
+# into https://www.kuleuven.be/wieiswie/en/person/<id> — the university's public
+# profile carrying publications, memberships and contact details. Find someone's
+# number in the URL of their entry on the LaBGAS members page, or in any
+# who's who link. Every id below was checked against the name on its profile.
 
 groups:
   - id: pi
@@ -25,6 +31,7 @@ groups:
 members:
   # --- PI --------------------------------------------------------------
   - name: "Lukas Van Oudenhove"
+    kuleuven_id: "00027997"
     photo: lukas-van-oudenhove.jpg
     group: pi
     title: "Research Professor, head of LaBGAS"
@@ -36,75 +43,80 @@ members:
     email: "lukas.vanoudenhove@kuleuven.be"
     orcid: "0000-0002-6540-3113"
     scholar: "https://scholar.google.com/citations?user=xYPdgr8AAAAJ"
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00027997"
     github: "lukasvo76"
 
   # --- Guest professors -------------------------------------------------
   - name: "Livia Guadagnoli"
+    kuleuven_id: "00140676"
+    photo: livia-guadagnoli.jpg
     group: guest
     title: "Guest professor"
     focus: >-
       Psychogastroenterology; behavioural treatment for avoidant/restrictive
       food intake disorder in the context of functional dyspepsia.
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00140676"
 
   - name: "Iris Coppieters"
+    kuleuven_id: "00145451"
     photo: iris-coppieters.jpg
     group: guest
     title: "Guest professor"
     focus: >-
       Neuroimaging and neuropsychophysiology of chronic pain and myalgic
       encephalomyelitis/chronic fatigue syndrome.
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00145451"
 
   # --- Coordination -----------------------------------------------------
   - name: "Liene Bervoets"
+    kuleuven_id: "00154051"
     photo: liene-bervoets.jpg
     group: coordinator
     title: "Research coordinator"
     email: "liene.bervoets@kuleuven.be"
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00154051"
 
   # --- Post-docs --------------------------------------------------------
   - name: "Nathalie Weltens"
+    kuleuven_id: "00077122"
     photo: nathalie-weltens.jpg
     group: postdoc
     title: "Post-doctoral researcher"
     focus: >-
       Nutrient-induced gut-brain signalling and its effects on emotion,
       appetite and food reward.
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00077122"
 
   - name: "Maaike Van Den Houte"
+    kuleuven_id: "00092786"
+    photo: maaike-van-den-houte.jpg
     group: postdoc
     title: "Post-doctoral researcher"
     focus: >-
       Functional somatic syndromes, fatigue, interoception and autonomic
       nervous system function.
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00092786"
 
   - name: "Boushra Dalile"
+    kuleuven_id: "00115135"
     photo: boushra-dalile.jpg
     group: postdoc
     title: "Post-doctoral researcher"
     focus: >-
       Short-chain fatty acids in microbiota-gut-brain communication; effects
       of microbial metabolites on stress and fear.
-    kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00115135"
 
   # --- PhD students -----------------------------------------------------
   - name: "Daniëlle Jongen"
+    kuleuven_id: "00112751"
     group: phd
     title: "PhD student"
   - name: "Annalena Fuchs"
+    kuleuven_id: "00149675"
     photo: annalena-fuchs.jpg
     group: phd
     title: "PhD student"
   - name: "Nele Mattelaer"
+    kuleuven_id: "00144787"
     photo: nele-mattelaer.jpg
     group: phd
     title: "PhD student"
   - name: "Tabea Eimer"
+    kuleuven_id: "00148935"
     photo: tabea-eimer.jpg
     group: phd
     title: "PhD student"
@@ -112,6 +124,7 @@ members:
       Interoceptive ability across the respiratory, esophageal and cardiac
       domains.
   - name: "Ynse Dooms"
+    kuleuven_id: "00149628"
     photo: ynse-dooms.jpg
     group: phd
     title: "PhD student"
@@ -119,32 +132,40 @@ members:
       Neuropsychophysiological subgroups in myalgic encephalomyelitis/chronic
       fatigue syndrome.
   - name: "Dina Satriawan"
+    kuleuven_id: "00150134"
     photo: dina-satriawan.jpg
     group: phd
     title: "PhD student"
   - name: "Casper Vananderoye"
+    kuleuven_id: "00155361"
     group: phd
     title: "PhD student"
   - name: "Lixin Qiu"
+    kuleuven_id: "00167298"
     photo: lixin-qiu.jpg
     group: phd
     title: "PhD student"
   - name: "Franco Ruiz"
+    kuleuven_id: "00163673"
     photo: franco-ruiz.jpg
     group: phd
     title: "PhD student"
   - name: "Elin Marie Johansson"
+    kuleuven_id: "00168296"
     photo: elin-marie-johansson.jpg
     group: phd
     title: "PhD student"
   - name: "Robin Quagebeur"
+    kuleuven_id: "00149741"
     group: phd
     title: "PhD student"
   - name: "Sybren Rinckhout"
+    kuleuven_id: "00173293"
     photo: sybren-rinckhout.jpg
     group: phd
     title: "PhD student"
   - name: "Jim Draux"
+    kuleuven_id: "00175263"
     group: phd
     title: "PhD student"
   - name: "Tuur Abts"
@@ -152,7 +173,12 @@ members:
     group: phd
     title: "PhD student"
   - name: "Alexine Mennes"
+    kuleuven_id: "00179338"
     photo: alexine-mennes.jpg
+    group: phd
+    title: "PhD student"
+  - name: "Annelies Falter"
+    kuleuven_id: "00183708"
     group: phd
     title: "PhD student"
 

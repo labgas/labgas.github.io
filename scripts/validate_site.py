@@ -136,7 +136,15 @@ def check_expected_fields(data: dict) -> None:
         photo = m.get("photo")
         if photo and not os.path.isfile(os.path.join(ROOT, "assets", "images", "team", photo)):
             fail(f"_data/team.yml: {m.get('name')} references missing photo {photo}")
-    notes.append(f"team: {len(members)} members across {len(groups)} groups")
+        kid = m.get("kuleuven_id")
+        if kid is not None and not re.fullmatch(r"\d{8}", str(kid)):
+            fail(f"_data/team.yml: {m.get('name')} has malformed kuleuven_id {kid!r} (expected 8 digits)")
+    with_id = sum(1 for m in members if m.get("kuleuven_id"))
+    with_photo = sum(1 for m in members if m.get("photo"))
+    notes.append(
+        f"team: {len(members)} members across {len(groups)} groups "
+        f"({with_photo} with photos, {with_id} with KU Leuven profiles)"
+    )
 
     projects = (data.get("projects") or {}).get("projects", [])
     valid_lines = {"symptoms", "appetite", "microbiota"}

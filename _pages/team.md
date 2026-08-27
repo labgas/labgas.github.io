@@ -17,6 +17,10 @@ bioengineering and biostatistics all sit in the same lab meeting. We are embedde
 [TARGID](https://gbiomed.kuleuven.be/english/research/50000625/50000628/) at KU Leuven and work
 closely with microbiology, nutrition, psychology and neuroscience groups in Leuven and beyond.
 
+Each **KU Leuven profile** link below opens that person's entry in the university's
+[who's who](https://www.kuleuven.be/wieiswie/en/) directory, with their publications,
+memberships and contact details.
+
 {% for g in site.data.team.groups %}
 {% assign people = site.data.team.members | where: "group", g.id %}
 {% if people.size > 0 %}
@@ -46,9 +50,9 @@ closely with microbiology, nutrition, psychology and neuroscience groups in Leuv
       <span class="person__name">{{ m.name }}</span>
       {% if m.title %}<span class="person__title">{{ m.title }}</span>{% endif %}
       {% if m.focus %}<p class="person__focus">{{ m.focus }}</p>{% endif %}
-      {% if m.kuleuven or m.orcid or m.scholar or m.github or m.email %}
+      {% if m.kuleuven_id or m.orcid or m.scholar or m.github or m.email %}
       <div class="person__links">
-        {% if m.kuleuven %}<a href="{{ m.kuleuven }}">Profile</a>{% endif %}
+        {% if m.kuleuven_id %}<a href="https://www.kuleuven.be/wieiswie/en/person/{{ m.kuleuven_id }}">KU Leuven profile</a>{% endif %}
         {% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}
         {% if m.scholar %}<a href="{{ m.scholar }}">Scholar</a>{% endif %}
         {% if m.github %}<a href="https://github.com/{{ m.github }}">GitHub</a>{% endif %}

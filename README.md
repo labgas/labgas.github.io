@@ -31,17 +31,39 @@ Append to the `members:` list in `_data/team.yml`:
 
 ```yaml
   - name: "Given Family"
+    kuleuven_id: "00123456"     # optional; 8-digit KU Leuven person number
     group: phd          # pi | guest | coordinator | postdoc | phd | students | alumni
     title: "PhD student"
     focus: >-
       One or two sentences. Optional.
-    photo: given-family.jpg     # optional; drop the file in assets/images/team/
-    kuleuven: "https://..."     # optional
+    photo: given-family.jpg     # optional; see "Adding a photo" below
     orcid: "0000-0000-0000-0000"  # optional
+    scholar: "https://scholar.google.com/citations?user=..."  # optional
+    email: "given.family@kuleuven.be"   # optional
 ```
+
+`kuleuven_id` becomes a link to `https://www.kuleuven.be/wieiswie/en/person/<id>` — the
+university's public profile with publications, memberships and contact details. Find the number
+in the URL of that person's entry on the LaBGAS members page or in any who's who link.
 
 Without a `photo`, the page renders an initials avatar — so you can add people now and photos
 later.
+
+### Adding a photo
+
+Put the original in the shared Drive folder
+(`LaBGAS/LaBGAS_GENERAL/LaBGAS_website/Profile photos/`), add it to the `PORTRAITS` map in
+`scripts/prepare_images.py`, then:
+
+```bash
+python scripts/prepare_images.py
+```
+
+That crops it square, resizes to 480px and writes it to `assets/images/team/`. Sources are never
+committed — some are over 20 MB. If the automatic crop misses the face (full-length shots,
+mainly), add a `(centre_x, centre_y, side)` entry to `CROP_OVERRIDES` instead of editing the
+photo. `--greyscale` renders all portraits in black and white, if you would rather they were
+uniform than true to the originals.
 
 ### Adding a publication
 

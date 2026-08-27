@@ -40,7 +40,10 @@ TEAM = os.path.join(IMAGES, "team")
 # face against a name, which is worse than the initials-avatar fallback.
 PORTRAITS = {
     "Profile photos/VanOudenhove_MG_5928s.jpg": "lukas-van-oudenhove",
-    "Profile photos/bw/nathalie.png": "nathalie-weltens",
+    # Sources below identified by the lab — their filenames give nothing away.
+    "Profile photos/Profile pic.jpg": "nathalie-weltens",
+    "Profile photos/IMG_1674.jpg": "maaike-van-den-houte",
+    "Profile photos/IMG-7152 (2).jpg": "livia-guadagnoli",
     "Profile photos/portrait_2023_BoushraDALILE.jpg": "boushra-dalile",
     "Profile photos/Iris.JPG": "iris-coppieters",
     "Profile photos/Liene.jpg": "liene-bervoets",
