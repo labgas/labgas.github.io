@@ -15,7 +15,7 @@ through mechanisms we can measure and manipulate experimentally.
 
 Three research lines organise that work. They overlap heavily in method and in people.
 
-## Gastrointestinal symptom perception
+## Gastrointestinal/bodily symptom perception
 
 Why do some people experience severe, disabling gastrointestinal symptoms with little or no
 detectable organic abnormality, while others with clear pathology report almost nothing? This
@@ -72,7 +72,7 @@ academic stress, and the role of microbial metabolites in anorexia nervosa.
 {% assign items = site.data.projects.projects | where: "line", lid %}
 {% for p in items %}
 <div class="project{% if p.featured %} is-featured{% endif %}">
-  <h3>{{ p.name }}</h3>
+  <h3 id="{{ p.name | slugify }}">{{ p.name }}</h3>
   {% if p.tagline %}<p class="project__tagline">{{ p.tagline }}</p>{% endif %}
   <p>{{ p.summary }}</p>
   {% if p.funder or p.period %}

@@ -118,31 +118,37 @@
     margin-bottom: 2.2rem;
   }
 
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+  /* A list, not a grid: the bios run to a few hundred words each, which a
+     card grid cannot hold without wildly uneven column heights. */
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
   }
 
   .person {
     display: flex;
-    gap: 0.7rem;
+    gap: 1.1rem;
     align-items: flex-start;
     border: 1px solid $border-color;
+    border-left: 3px solid $brand-teal;
     border-radius: 4px;
-    padding: 0.75rem 0.85rem;
+    padding: 1rem 1.15rem;
     background: #fff;
   }
 
+  .person__aside {
+    flex: 0 0 76px;
+  }
+
   .person__avatar {
-    flex: 0 0 46px;
-    width: 46px;
-    height: 46px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
     object-fit: cover;
     background: mix(#fff, $brand-teal, 84%);
     color: $primary-color;
-    font-size: 0.85rem;
+    font-size: 1.35rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -153,35 +159,73 @@
 
   .person__body {
     min-width: 0;
+    flex: 1;
   }
 
   .person__name {
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: 1.02rem;
     line-height: 1.25;
-    display: block;
+    margin: 0;
   }
 
   .person__title {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: $muted-text-color;
-    display: block;
-    margin-top: 0.1rem;
+    margin: 0.1rem 0 0;
   }
 
-  .person__focus {
-    font-size: 0.79rem;
+  .person__bio {
+    font-size: 0.85rem;
+    line-height: 1.62;
+    margin: 0.6rem 0 0;
+  }
+
+  .person__projects {
+    margin: 0.7rem 0 0;
+    font-size: 0.75rem;
+    line-height: 2;
+  }
+
+  .person__projects-label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.68rem;
     color: $muted-text-color;
-    margin: 0.4rem 0 0;
-    line-height: 1.5;
+    margin-right: 0.4rem;
+  }
+
+  .project-chip {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.3rem 0.25rem 0;
+    border: 1px solid mix($brand-teal, $border-color, 45%);
+    border-radius: 999px;
+    background: mix(#fff, $brand-teal, 95%);
+    font-size: 0.75rem;
+    white-space: normal;
+
+    &.is-plain {
+      color: $muted-text-color;
+      background: $form-background-color;
+      border-color: $border-color;
+    }
   }
 
   .person__links {
-    margin-top: 0.4rem;
-    font-size: 0.75rem;
+    margin: 0.6rem 0 0;
+    font-size: 0.76rem;
 
     a {
-      margin-right: 0.5rem;
+      margin-right: 0.7rem;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .person {
+      flex-direction: column;
+      gap: 0.6rem;
     }
   }
 

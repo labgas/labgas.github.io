@@ -23,7 +23,7 @@ We also build the analysis software behind that work, and release it openly.
 
 <div class="line-grid">
   <div class="line-card">
-    <h3><a href="{{ '/research/#gastrointestinal-symptom-perception' | relative_url }}">Gastrointestinal symptom perception</a></h3>
+    <h3><a href="{{ '/research/#gastrointestinalbodily-symptom-perception' | relative_url }}">Gastrointestinal/bodily symptom perception</a></h3>
     <p>Psychobiological mechanisms underlying symptom perception in disorders of gut-brain
     interaction, studied with functional brain imaging and psychophysiology.</p>
   </div>

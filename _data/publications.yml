@@ -5,7 +5,7 @@
 
 lines:
   - id: symptoms
-    label: "Gastrointestinal symptom perception"
+    label: "Gastrointestinal/bodily symptom perception"
   - id: appetite
     label: "Appetite, food intake & reward"
   - id: microbiota

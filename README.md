@@ -16,6 +16,7 @@ layout or HTML.
 | To change | Edit |
 |---|---|
 | A team member — add, remove, update, add a photo | `_data/team.yml` |
+| Team bios and project links | the KU Leuven page, then re-run the harvest (below) |
 | Projects on the Research page | `_data/projects.yml` |
 | The repository index on the Tools page | `_data/repos.yml` |
 | Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
@@ -48,6 +49,34 @@ in the URL of that person's entry on the LaBGAS members page or in any who's who
 
 Without a `photo`, the page renders an initials avatar — so you can add people now and photos
 later.
+
+### Refreshing bios and project links
+
+Biographies and project lists are not written here — they are pulled from each person's page on
+the KU Leuven site so there is a single place to keep them current:
+
+```bash
+python scripts/fetch_team_bios.py
+```
+
+This rewrites the `bio:` and `projects:` blocks in `_data/team.yml` for everyone with a
+`kuleuven_id`, leaving all other fields alone. **Hand-edits to those two fields will not survive
+a re-run** — change the source page instead. Use `--dry-run` to see what would change.
+
+Two behaviours worth knowing:
+
+- **House-style wording** lives in `SUBSTITUTIONS` at the top of the script, so edits the lab
+  has asked for are re-applied on every run instead of being silently reverted.
+- **Project links point at our own Research page**, not back at the KU Leuven site. Source
+  titles are matched to `_data/projects.yml`, with an explicit `SLUG_ALIASES` table for the
+  ones whose long official titles do not resemble our short names. The table is keyed on the
+  source URL slug rather than the title, because two projects have nearly identical titles but
+  are different studies. Add an entry there when a new project appears.
+
+People whose project involvement spans the whole portfolio — the PI and the research
+coordinator — are marked `projects_all: true` in `_data/team.yml` instead, and listed in
+`SKIP_PROJECTS` so the harvest leaves them alone. Add `projects_link: false` to show that
+without a link.
 
 ### Adding a photo
 

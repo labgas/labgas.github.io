@@ -32,18 +32,18 @@ members:
   # --- PI --------------------------------------------------------------
   - name: "Lukas Van Oudenhove"
     kuleuven_id: "00027997"
+    projects_all: true
     photo: lukas-van-oudenhove.jpg
     group: pi
     title: "Research Professor, head of LaBGAS"
-    focus: >-
-      Psychiatrist and gut-brain researcher. Psychobiological mechanisms of
-      gastrointestinal symptom perception, gut-brain control of appetite and
-      food intake, and the influence of nutrient- and microbiota-related gut
-      signals on affect and cognition.
     email: "lukas.vanoudenhove@kuleuven.be"
     orcid: "0000-0002-6540-3113"
     scholar: "https://scholar.google.com/citations?user=xYPdgr8AAAAJ"
     github: "lukasvo76"
+    bio:
+      - "Lukas graduated as a Medical Doctor at KU Leuven in 2001. During his specialist training in psychiatry at the Onze-Lieve-Vrouw Hospital Aalst and at the University Psychiatric Center KU Leuven, he was granted a PhD-fellowship of the Research Foundation – Flanders. This allowed him to perform doctoral research from October 2004 until the end of his psychiatry training in September 2008, resulting in the successful defense of his doctoral thesis ‘Psychobiological mechanisms in functional dyspepsia. Converging evidence from psychophysiology & functional brain imaging?’ at KU Leuven on September 30th 2008. After a sabbatical-cum-postdoc in his beloved Mexico, he worked as a postdoctoral fellow of the Research Foundation – Flanders at the Translational Research Center for Gastrointestinal Diseases (TARGID) of KU Leuven, on a project titled ‘Role of psychological factors and central neurotransmitter systems in visceral pain in health and functional gastrointestinal disorders’ from 2009 until 2012."
+      - "In October 2012, he was appointed assistant research professor funded by the KU Leuven Special Research Fund, which allowed him to establish his own group within TARGID, the Laboratory for Brain-Gut Axis Studies (LaBGAS). The highly collaborative research lines of his group cover various aspects of gut-brain interactions, including psychobiological mechanisms underlying gastrointestinal/bodily symptom perception as well as the control of appetite and food intake in health and disease and, most recently, the influence of nutrient- and microbiota-related gut-brain signals on psychological processes and their neural basis. His research has been internationally authoritative, as reflected by more than 200 peer-reviewed publications and numerous invited and abstract presentations at international scientific meetings. He also won several international research awards: a Young Scholar Award and MacLean Scholar Award from the American Psychosomatic Society in 2006 & 2010, respectively, a Young Investigator Award from the Functional Brain-Gut Research Group in 2008 and a Fellow Abstract Prize from the American Gastroenterological Association in 2009. In 2012, he was chosen as ‘Rising Star’ by United European Gastroenterology and in 2013, he won the Junior Clinical Researcher Award of the International Foundation for Functional Gastrointestinal Disorders. Lukas Van Oudenhove also served as co-chair of the Rome IV committee on psychosocial aspects of functional gastrointestinal disorders."
+      - "During his sabbatical in Tor Wager’s Cognitive and Affective Neuroscience Lab at Dartmouth College (Hanover, NH, USA) in 2020-21, he gained expertise in advanced multivariate brain imaging analysis techniques. In the same year, Lukas got granted a prestigious Consolidator Award by the European Research Council. His MoodBugs project will focus on microbiota-gut-brain signaling mechanisms mediating the putative impact of the gut microbiota on stress and fear responses in humans, and will provide him with a unique opportunity to consolidate and expand LaBGAS."
 
   # --- Guest professors -------------------------------------------------
   - name: "Livia Guadagnoli"
@@ -51,26 +51,39 @@ members:
     photo: livia-guadagnoli.jpg
     group: guest
     title: "Guest professor"
-    focus: >-
-      Psychogastroenterology; behavioural treatment for avoidant/restrictive
-      food intake disorder in the context of functional dyspepsia.
+    bio:
+      - "Livia graduated with her PhD in clinical psychology (health psychology emphasis) in September 2020 from Northwestern University Feinberg School of Medicine in Chicago, IL, USA under the mentorship of Dr. Laurie Keefer. She joined Dr. Keefer’s lab on a National Institute of Health (NIH) T32 Training Grant in GI Physiology and Psychology. Throughout her PhD training, Livia studied the role of psychosocial processes (e.g., symptom-specific anxiety, stigma, PTSD) on symptom/disease experience in patients with various gastrointestinal illnesses, including gastroesophageal reflux disease (GERD), irritable bowel syndrome, and inflammatory bowel diseases. She also received training in qualitative methods and patient-reported outcome measure development. Her specific line of research focused on identifying and assessing the role of esophageal hypervigilance (i.e., increased attention towards esophageal sensations) on esophageal symptom perception in patients with GERD, reflux hypersensitivity, and functional heartburn. In March 2020, Livia was awarded a one-year Belgian American Educational Foundation postdoctoral fellowship to pursue postdoctoral research in Belgium. The aim of this fellowship was to develop skills in experimental health psychology, particularly as it relates to visceral/esophageal symptom perception, by learning from experts within LaBGAS and OGP (Health Psychology) at KU Leuven. During her first year in Leuven, Livia was awarded an FWO junior Postdoctoral Fellowship for her project entitled “Does attention to the body influence symptom perception? An experimental evaluation of hypervigilance and its impact on the perception of esophageal sensations.” During this three-year long fellowship (October 2021-2024), Livia will incorporate the knowledge of esophageal hypervigilance that she acquired as a clinical-researcher with the innovative experimental techniques she's learning here in Leuven, to further understand how bodily attention impacts the perception of visceral esophageal symptoms. Clinically, Livia is trained in administering evidence-based behavioral interventions, including cognitive behavioral therapy, acceptance and commitment therapy, and gut-directed hypnotherapy to patients with a range of gut-brain disorders. She values the reciprocal relationship between research and clinical work and hopes to continue pursuing research focused on identifying and refining psychological targets for future behavioral intervention."
+    projects:
+      - title: "From Pavlov to visceroception"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/pavlov-visceroception"
+        ref: "from-pavlov-to-visceroception"
 
   - name: "Iris Coppieters"
     kuleuven_id: "00145451"
     photo: iris-coppieters.jpg
     group: guest
     title: "Guest professor"
-    focus: >-
-      Neuroimaging and neuropsychophysiology of chronic pain and myalgic
-      encephalomyelitis/chronic fatigue syndrome.
+    bio:
+      - "Iris holds a Master of Science degree in Rehabilitation Sciences and Physiotherapy and graduated with her PhD in Health Sciences in June 2017 from Ghent University. Her doctoral research focused on cognitive deficits, central sensitization and brain alterations in patients with chronic whiplash associated disorders, chronic idiopathic neck pain and fibromyalgia. Iris started collaborating with LaBGAS in 2020 and joined Prof. Van Oudenhove Lukas for a research stay at Dartmouth college to work together at CANlab (The Cognitive and Affective Neuroscience Lab) on functional MRI analyses of a project including people with chronic whiplash associated disorders. Iris officially joined LaBGAS in September 2021. She is currently working as a postdoctoral researcher on the FWO project “Identifying (psycho)physiology-based subgroups in chronic fatigue syndrome and their relevance for rehabilitation”. The general aim is to test an integrative psychophysiological model of Chronic Fatigue Syndrome (CFS) by investigating the relationships between peripheral (psycho)physiological dysfunctions (stress response system, systemic inflammation), brain function (neuroinflammation, regional cerebral blood flow and functional connectivity) and fatigue perception and severity, as well as to identify subgroups of CFS patients based on a combination of these parameters. Importantly, these subgroups will be used as potential predictors of treatment response. Iris is also a postdoctoral research fellow of the Research Foundation Flanders (FWO) appointed at the Vrije Universiteit Brussel (VUB) and a member of the Pain in Motion (PiM) international research group. The project that she is working on at VUB examines the effect of a contemporary pain neuroscience intervention compared to usual care evidence-based physiotherapy applied to chronic pain in patients with chronic whiplash associated disorders. Iris is also an assistant research professor at the VUB and physiotherapist at the University Hospital Brussels where she treats patients with chronic pain."
+    projects:
+      - title: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/CFS"
+        ref: "biopsychosocial-mechanisms-of-chronic-fatigue-syndrome"
+      - title: "SY-NAPS"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain"
+        ref: "sy-naps"
 
   # --- Coordination -----------------------------------------------------
   - name: "Liene Bervoets"
     kuleuven_id: "00154051"
+    projects_all: true
+    projects_link: false
     photo: liene-bervoets.jpg
     group: coordinator
     title: "Research coordinator"
     email: "liene.bervoets@kuleuven.be"
+    bio:
+      - "Liene has more than a decade of experience in biomedical and clinical research within several universities and hospitals. She obtained a PhD in Biomedical Sciences at Hasselt University in Belgium. During her PhD research, she extended her knowledge about the metabolic health of obese children and adolescents by clinical and metabolomics research. Following her PhD, she specialized in gut microbiota research at the Penders Lab, Maastricht University in the Netherlands. Her postdoc research focused on host-microbiota-diet interactions in early life. She was also involved in the founding of the Euregional Microbiome Center. She now coordinates LaBGAS research projects that explore the gut-brain axis and how this impacts mental and physical health. Alongside her position as a research coordinator, she is also active as a dietitian and orthomolecular therapist in a private practice, providing individualized nutritional care and counselling for patients with a range of GI conditions. Liene's ultimate goal is to increase our knowledge and understanding on diet-microbiota-gut-brain interactions and translate this into practice in order to optimize our health and well-being."
 
   # --- Post-docs --------------------------------------------------------
   - name: "Nathalie Weltens"
@@ -78,105 +91,219 @@ members:
     photo: nathalie-weltens.jpg
     group: postdoc
     title: "Post-doctoral researcher"
-    focus: >-
-      Nutrient-induced gut-brain signalling and its effects on emotion,
-      appetite and food reward.
+    bio:
+      - "Nathalie graduated with her PhD in Biomedical Sciences in December 2017 from KU Leuven. Her doctoral research combined psychological/behavioral, neurophysiological and biochemical methods to gain more insight into the brain-gut signaling mechanisms underlying visceral pain perception and (disturbed) food intake. During the final year of her PhD, Nathalie successfully applied for a Marie Curie fellowship to spend one year abroad at the renowned Institute of Psychiatry, Psychology and Neuroscience (King’s College London), where she was involved in an intricate neuroimaging project assessing the brain responses to an acute cannabinoid challenge. After her return to KU Leuven, she obtained a one-year postdoctoral mandate (PDM) to start developing her multidisciplinary research program on the neurophysiology and -chemistry underlying the regulation and dysregulation of human food intake. In October 2019, she was granted a three-year junior Research Foundation - Flanders postdoctoral fellowship to continue her work on the psychobiology of human eating behavior. More specifically, she focuses on the interaction of gut-brain signaling mechanisms, including tastants and gastrointestinal hormones, with reward system neurotransmitters in the brain such as dopamine and endocannabinoids. To this end, she uses state-of-the-art human neuroimaging techniques, particularly simultaneous positron emission tomography (PET)-magnetic resonance (MR) imaging."
+    projects:
+      - title: "Erythritol: satiation and reward without the calories?"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/erythritol-project"
+        ref: "erythritol-satiation-and-reward-without-the-calories"
+      - title: "INBODY"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/inbody"
+        ref: "inbody"
+      - title: "Food reward after bariatric surgery"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1"
+        ref: "food-reward-after-bariatric-surgery"
+      - title: "SY-NAPS"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain"
+        ref: "sy-naps"
 
   - name: "Maaike Van Den Houte"
     kuleuven_id: "00092786"
     photo: maaike-van-den-houte.jpg
     group: postdoc
     title: "Post-doctoral researcher"
-    focus: >-
-      Functional somatic syndromes, fatigue, interoception and autonomic
-      nervous system function.
+    bio:
+      - "Maaike graduated with her PhD in health psychology in December 2017 from KULeuven. During her PhD, she studied symptom perception processes in functional somatic disorders, particularly in fibromyalgia and chronic fatigue syndrome (CFS). After her PhD, Maaike started working part-time at Hasselt University, where she is currently still working as a postdoctoral researcher and teaching assistant. From February 2018 until August 2018 Maaike also worked as a postdoctoral researcher at the Multidisciplinary Diagnostic Center for CFS of UZ/KULeuven, where she investigated the efficacy of treatment for CFS. In September 2018, Maaike started working at the research group for Health, Emotion, Cognition, and Memory at Université Catholique de Louvain, where she worked on a fNRS-funded project called “interoception across domains and dimensions, which culminated in the development of a new task measuring respiratory interoceptive accuracy. Maaike has been collaborating with LaBGAS since the start of her PhD in 2013, but officially joined LaBGAS in September 2020. She is currently the executing researcher on the EU-funded Discoverie project, which aims to provide an enhanced understanding of irritable bowel syndrome (IBS) and comorbidities and their risk factors. More specifically, Maaike will focus on the central mechanisms underlying IBS and it’s comorbidities, including functionality of the stress response system, using experimental designs and brain imaging techniques."
+    projects:
+      - title: "DISCOvERIE"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/discoverie"
+        ref: "discoverie"
+      - title: "INBODY"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/inbody"
+        ref: "inbody"
+      - title: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/CFS"
+        ref: "biopsychosocial-mechanisms-of-chronic-fatigue-syndrome"
+      - title: "Gut-immune-brain axis in IBD fatigue"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/copy_of_the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+        ref: "gut-immune-brain-axis-in-ibd-fatigue"
 
   - name: "Boushra Dalile"
     kuleuven_id: "00115135"
     photo: boushra-dalile.jpg
     group: postdoc
     title: "Post-doctoral researcher"
-    focus: >-
-      Short-chain fatty acids in microbiota-gut-brain communication; effects
-      of microbial metabolites on stress and fear.
+    bio:
+      - "Boushra was trained in psychology (Swinburne University of Technology, Australia) and cognitive neuroscience (University of Skövde, Sweden; The Max Planck Institute for Human Cognitive and Brain Sciences, Germany), before completing her doctoral training in 2021 at the Translational Research Center for Gastrointestinal Disorders (TARGID) at KU Leuven. She conducted interdisciplinary research on the effects of dietary fiber and the role of SCFAs in the microbiota-gut-brain axis, particularly pertaining to sensitivity to psychosocial stress and anxiety-related processes. Her PhD work was the first to show that administering SCFAs directly to the human colon, using colon-delivery capsules, and in doses equivalent to normal intake of fermentable dietary fiber attenuates the hypothalamic-pituitary-adrenal axis response to acute stress in healthy participants. Her work received the prestigious 2023 KU Leuven Research Council Award in Biomedical Sciences. In 2021, Boushra was granted a Postdoctoral Mandate (PDM) from KU Leuven, allowing her to help establish LaBGAS’ Moodbugs project and GUTSIE project, both of which build on her PhD work and seek to unravel the putative mechanisms of action mediating the relationship between SCFAs and the neuro-psycho-biological stress response, as well as elucidating the functional consequences of attenuating the stress response on core executive functions. While keeping her ties with LaBGAS by co-supervising PhD students, Boushra went on to secure a competitive Junior FWO Postdoctoral Fellowship in 2023, where she’s building an independent research line at Bramlab. Boushra is also the program manager of the Leuven Brain Institute’s Stress Research Center, and a member of the governing body of Academische Stichting Leuven. Boushra is always eager to host and supervise interns and Master students, so don’t hesitate to reach out!"
+    projects:
+      - title: "MoodBugs"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/Moodbugs"
+        ref: "moodbugs"
+      - title: "GUTSIE"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-on-stress-induced-impairment-in-core-executive-functions"
+        ref: "gutsie"
 
   # --- PhD students -----------------------------------------------------
   - name: "Daniëlle Jongen"
     kuleuven_id: "00112751"
     group: phd
     title: "PhD student"
+    bio:
+      - "Daniëlle obtained a Bachelor degree in Psychology and a Research Master degree in Clinical and Cognitive Neuroscience, at Maastricht University. She joined LaBGAS in 2016 to work on a PhD project revolving around the neurochemical mechanisms of food reward. She uses state-of-the-art human neuroimaging techniques, including simultaneous positron emission tomography (PET)-magnetic resonance (MR) imaging. One of the main projects investigates the response of the brain reward system to food stimuli in healthy females, focussed on brain activity, dopamine release, and the role of gastrointestinal hunger and satiety hormones. Furthermore, the brain reward response to these food stimuli is investigated in patients with the eating disorder Bulimia Nervosa, to elucidate the role of different food reward responses, dopamine release, and hunger/satiety hormones in this disorder. Other projects focus on interactions between dopamine and opioids in the reward system as well as their correlations with BMI. With an additional behavioural study, she investigates flavour-nutrient learning processes as a mechanism behind food choice. During her education and her PhD she acquired broad experience in performing and analysing data from brain imaging studies. She uses her fascination with the brain and brain-gut axis to help us get one step closer in understanding food reward."
   - name: "Annalena Fuchs"
     kuleuven_id: "00149675"
     photo: annalena-fuchs.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "With a background in Cognitive Science, in 2021 Annalena graduated from her MSc in Cognitive and Clinical Neuroscience with specialisation in Drug Development and Neurohealth at Maastricht University, Maastricht, The Netherlands. She spent her research internship and MSc thesis investigating metabolic profiles in Alzheimer’s Disease and Frontotemporal dementia using multimodal brain imaging techniques at RWTH University Hospital, Aachen, Germany. Throughout her studies, Annalena gained experience in the application and analysis of eye-tracking, EEG, MRI and FDG PET as well as laboratory experiments. Annalena's diverse background and interests motivated her to apply to the PhD position on the MoodBugs project at LaBGas, starting October 2021. During her PhD she will investigate the role of the gut microbiota-gut-brain axis in stress sensitivity and fear learning. Specifically, she aims to establish the directionality and causality of the relationship between gut microbiota composition and stress. Furthermore, she will investigate the effect of short-chain fatty acid intervention on functional brain imaging correlates of stress and fear, as well as the role of histone deacetylases in mediating this effect using combined PET/MR imaging."
+    projects:
+      - title: "MoodBugs"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/Moodbugs"
+        ref: "moodbugs"
   - name: "Nele Mattelaer"
     kuleuven_id: "00144787"
     photo: nele-mattelaer.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Nele graduated as a master of Biomedical Sciences (Basic and Translational Research) in 2021. During her master, her interest in the brain sparked at an internship she did at the Laboratory for Neuro- and Psychophysiology. Because of this experience, she chose to do her master thesis at the Center for Clinical Psychiatry, where she investigated how different variables influence face perception, specifically focusing on the influence of depressive symptoms. In her thesis she got some practical experience in interviewing, VR, MRI, EEG and eye-tracking. In October 2021, Nele started her PhD at the research group of Clinical and Experimental Endocrinology and LaBGAS. During her PhD, she will investigate how bariatric surgery influences food reward by exploring the brain, but also metabolic and endocrine factors. Specifically, she will focus on central and peripheral endocannabinoids and dopamine. By investigating how these are affected in obesity and after bariatric surgery (using PET and blood and urine samples), she aims to elucidate some of the observed changes in food behaviour after surgery."
+    projects:
+      - title: "Food reward after bariatric surgery"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1"
+        ref: "food-reward-after-bariatric-surgery"
   - name: "Tabea Eimer"
     kuleuven_id: "00148935"
     photo: tabea-eimer.jpg
     group: phd
     title: "PhD student"
-    focus: >-
-      Interoceptive ability across the respiratory, esophageal and cardiac
-      domains.
+    bio:
+      - "Tabea graduated from the Master of Psychology: Theory and Research Program at KU Leuven in 2021. She gained research experience through several student jobs and internships across different countries during which she developed a strong interest in health psychology, psychophysiology, and psychobiology, especially in relation to the gut-brain axis. In October 2021, she joined the Health Psychology group and LaBGAS as a PhD student. She is working on INBODY, a collaborative project between KU Leuven and the University of Luxembourg. More specifically, Tabea investigates if interoception is a general ability that shares neural processing characteristics across multiple organ domains and if that predicts affective responses. Further, she is testing whether altered interoceptive processing of bodily signals from different organs can explain the heterogeneity of somatic symptoms in functional somatic syndromes. To do so, she uses various methods including psychophysiological, neural (EEG) and behavioral measures. In 2023, Tabea was awarded an FWO PhD fellowship fundamental research, allowing her to delve more into gastric interoception. In this project, she will focus on developing a new method to assess gastric interoception and measure it in both healthy individuals and in patients with functional dyspepsia."
+    projects:
+      - title: "INBODY"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/inbody"
+        ref: "inbody"
   - name: "Ynse Dooms"
     kuleuven_id: "00149628"
     photo: ynse-dooms.jpg
     group: phd
     title: "PhD student"
-    focus: >-
-      Neuropsychophysiological subgroups in myalgic encephalomyelitis/chronic
-      fatigue syndrome.
+    bio:
+      - "Ynse obtained a Master in Biomedical Research in Movement Sciences at KU Leuven in 2021. During these studies, she performed her Master’s thesis at the Movement Control and Neuroplasticity Research Group. There she investigated the timing when the dorsal premotor cortex affects predictive force scaling during associative learning in a grasp-lifting task. During an additional internship at the Movement Control and Neuroplasticity Research Group, she got practical experience in different neuroimaging techniques. Ynse performed a second internship at the Laboratory for Neuro- and Psychophysiology at KU Leuven where she conducted non-human primate research. Because of her interest in brain research as well as movement sciences, she started as a PhD student at LaBGAS and the Research Group on Health and Rehabilitation Psychology in 2021. During her PhD project, she will be studying the biopsychosocial mechanisms of chronic fatigue syndrome and their relevance for rehabilitation. Therefore, she will investigate the relationship between peripheral (psycho)physiological dysfunction, brain function and fatigue perception. Based on a combination of these parameters, she will identify subgroups in chronic fatigue syndrome pathophysiology. Then, she will investigate how these subgroups relate to rehabilitation success."
+    projects:
+      - title: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/CFS"
+        ref: "biopsychosocial-mechanisms-of-chronic-fatigue-syndrome"
   - name: "Dina Satriawan"
     kuleuven_id: "00150134"
     photo: dina-satriawan.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Dina graduated with a Master of Neuroscience (Advanced) degree from the Australian National University in 2017. For her thesis project, she studied the changes in the brain of a rat model of Hirschsprung's disease – a neurodevelopmental disorder that manifests itself primarily through gastrointestinal symptoms. Her studies in the field of molecular and cellular neuroscience led her into academia where she worked as a biomedicine faculty member at the Indonesia International Institute for Life Sciences for three years prior to commencing her doctoral studies. On top of academia, Dina also has a strong clinical background as a registered medical doctor in her home country, Indonesia. Ultimately, her fascination on how distant but connected the brain and gut are was what motivated her to work on her current doctoral project which aims to elucidate the causative role of microbiota-affect relationships in humans and whether short-chain fatty acids and neuroinflammation are underlying mediators. Through this project, Dina will acquire a broad set of clinical trial and neuroimaging skills to complement her medical and fundamental neuroscience background."
+    projects:
+      - title: "MoodBugs"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/Moodbugs"
+        ref: "moodbugs"
   - name: "Casper Vananderoye"
     kuleuven_id: "00155361"
     group: phd
     title: "PhD student"
+    bio:
+      - "Casper obtained a Master degree at the FaBeR faculty of KU Leuven in 2023, majoring in Biomedical Research in Movement Sciences. He attended internships at the Physical Medicine and Rehabilitation research group at the university hospital of Oslo and the Movement Control and Neuroplasticity research group at KU Leuven while earning his Master degree. In his master’s thesis he investigated the effect of an 8-week training program on heart rate variability, which was performed at the Movement Control and Neuroplasticity research group in Leuven. He developed a strong interest in neuroimaging techniques and sleep analyses due to these experiences and joined LaBGAS as a PhD student in October 2023. During his PhD, Casper will investigate the neurobiological mechanisms underlying the bidirectional sleep-pain relationship in people with non-specific chronic low back pain. To assess these mechanisms this project will utilize cutting-edge methods in neuroscience (PET-MRI), pain (quantitative sensory testing), and sleep medicine research."
+    projects:
+      - title: "SY-NAPS"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain"
+        ref: "sy-naps"
   - name: "Lixin Qiu"
     kuleuven_id: "00167298"
     photo: lixin-qiu.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Lixin graduated with a Master of Science in Education from the Psychology School at South China Normal University, where he specialized in basic psychology and cognitive neuroscience. During his first master's project, he explored the gender differences in stress-induced cognitive impairment and brain network alterations. In his second master’s project, he investigated the functional specialization of orbitofrontal cortex subregions in inferential decision-making based on their dissociable information representation and functional connectivity patterns. Through 3-year studies, Lixin acquired practical experience in conducting fMRI experiments and MRI data analysis. His original interest in the association between psychological stress and functional somatic symptoms brought him to LaBGAS in September 2023. During the PhD, Lixin will investigate the stress processing in patients with irritable bowel syndrome and chronic fatigue syndrome, and identify whether they share a common neural basis by utilizing multimodal brain imaging techniques, e.g., sMRI, fMRI, and PET."
+    projects:
+      - title: "DISCOvERIE"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/discoverie"
+        ref: "discoverie"
+      - title: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/CFS"
+        ref: "biopsychosocial-mechanisms-of-chronic-fatigue-syndrome"
   - name: "Franco Ruiz"
     kuleuven_id: "00163673"
     photo: franco-ruiz.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Franco is a medical doctor from Argentina with training in primary healthcare, emergency medicine and intensive care. Additionally, he completed a postgraduate in Psychoneuroimmunology and Nutrition. In 2020, he co-founded a private consultation that aimed to provide medical and lifestyle interventions to optimize health, improve medical conditions and enhance physical & mental performance. During the COVID-19 pandemic, he worked as a physician both in primary healthcare emergency services and the intensive care unit in his home country. Since his graduation in 2017, he was incorporated as a lecturer in the Medical Biophysics and Physiology department at his alma mater. With an always latent desire to devote his career to research, he got a position to start his PhD training in 2023. His project aims to elucidate the effects of gut bacterial metabolites - Short-Chain Fatty Acids - on core executive functions under psychosocial and physiological stress conditions."
+    projects:
+      - title: "GUTSIE"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-on-stress-induced-impairment-in-core-executive-functions"
+        ref: "gutsie"
   - name: "Elin Marie Johansson"
     kuleuven_id: "00168296"
     photo: elin-marie-johansson.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Elin holds a Bachelor's degree in Physiotherapy (Linköping University, Sweden) and a Master’s degree in Sports Physiology and Medicine (Örebro University, Sweden), which she obtained in the year of 2020 and 2022, respectively. In late 2022, she became a clinical research fellow within the international Pain in Motion research group situated in Brussels, Belgium, and in 2023, she obtained a PhD fellowship grant from Research Foundation – Flanders (FWO), whereby she became a joint PhD student at Vrije University Brussels and KU Leuven within the SLEEP-PAIN project. During her PhD, Elin will study the neurobiological mechanisms underlying the bidirectional relationship between chronic low back pain and chronic sleep disruption (i.e., insomnia). Specifically, she will study people with and without chronic low back pain and/or (comorbid) insomnia to investigate if the two conditions, as well as their interaction, are associated with excessive brain neuroinflammation, and if the level of neuroinflammation explains variation in pain system hypersensitivity. These questions will be answered using PET-(f)MRI and MRS imaging, quantitative sensory testing, ecological sampling methods, and sleep tracking technologies, but Elin is also involved in the KOA-PAIN research project, in which she is responsible for the processing and analysis of pain-related EEG data in people with knee osteoarthritis. Elin has a burning interest in pain-related brain processing and with her research, she thrives to improve the mechanistic understanding of both the development and maintenance of, as well as the recovery from chronic pain by studying it from the perspective of the brain."
+    projects:
+      - title: "SY-NAPS"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain"
+        ref: "sy-naps"
   - name: "Robin Quagebeur"
     kuleuven_id: "00149741"
     group: phd
     title: "PhD student"
+    bio:
+      - "Robin is a PhD candidate at the Mind-Body Research Group, which is part of the Psychiatry Research Group within the Department of Neurosciences. He is conducting his research under the supervision of Professor Elske Vrieze, in collaboration with LaBGAS, focusing on the interactions between stress and the gut microbiome and their effects on eating behavior in anorexia nervosa patients."
+      - "After graduating as a medical doctor in 2018, Robin pursued a psychiatry residency, gaining clinical experience at several psychiatric hospitals, where he worked at the University Psychiatric Hospital Leuven and the Alexianen Psychiatric Hospital in Tienen. Alongside his clinical work, Robin earned a degree in psychotherapy before starting his PhD in 2021."
+    projects:
+      - title: "Short-chain fatty acids in anorexia nervosa"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+        ref: "short-chain-fatty-acids-in-anorexia-nervosa"
   - name: "Sybren Rinckhout"
     kuleuven_id: "00173293"
     photo: sybren-rinckhout.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Sybren obtained his Master’s degree in Biomedical Sciences – Basic and Translational Research at KU Leuven in 2024. During his lab rotation at LaBGAS (TARGID) in his first master year he worked on the Moodbugs project, investigating the effect of colonic butyrate on fecal SCFA concentrations and stool consistency. As a result, he became passionate about the microbiota-gut-brain axis and decided to do his Master’s Thesis at TARGID in collaboration with the Molecular Small Animal Imaging Center (MoSAIC), where he characterized the gut-brain axis in an animal model of functional gastrointestinal disorders, the diabetes-prone BioBreeding rat. During his thesis, Sybren gained valuable experience in animal handling and brain imaging (ce-MRI, MRS and fMRI). Intrigued by the brain imaging techniques, he decided to continue the data analysis of the MRI experiments performed during his thesis as a part-time (70%) employee at KU Leuven for two months, until he started his PhD at TARGID and the IBD group in 2024. During his PhD, he will investigate the gut-immune-brain axis in a longitudinal study of IBD, both during active disease and in remission. He will measure markers of mucosal, systemic and neuroinflammation and correlate these with a multidimensional assessment of fatigue, microbial composition, fecal SCFA concentration and stress response."
+    projects:
+      - title: "Gut-immune-brain axis in IBD fatigue"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/copy_of_the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+        ref: "gut-immune-brain-axis-in-ibd-fatigue"
   - name: "Jim Draux"
     kuleuven_id: "00175263"
     group: phd
     title: "PhD student"
+    bio:
+      - "Jim obtained a Master in clinical Neuropsychology at the University of Mons in 2024. During his Master, Jim took part in the research life of the University of Mons through two internships which allowed him to further develop his interest in the interoceptive processes as well as psychophysiological means of measure. He joined the Health Psychology department of KU Leuven as a PhD student in October 2024 to work on the INBODY project. This is a collaborative project between KU Leuven and the University of Luxembourg. More specifically, Jim investigates if interoception is a general ability that shares neural processing characteristics across multiple organ domains and if that predicts affective responses. Further, he is testing whether altered interoceptive processing of bodily signals from different organs can explain the heterogeneity of somatic symptoms in functional somatic syndromes. To do so, he uses various methods including psychophysiological, neural (EEG) and behavioral measures."
+    projects:
+      - title: "INBODY"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/inbody"
+        ref: "inbody"
   - name: "Tuur Abts"
     photo: tuur-abts.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "After earning a professional BSc in Biomedical Laboratory Technology, Tuur completed an MSc in Biomedical Sciences with a minor in clinical sciences at KU Leuven. Throughout his academic journey and research experience, including his current PhD in Cognitive Neurosciences, he has cultivated a deep passion for clinical research and body-brain interactions. As an intern researcher at LaBGAS, he contributed to large clinical studies within the MoodBugs project, culminating in a thesis on the immune-modulating effects of dietary fiber and short-chain fatty acids on mood via the microbiota-gut-brain axis. Building on this foundation, his PhD research explores the gut-immune-brain axis and its role in fatigue in Inflammatory Bowel Disease, aiming to unravel the complex interplay between the gut microbiome, immune system, and brain, and their impact on fatigue in IBD patients."
+    projects:
+      - title: "Gut-immune-brain axis in IBD fatigue"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/copy_of_the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+        ref: "gut-immune-brain-axis-in-ibd-fatigue"
   - name: "Alexine Mennes"
     kuleuven_id: "00179338"
     photo: alexine-mennes.jpg
     group: phd
     title: "PhD student"
+    bio:
+      - "Alexine earned her Master of Biomedical Sciences (Clinical Sciences) at KU Leuven in 2025. During her master’s thesis at LaBGAS, she investigated how a microbiota-modulating antibiotic influences brain responses to acute stress and neuroinflammatory processes in healthy volunteers, using fMRI and ¹H-MRS. This work deepened her fascination with the microbiota-gut-brain axis and sparked a lasting interest in neuroimaging and psychobiological research. Building on this interest, she is currently pursuing a PhD at LaBGAS and the Department of Clinical and Experimental Endocrinology, focusing on the neuropsychobiological mechanisms through which the GLP-1 receptor agonist semaglutide influences eating behavior and weight regulation. Using a multimodal approach, her work aims to clarify drivers of individual differences in response to GLP-1-based pharmacotherapy in obesity across the binge eating spectrum, paving the way for more personalized obesity care."
+    projects:
+      - title: "GLP-1 pharmacotherapy optimisation"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"
+        ref: "glp-1-pharmacotherapy-optimisation"
   - name: "Annelies Falter"
     kuleuven_id: "00183708"
     group: phd

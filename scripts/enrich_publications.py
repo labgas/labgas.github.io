@@ -38,7 +38,7 @@ DELAY = 0.4
 
 LINE_ORDER = ["symptoms", "appetite", "microbiota", "methods"]
 LINE_LABELS = {
-    "symptoms": "Gastrointestinal symptom perception",
+    "symptoms": "Gastrointestinal/bodily symptom perception",
     "appetite": "Appetite, food intake & reward",
     "microbiota": "Microbiota-gut-brain signalling, stress & affect",
     "methods": "Neuroimaging methods & brain representations",
