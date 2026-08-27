@@ -182,27 +182,13 @@ members:
     group: phd
     title: "PhD student"
 
-  # --- Students ---------------------------------------------------------
-  - name: "Lien Horemans"
-    group: students
-  - name: "Fleur Bosmans"
-    group: students
-  - name: "Lisa Lemaire"
-    group: students
-  - name: "Si-Jin van de Vorst"
-    group: students
-  - name: "Sina Schnurr"
-    group: students
-  - name: "Jeanne Bruyr"
-    group: students
-  - name: "Taskin Asu Aslihan"
-    group: students
-  - name: "Justine Dewitte"
-    group: students
-  - name: "Caressa Haerts"
-    group: students
-  - name: "Jarne Derycke"
-    group: students
+  # --- Master's & medical students --------------------------------------
+  # Intentionally empty between academic years. The Team page skips any group
+  # with no members, so this section simply does not render until names are
+  # added back — no template change needed.
+  #
+  #  - name: "Given Family"
+  #    group: students
 
   # --- Alumni -----------------------------------------------------------
   # TODO (lab): add former members here — same fields, group: alumni.
