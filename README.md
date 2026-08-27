@@ -8,6 +8,107 @@ Built with [Jekyll](https://jekyllrb.com/) and the
 via `remote_theme`. GitHub Pages builds and deploys the site automatically on every push to
 `main`; there is no build step to run yourself and no theme copy to maintain.
 
+**Lab members:** you can update your own biography, photo and projects yourself, in the browser,
+without installing anything — see [For lab members](#for-lab-members-updating-your-own-entry)
+below. The rest of this README is for whoever maintains the site.
+
+## For lab members: updating your own entry
+
+You do **not** need to install anything, know git, or ask anyone. Everything is edited in the
+browser on github.com, and the site rebuilds itself about a minute after you save.
+
+You need a GitHub account that is a member of the [labgas organisation](https://github.com/labgas).
+If you are not a member yet, ask Lukas to add you. If you do not have permission to save
+directly, GitHub will offer to "propose changes" instead — do that, and someone will approve it.
+
+### The 60-second version
+
+1. Open the file you need (links below) and click the **pencil icon** ✏️ at the top right.
+2. Make your change.
+3. Scroll down, write a short note like `update my bio`, and click **Commit changes**.
+4. Wait about a minute, then reload <https://labgas.github.io> — your change is live.
+
+### Update your biography
+
+Open **[`_data/team.yml`](https://github.com/labgas/labgas.github.io/edit/main/_data/team.yml)**
+and find your name. Your entry looks like this:
+
+```yaml
+  - name: "Given Family"
+    kuleuven_id: "00123456"
+    photo: given-family.jpg
+    group: phd
+    title: "PhD student"
+    bio_lead: "The first sentence or two of your bio."
+    bio:
+      - "The first sentence or two of your bio. Then the rest of the paragraph, which stays hidden until someone clicks Read more."
+      - "A second paragraph, if you want one."
+```
+
+**The one rule that matters:** `bio_lead` is the part shown before someone clicks "Read more",
+and it must be **the exact opening of your first `bio` paragraph, copied word for word**. If the
+two differ, your opening sentence appears twice on the page. The safest way is to write your
+first paragraph, then copy its first sentence or two into `bio_lead`.
+
+Don't want a "Read more" toggle? Delete the `bio_lead:` line and your whole bio shows at once —
+sensible if it is only a few sentences.
+
+Everything sits inside `"double quotes"` on one long line. That is fine — the browser will wrap
+it. If your text contains a `"`, write it as `\"`.
+
+### Add or change your photo
+
+Photos are not stored in this file. Send a photo (portrait orientation, head and shoulders, at
+least 400×400) to Lukas or Liene and it gets processed and added — it needs resizing and
+cropping first, which is not something the browser editor can do.
+
+If your entry has no `photo:` line you currently show as initials in a circle, which is a
+perfectly fine thing to leave.
+
+### Add a project to your entry
+
+Under your name, add or edit the `projects:` block:
+
+```yaml
+    projects:
+      - title: "MoodBugs"
+        ref: moodbugs
+```
+
+`ref` is the project's name in lower case with spaces and punctuation turned into hyphens, and it
+must match a project on the [Research page](https://labgas.github.io/research/) —
+`MoodBugs` → `moodbugs`, `SY-NAPS` → `sy-naps`,
+`GLP-1 pharmacotherapy optimisation` → `glp-1-pharmacotherapy-optimisation`. After saving, click
+your project chip on the [Team page](https://labgas.github.io/team/) to check it jumps to the
+right project. If it scrolls nowhere, the `ref` is wrong.
+
+### Update a project description
+
+Open **[`_data/projects.yml`](https://github.com/labgas/labgas.github.io/edit/main/_data/projects.yml)**.
+The short text on the collapsed card is `tagline` and `summary`; everything under `detail:` is
+what appears when someone clicks it — description, duration, funding, investigators, team and key
+publications. Add a paragraph by adding another `- "…"` line under `description:`.
+
+### Things that will break the site
+
+The files are YAML, which is fussy about two things:
+
+- **Indentation must be spaces, never tabs**, and must line up with the lines around it. Copy an
+  existing entry and edit it rather than typing a new one from scratch.
+- **Every piece of text needs its `"quotes"` closed.**
+
+Nothing you do here can break the site permanently, and nothing is ever lost — every version is
+kept. If a change is malformed the site simply keeps serving the previous version.
+
+### Checking it worked
+
+The **[Actions tab](https://github.com/labgas/labgas.github.io/actions)** shows a build for every
+save: a green tick means your change is live, a red cross means the file has a syntax error.
+Click a red one and it will tell you which line. Either fix it, or revert your change and ask for
+help — no harm done.
+
+---
+
 ## Editing content
 
 Almost everything that changes over time lives in `_data/`, so routine updates never touch
