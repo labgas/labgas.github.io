@@ -124,6 +124,3 @@ Interested in joining? See [Join us]({{ '/join/' | relative_url }}), or write to
 [Lukas Van Oudenhove](mailto:lukas.vanoudenhove@kuleuven.be) about research positions and to
 [Liene Bervoets](mailto:liene.bervoets@kuleuven.be) about taking part in a study.
 
-Biographies are reproduced from the
-[LaBGAS pages](https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers)
-on the KU Leuven site.

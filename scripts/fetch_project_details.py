@@ -1,16 +1,15 @@
-"""Harvest full project descriptions from the LaBGAS project pages on gbiomed.kuleuven.be.
+"""RETIRED — kept as a record of where the project detail came from. Do not run.
 
-Each project page carries a PROJECT INFORMATION block (duration, funding, principal
-investigators, team members) and a PROJECT DESCRIPTION block. This script pulls both
-and merges them into _data/projects.yml as `detail:` on the matching project, leaving
-the hand-written `name`, `line`, `tagline` and `summary` fields untouched — those are
-the index-level copy, this is what expands underneath it.
+This harvested full project descriptions, funding, investigators and team members from
+the LaBGAS project pages on gbiomed.kuleuven.be. That site is being taken offline, and
+_data/projects.yml is now the source of truth: edit the `detail:` block there directly
+(see the README).
 
-Run:  python scripts/fetch_project_details.py
-      python scripts/fetch_project_details.py --dry-run
+Running this against a dead or moved site would be destructive — it rewrites `detail:`
+wholesale.
 
-The source pages mark up body text inconsistently — some use <p>, others <h4
-class="card-title"> — so both are collected, in document order.
+Note that SLUG_ALIASES below is still imported by fetch_team_bios.py, so this module
+must remain importable even though neither script should be executed.
 
 Stdlib only.
 """
@@ -242,7 +241,18 @@ def merge(details: dict, dry: bool) -> "tuple[int, list]":
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--source-is-live",
+        action="store_true",
+        help="confirm the source site is reachable and still has the expected markup",
+    )
     args = ap.parse_args()
+
+    if not args.source_is_live:
+        print(__doc__)
+        print("Refusing to run. _data/projects.yml is the source of truth; edit it directly.")
+        print("If you really have a live source, pass --source-is-live.")
+        return 1
 
     try:
         idx = get(BASE)

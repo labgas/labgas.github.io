@@ -16,9 +16,9 @@ layout or HTML.
 | To change | Edit |
 |---|---|
 | A team member — add, remove, update, add a photo | `_data/team.yml` |
-| Team bios and project links | the KU Leuven page, then re-run the harvest (below) |
+| Team bios and their project links | `_data/team.yml` (`bio_lead`, `bio`, `projects`) |
 | Projects on the Research page — name, tagline, summary | `_data/projects.yml` |
-| Project descriptions, funding, people | the KU Leuven project page, then re-run the harvest (below) |
+| Project descriptions, funding, people | `_data/projects.yml` (`detail:`) |
 | The repository index on the Tools page | `_data/repos.yml` |
 | Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
 | Masthead and docs sidebar navigation | `_data/navigation.yml` |
@@ -51,56 +51,73 @@ in the URL of that person's entry on the LaBGAS members page or in any who's who
 Without a `photo`, the page renders an initials avatar — so you can add people now and photos
 later.
 
-### Refreshing bios and project links
+### Editing a biography
 
-Biographies and project lists are not written here — they are pulled from each person's page on
-the KU Leuven site so there is a single place to keep them current:
+Bios live in `_data/team.yml` under each member. Two fields, both plain text:
 
-```bash
-python scripts/fetch_team_bios.py
+```yaml
+    bio_lead: "The first sentence or two, shown collapsed on the Team page."
+    bio:
+      - "Full first paragraph. `bio_lead` must be an exact prefix of this."
+      - "Second paragraph. Add as many as you like."
 ```
 
-This rewrites the `bio:` and `projects:` blocks in `_data/team.yml` for everyone with a
-`kuleuven_id`, leaving all other fields alone. **Hand-edits to those two fields will not survive
-a re-run** — change the source page instead. Use `--dry-run` to see what would change.
+The Team page shows `bio_lead` and hides the rest behind a "Read more" toggle. It does that by
+removing `bio_lead` from the front of the first paragraph, so **`bio_lead` has to match the
+opening of `bio[0]` character for character** — otherwise the opening text appears twice. Copy
+and paste it rather than retyping. Leave `bio_lead` out entirely and the whole bio shows
+uncollapsed, which is fine for a short one.
 
-Two behaviours worth knowing:
+### Editing a person's projects
 
-- **House-style wording** lives in `SUBSTITUTIONS` at the top of the script, so edits the lab
-  has asked for are re-applied on every run instead of being silently reverted.
-- **Project links point at our own Research page**, not back at the KU Leuven site. Source
-  titles are matched to `_data/projects.yml`, with an explicit `SLUG_ALIASES` table for the
-  ones whose long official titles do not resemble our short names. The table is keyed on the
-  source URL slug rather than the title, because two projects have nearly identical titles but
-  are different studies. Add an entry there when a new project appears.
-
-People whose project involvement spans the whole portfolio — the PI and the research
-coordinator — are marked `projects_all: true` in `_data/team.yml` instead, and listed in
-`SKIP_PROJECTS` so the harvest leaves them alone. Add `projects_link: false` to show that
-without a link.
-
-### Refreshing project details
-
-Each project on the Research page expands to show its full description, duration, funding,
-investigators, team and key publications. That content is harvested from the project pages on
-the KU Leuven site:
-
-```bash
-python scripts/fetch_project_details.py
+```yaml
+    projects:
+      - title: "MoodBugs"
+        ref: moodbugs          # anchor on /research/ — omit and give `url:` for an external link
 ```
 
-This rewrites only the `detail:` block of each project in `_data/projects.yml`; the
-hand-written `name`, `line`, `tagline` and `summary` — the index-level copy shown when the
-project is collapsed — are left alone. Use `--dry-run` to preview.
+`ref` must match the project's `name` in `_data/projects.yml` slugified: lower case, spaces and
+punctuation to hyphens. `MoodBugs` → `moodbugs`, `SY-NAPS` → `sy-naps`,
+`GLP-1 pharmacotherapy optimisation` → `glp-1-pharmacotherapy-optimisation`. Get it wrong and
+the chip renders but scrolls nowhere; `scripts/validate_site.py` does not currently catch this,
+so check the link after editing.
 
-Where a project has harvested `detail.duration` or `detail.funding`, those take precedence over
-the `period` and `funder` fields for the summary line, because the project pages name the actual
-funding body where our own summary often only had the category.
+People whose involvement spans everything — the PI and the research coordinator — use
+`projects_all: true` instead of a list, plus `projects_link: false` to show it without a link.
 
-`SLUG_ALIASES` in this script is the single mapping from source page slug to our project name.
-`fetch_team_bios.py` imports it, so a new project only needs adding in one place. It is keyed on
-the URL slug rather than the page title on purpose: the anorexia SCFA project and GUTSIE have
-nearly identical titles but are different studies.
+### Editing a project description
+
+In `_data/projects.yml`, the collapsed card comes from `name`, `tagline`, `summary`; everything
+under `detail:` is what opens when it is clicked:
+
+```yaml
+    detail:
+      duration: "2021-2026"
+      funding: "ERC-Consolidator Grant granted to …"
+      investigators: "…"
+      team: "…"
+      description:
+        - "One paragraph per entry."
+      publications:
+        - "Full citation with a DOI. Rendered under Key publications."
+```
+
+`detail.duration` and `detail.funding` override the `period` and `funder` fields on the
+collapsed card when both are present.
+
+### About the harvest scripts
+
+`scripts/fetch_team_bios.py` and `scripts/fetch_project_details.py` originally populated all of
+the above from the lab's pages on `gbiomed.kuleuven.be`. **That site is being retired, and the
+data files above are now the source of truth.** The scripts are kept as a record of where the
+text came from and would need re-pointing at a new source to be useful again.
+
+Do not run them against a dead site: they rewrite `bio`/`projects`/`detail` wholesale, so a
+failed fetch would replace good content with nothing. They report per-person errors rather than
+failing outright, which is exactly the case to avoid here.
+
+`scripts/enrich_publications.py` is unaffected — it reads PubMed, not the KU Leuven site, and
+stays the way to refresh the publication list.
 
 ### Adding a photo
 

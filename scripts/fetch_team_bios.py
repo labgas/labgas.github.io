@@ -1,14 +1,17 @@
-"""Harvest team member bios and project links from the LaBGAS pages on gbiomed.kuleuven.be.
+"""RETIRED — kept as a record of where the team bios came from. Do not run.
 
-Each member's page has a BACKGROUND section holding their biography and a PROJECTS
-section listing the studies they work on. This script pulls both and merges them into
-_data/team.yml, keyed on `kuleuven_id`, without disturbing any other field.
+This harvested member bios and project links from the LaBGAS pages on
+gbiomed.kuleuven.be. That site is being taken offline, and _data/team.yml is now the
+source of truth: edit `bio_lead`, `bio` and `projects` there directly (see the README).
 
-Run:  python scripts/fetch_team_bios.py
-      python scripts/fetch_team_bios.py --dry-run     # report only, write nothing
+Running this against a dead or moved site would be destructive. It rewrites the `bio:`
+and `projects:` blocks wholesale and reports per-person fetch failures rather than
+aborting, so a site-wide 404 would quietly replace every biography with nothing.
 
-Existing bios are overwritten, so hand-edits to `bio:` in team.yml will not survive a
-re-run — edit the source page instead, or drop the member from the harvest.
+If the content moves somewhere new, re-point BASE and re-check the extraction: it
+depends on the old site's markup (a BACKGROUND heading, a PROJECTS list) which a new
+site is unlikely to reproduce.
+
 Stdlib only; no third-party dependencies.
 """
 
@@ -290,7 +293,18 @@ def merge(harvest: dict) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--source-is-live",
+        action="store_true",
+        help="confirm the source site is reachable and still has the expected markup",
+    )
     args = ap.parse_args()
+
+    if not args.source_is_live:
+        print(__doc__)
+        print("Refusing to run. _data/team.yml is the source of truth; edit it directly.")
+        print("If you really have a live source, pass --source-is-live.")
+        return 1
 
     canonical = load_projects()
     members = read_members()
