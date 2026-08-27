@@ -17,27 +17,22 @@ Three research lines organise that work. They overlap heavily in method and in p
 
 ## Gastrointestinal symptom, pain, and fatigue perception
 
-Why do some people experience severe, disabling gastrointestinal symptoms with little or no
-detectable organic abnormality, while others with clear pathology report almost nothing? This
-line studies the psychobiological mechanisms underlying symptom perception in disorders of
-gut-brain interaction (DGBI) — irritable bowel syndrome, functional dyspepsia, refractory
-reflux — and in related functional somatic syndromes.
+This line asks why some people experience severe, disabling gastrointestinal symptoms with
+little detectable organic abnormality while others with clear pathology report almost nothing.
+We study symptom perception in disorders of gut-brain interaction — irritable bowel syndrome,
+functional dyspepsia, refractory reflux — and in related functional somatic syndromes,
+combining controlled gut stimulation with brain imaging, psychophysiology and experimental
+manipulations such as fear conditioning, returning to visceral hypersensitivity, interoceptive
+fear learning and hypervigilance.
 
-We combine controlled chemical and mechanical stimulation of the gut with functional brain
-imaging, psychophysiology and experimental psychological manipulations such as emotion
-induction, fear conditioning and attentional focus. Recurring themes include visceral
-hypersensitivity, interoceptive fear learning, hypervigilance, and the relative contribution of
-physiological versus psychological processes to symptom severity.
-
-Fatigue has become a substantial strand of this line, led by Maaike Van Den Houte. It has
-traditionally been studied either as (psycho)physiological dysfunction — of the stress response,
-immune and central nervous systems — or, in health psychology, as distorted perception of bodily
-sensations. We integrate the two, since neither alone explains why fatigue is experienced as
-severely as it is.
-
-This yields subgroups in myalgic encephalomyelitis/chronic fatigue syndrome intended to predict
+Fatigue has become a substantial strand of this line. It has traditionally been studied either
+as (psycho)physiological dysfunction — of the stress response, immune and central nervous
+systems — or, in health psychology, as distorted perception of bodily sensations; we integrate
+the two, since neither alone explains why fatigue is experienced as severely as it is. This
+yields subgroups in myalgic encephalomyelitis/chronic fatigue syndrome intended to predict
 rehabilitation response, and work on the gut-immune-brain axis in inflammatory bowel disease,
-where around half of patients in remission remain fatigued despite anti-inflammatory treatment.
+where half of patients in remission remain fatigued despite anti-inflammatory treatment.
+
 Related work examines the bidirectional sleep-pain relationship in chronic low back pain.
 
 ## Appetite, food intake & reward
