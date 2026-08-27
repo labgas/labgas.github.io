@@ -116,9 +116,9 @@
       border-left-color: $brand-teal;
     }
 
-    h3 {
+    .project__name {
       margin: 0 0 0.15rem;
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     p {
@@ -126,19 +126,138 @@
       font-size: 0.88em;
     }
 
+    .project__tagline,
+    .project__summary,
+    .project__meta {
+      display: block;
+    }
+
     .project__tagline {
       color: $accent-color;
-      font-size: 0.85em;
+      font-size: 0.85rem;
       font-style: italic;
       margin: 0 0 0.35rem;
     }
 
+    .project__summary {
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
     .project__meta {
-      font-size: 0.76em;
+      font-size: 0.76rem;
       color: $muted-text-color;
       text-transform: uppercase;
       letter-spacing: 0.03em;
-      margin: 0.35rem 0 0;
+      margin: 0.4rem 0 0;
+    }
+  }
+
+  /* Expandable project. The whole summary block is the click target, so the
+     card reads as one thing rather than a heading with a link bolted on. */
+  details.project {
+    > summary {
+      cursor: pointer;
+      list-style: none;
+      display: block;
+      position: relative;
+      padding-right: 5.5rem;
+
+      &::-webkit-details-marker { display: none; }
+
+      &::after {
+        content: "Details";
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $link-color;
+        border: 1px solid mix($brand-teal, $border-color, 45%);
+        border-radius: 999px;
+        padding: 0.1rem 0.6rem;
+        background: mix(#fff, $brand-teal, 95%);
+      }
+
+      &:hover::after,
+      &:focus-visible::after {
+        background: mix(#fff, $brand-teal, 88%);
+      }
+    }
+
+    &[open] > summary::after {
+      content: "Close";
+    }
+
+    &[open] {
+      border-left-color: $brand-teal;
+      background: mix(#fff, $brand-teal, 97%);
+      border-radius: 0 4px 4px 0;
+      padding-bottom: 0.9rem;
+      padding-right: 1rem;
+    }
+
+    /* Linked to from a team member's project chip. */
+    &:target {
+      box-shadow: 0 0 0 3px mix(#fff, $brand-teal, 70%);
+    }
+  }
+
+  .project__detail {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid mix($brand-teal, $border-color, 30%);
+
+    p {
+      font-size: 0.86rem;
+      line-height: 1.65;
+      margin: 0 0 0.7rem;
+    }
+  }
+
+  .project__people {
+    margin: 0.9rem 0 0;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.8rem;
+
+    dt {
+      font-weight: 600;
+      color: $muted-text-color;
+      white-space: nowrap;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    @media (max-width: 520px) {
+      grid-template-columns: 1fr;
+
+      dd { margin-bottom: 0.4rem; }
+    }
+  }
+
+  .project__pubs-label {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $muted-text-color;
+    margin: 1rem 0 0.3rem !important;
+  }
+
+  .project__pubs {
+    margin: 0;
+    padding-left: 1.1rem;
+
+    li {
+      font-size: 0.78rem;
+      line-height: 1.55;
+      margin-bottom: 0.4rem;
+      color: $muted-text-color;
     }
   }
 

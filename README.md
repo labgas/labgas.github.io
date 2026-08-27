@@ -17,7 +17,8 @@ layout or HTML.
 |---|---|
 | A team member — add, remove, update, add a photo | `_data/team.yml` |
 | Team bios and project links | the KU Leuven page, then re-run the harvest (below) |
-| Projects on the Research page | `_data/projects.yml` |
+| Projects on the Research page — name, tagline, summary | `_data/projects.yml` |
+| Project descriptions, funding, people | the KU Leuven project page, then re-run the harvest (below) |
 | The repository index on the Tools page | `_data/repos.yml` |
 | Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
 | Masthead and docs sidebar navigation | `_data/navigation.yml` |
@@ -77,6 +78,29 @@ People whose project involvement spans the whole portfolio — the PI and the re
 coordinator — are marked `projects_all: true` in `_data/team.yml` instead, and listed in
 `SKIP_PROJECTS` so the harvest leaves them alone. Add `projects_link: false` to show that
 without a link.
+
+### Refreshing project details
+
+Each project on the Research page expands to show its full description, duration, funding,
+investigators, team and key publications. That content is harvested from the project pages on
+the KU Leuven site:
+
+```bash
+python scripts/fetch_project_details.py
+```
+
+This rewrites only the `detail:` block of each project in `_data/projects.yml`; the
+hand-written `name`, `line`, `tagline` and `summary` — the index-level copy shown when the
+project is collapsed — are left alone. Use `--dry-run` to preview.
+
+Where a project has harvested `detail.duration` or `detail.funding`, those take precedence over
+the `period` and `funder` fields for the summary line, because the project pages name the actual
+funding body where our own summary often only had the category.
+
+`SLUG_ALIASES` in this script is the single mapping from source page slug to our project name.
+`fetch_team_bios.py` imports it, so a new project only needs adding in one place. It is keyed on
+the URL slug rather than the page title on purpose: the anorexia SCFA project and GUTSIE have
+nearly identical titles but are different studies.
 
 ### Adding a photo
 

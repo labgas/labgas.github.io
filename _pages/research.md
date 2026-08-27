@@ -71,20 +71,88 @@ academic stress, and the role of microbial metabolites in anorexia nervosa.
 
 {% assign items = site.data.projects.projects | where: "line", lid %}
 {% for p in items %}
-<div class="project{% if p.featured %} is-featured{% endif %}">
-  <h3 id="{{ p.name | slugify }}">{{ p.name }}</h3>
+{%- comment -%}
+  Harvested detail wins over the hand-written funder/period: the project pages
+  name the actual funding body where our summary line only had the category.
+{%- endcomment -%}
+{% assign period = p.detail.duration | default: p.period %}
+{% assign funder = p.detail.funding | default: p.funder %}
+{% assign has_detail = false %}
+{% if p.detail.description or p.detail.investigators or p.detail.team %}{% assign has_detail = true %}{% endif %}
+
+{% if has_detail %}
+<details class="project{% if p.featured %} is-featured{% endif %}" id="{{ p.name | slugify }}">
+  <summary>
+    <h3 class="project__name no_toc">{{ p.name }}</h3>
+    {% if p.tagline %}<span class="project__tagline">{{ p.tagline }}</span>{% endif %}
+    <span class="project__summary">{{ p.summary }}</span>
+    {% if funder or period %}
+    <span class="project__meta">
+      {%- if funder %}{{ funder }}{% endif -%}
+      {%- if funder and period %} · {% endif -%}
+      {%- if period %}{{ period }}{% endif -%}
+    </span>
+    {% endif %}
+  </summary>
+  <div class="project__detail">
+    {% for para in p.detail.description %}<p>{{ para }}</p>{% endfor %}
+
+    {% if p.detail.investigators or p.detail.team or p.detail.collaborators %}
+    <dl class="project__people">
+      {% if p.detail.investigators %}<dt>Principal investigators</dt><dd>{{ p.detail.investigators }}</dd>{% endif %}
+      {% if p.detail.team %}<dt>Team</dt><dd>{{ p.detail.team }}</dd>{% endif %}
+      {% if p.detail.collaborators %}<dt>Collaborators</dt><dd>{{ p.detail.collaborators }}</dd>{% endif %}
+    </dl>
+    {% endif %}
+
+    {% if p.detail.publications %}
+    <p class="project__pubs-label">Key publications</p>
+    <ul class="project__pubs">
+      {% for ref in p.detail.publications %}<li>{{ ref }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</details>
+{% else %}
+<div class="project{% if p.featured %} is-featured{% endif %}" id="{{ p.name | slugify }}">
+  <h3 class="project__name no_toc">{{ p.name }}</h3>
   {% if p.tagline %}<p class="project__tagline">{{ p.tagline }}</p>{% endif %}
-  <p>{{ p.summary }}</p>
-  {% if p.funder or p.period %}
+  <p class="project__summary">{{ p.summary }}</p>
+  {% if funder or period %}
   <p class="project__meta">
-    {%- if p.funder %}{{ p.funder }}{% endif -%}
-    {%- if p.funder and p.period %} · {% endif -%}
-    {%- if p.period %}{{ p.period }}{% endif -%}
+    {%- if funder %}{{ funder }}{% endif -%}
+    {%- if funder and period %} · {% endif -%}
+    {%- if period %}{{ period }}{% endif -%}
   </p>
   {% endif %}
 </div>
+{% endif %}
 {% endfor %}
 {% endfor %}
+
+<script>
+// Open a project when linked to directly — from a team member's project chip,
+// or from a shared link. Browsers scroll to a <details> by id but do not expand
+// it, so do that here. Progressive enhancement: without JS the anchor still
+// scrolls to the right project, it just stays collapsed.
+(function () {
+  function openTarget() {
+    var id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS' && !el.open) {
+      el.open = true;
+      el.scrollIntoView({ block: 'start' });
+    }
+  }
+  window.addEventListener('hashchange', openTarget);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', openTarget);
+  } else {
+    openTarget();
+  }
+})();
+</script>
 
 ---
 

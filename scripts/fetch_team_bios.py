@@ -42,28 +42,10 @@ NOISE = re.compile(
 # `projects_all` flag in team.yml rather than by harvesting a list.
 SKIP_PROJECTS = {"Lukas Van Oudenhove", "Liene Bervoets"}
 
-# Source project pages whose titles do not resemble the short public names we use
-# on the Research page. Keyed on the source URL slug rather than the title, which
-# is stable and unambiguous — two of these differ only by a typo in the title, and
-# the anorexia SCFA project reads almost identically to GUTSIE but is a different
-# study, so name-similarity matching would mis-link it.
-SLUG_ALIASES = {
-    "discoverie": "DISCOvERIE",
-    "inbody": "INBODY",
-    "erythritol-project": "Erythritol: satiation and reward without the calories?",
-    "pavlov-visceroception": "From Pavlov to visceroception",
-    "CFS": "Biopsychosocial mechanisms of chronic fatigue syndrome",
-    "unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-"
-    "sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain": "SY-NAPS",
-    "gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1":
-        "Food reward after bariatric surgery",
-    "a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-"
-    "pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum":
-        "GLP-1 pharmacotherapy optimisation",
-    "the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-"
-    "stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa":
-        "Short-chain fatty acids in anorexia nervosa",
-}
+# Source project slug -> our project name. Defined once in fetch_project_details.py
+# and imported here so the two harvests cannot drift apart; both scripts live in
+# this directory, which is on sys.path when either is run.
+from fetch_project_details import SLUG_ALIASES  # noqa: E402
 
 
 def get(url: str) -> str:

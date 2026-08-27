@@ -20,6 +20,22 @@ projects:
       signals — short-chain fatty acids in particular — shape the response to
       psychosocial stress and fear learning in humans.
     featured: true
+    detail:
+      duration: "2021-2026"
+      funding: "ERC-Consolidator Grant granted to Lukas Van Oudenhove (LaBGAS)"
+      investigators: "Lukas Van Oudenhove"
+      team: "Boushra Dalile (LaBGAS), Kristin Verbeke (TARGID), Bram Vervliet (BRAM Lab), Jeroen Raes (RaesLab)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/Moodbugs"
+      description:
+        - "Do our gut microbes influence our emotions? This sounded far-fetched a decade ago, but rodent research has shown that the microbial ecosystem in the gut (the gut microbiota) causally impacts affective processes. The underlying microbiota-gut brain signalling mechanisms include the capacity of the microbiota to produce short-chain fatty acids (SCFA) from dietary fiber and to regulate inflammation."
+        - "These rodent findings have great potential to identify new modifiable players in the (patho)physiology of affective processes and disorders, which is urgently needed given the stalled revolution in affective science, but human translation is needed to fulfill this potential."
+        - "MoodBugs aims to fill this gap by investigating the relationship between the gut microbiota and stress sensitivity and fear learning, two affective endophenotypes, and the microbiota-gut-brain (SCFA, inflammation) and neur(ochemic)al mechanisms underlying it, in an interdisciplinary hypothesis-driven fashion."
+        - "In a population-based study, together with collaborators at RaesLab, we have shown a cross-sectional association between a specific microbiota profile (B2 enterotype) and mental well-being. To test directionality of this association, we proposed a longitudinal and mechanistic population-based study. Later on, to test causality, we will study the effect of depleting the gut microbiota using an antibiotic intervention on fear learning and its brain basis."
+        - "Previously, in a placebo-controlled trial, we have also showed that SCFA administration (1 week) attenuates the cortisol response to psychosocial stress. To test for whom and how SCFA work, we will investigate microbiota composition as a predictor of response to SCFA, and gene expression in affective circuits as the neural mechanism mediating their effect. We will be inducing systemic inflammation to test its causal effect on stress and fear, and on neuroinflammation in the underlying neural circuitry as hypothesized mediator. We will further investigate the potential of SCFA to dampen these inflammation-induced effects."
+      publications:
+        - "Valles-Colomer, M., Falony, G., Darzi, Y., Tigchelaar, E.F., Wang, J., Tito, R.Y., Schiweck, C., Kurilshikov, A., Joossens, M., Wijmenga, C., Claes, S., Van Oudenhove, L., Zhernakova, A., Vieira-Silva, S., Raes, J. (2019). The neuroactive potential of the human gut microbiota in quality of life and depression. NATURE MICROBIOLOGY, 4 (4), 623-632. doi: 10.1038/s41564-018-0337-x"
+        - "Dalile, B., Vervliet, B., Bergonzelli, G., Verbeke, K., Van Oudenhove, L. (2020). Colon-delivered short-chain fatty acids attenuate the cortisol response to psychosocial stress in healthy men: a randomized, placebo-controlled trial. NEUROPSYCHOPHARMACOLOGY, 45 (13), 2257-2266. doi: 10.1038/s41386-020-0732-x"
+        - "Dalile, B., Van Oudenhove, L., Vervliet, B., Verbeke, K. (2019). The role of short-chain fatty acids in microbiota-gut-brain communication. Nature Reviews Gastroenterology & Hepatology, 16, 461-478. doi: 10.1038/s41575-019-0157-3"
 
   - name: "GUTSIE"
     line: microbiota
@@ -29,6 +45,14 @@ projects:
     summary: >-
       Whether the gut bacterial metabolites known as short-chain fatty acids
       protect core executive functions against the effects of acute stress.
+    detail:
+      duration: "2023-2025"
+      funding: "United States Department of Defense - U.S Army Research Office"
+      investigators: "Lukas Van Oudenhove (LaBGAS), Kristin Verbeke (TARGID), Boushra Dalile (LaBGAS)"
+      team: "Franco Ruiz"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-on-stress-induced-impairment-in-core-executive-functions"
+      description:
+        - "The gut microbiome has emerged as a likely mediator of physiologic (e.g., hypothalamic-pituitary-adrenal (HPA) axis), emotional, and cognitive responses to stress. The short-chain fatty acids (SCFAs) acetate, propionate and butyrate are the main metabolites of fermentation of complex carbohydrates in the colon by the gut microbiota, and are thought to play a key role in microbiota-gut-brain communication. The effects of SCFAs on these communication pathways are likely via modulation of a combination of the following interacting mechanisms: decreasing inflammation, improving gut barrier integrity, inhibiting histone deacetylases, acting as ligands for G-protein coupled receptors, modulating vagal afferent signaling, crossing the blood-brain barrier, and modulating energy metabolism. In previous research from our lab, direct in vivo administration of SCFA to the large intestine of healthy humans, mimicking the effect of fiber fermentation, attenuated the cortisol response to acute stress. Previous findings suggest that a high cortisol response to acute laboratory stress in healthy participants is associated with long- and short-term negative effects, independent of changes in the subjective stress experience. On the long term, cohort studies indicate that a low cortisol response to acute laboratory stress is associated with a reduction in future health risks including but not limited to lower risk for development of a mental disorder (e.g., mood or anxiety disorders, and substance dependence disorders) and lower risk for developing hypertension. On the short-term, acute stress has been associated with modulation of cognitive functions. Most research in this area has been conducted in relation to core executive functions (higher cognitive processes that enable planning, forethought, and goal-directed action), revealing that acute stress and increased cortisol concentrations impair working memory (ability to keep information in mind and update/integrate current content with new information) and cognitive flexibility (refers to the ability to flexibly shift between cognitive rules or modes of thought), but enhance response inhibition (ability to inhibit proponent responses/actions in order to selectively engage with task-relevant information and goal-directed, rather than habitual behaviors). Building on these findings, the aim of the present proposal is to examine core executive function as a functional outcome of attenuating the cortisol response to acute laboratory stress through colonic delivery of an SCFA mix (acetate, propionate, butyrate)."
 
   - name: "Short-chain fatty acids in anorexia nervosa"
     line: microbiota
@@ -38,6 +62,17 @@ projects:
       The psychobiological impact of undernutrition on cognition and emotion in
       anorexia nervosa, and the role of gut bacterial metabolites in
       regulating stress responses, eating behaviour and nutritional state.
+    detail:
+      duration: "2021-2025"
+      funding: "King Baudouin Foundation grant"
+      investigators: "Elske Vrieze (Mind Body Research group), Lukas Van Oudenhove (LaBGAS), Kristin Verbeke (TARGID)"
+      team: "Robin Quagebeur (Mind Body Research group), Boushra Dalile (LaBGAS)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+      description:
+        - "As a potent modulator of the bidirectional communication between the host's gastrointestinal tract and brain, the gut microbiota plays a central role in what's commonly known as the gut-brain axis. The gut microbiota can impact multiple bodily processes such as metabolism, immunological responses, body weight regulation, brain function, and eating behavior. In patients with anorexia nervosa (AN), who characteristically maintain highly restricted diets, significant alterations in gut microbiota composition have been reported. Moreover, shifts in the gut microbiota composition of patients with AN have been observed before and after renourishment. However, even after renourishment, the gut microbiota composition continues to differ from healthy controls."
+        - "Short-chain fatty acids (SCFAs), metabolites produced following the bacterial fermentation of dietary fiber in the large intestine, are considered candidate mediators of the gut bacteria's effects on the host. Acetate, propionate, and butyrate are the most abundant SCFAs and may affect the host through immune, endocrine, neural, and humoral pathways. In previous research from the lab, direct in vivo administration of SCFAs to the large intestine of healthy humans, mimicking the effect of fiber fermentation, attenuated the cortisol response to acute stress. Despite a growing body of evidence indicating a relationship between the gut microbiota and AN, there is a significant gap in research that causally examines the role of SCFAs and explores the interactions among the gut microbiota, SCFAs, stress response, and eating behavior in AN."
+        - "In this project, we will investigate the effects of short-chain fatty acids (SCFAs) as mediators of microbiota-gut-brain interactions on the acute stress response, eating behavior, and nutritional state in malnourished patients with anorexia nervosa (AN)."
+        - "Quagebeur R, Dalile B, Raes J, Van Oudenhove L, Verbeke K, Vrieze E. The role of short-chain fatty acids (SCFAs) in regulating stress responses, eating behavior, and nutritional state in anorexia nervosa: protocol for a randomized controlled trial. J Eat Disord. 2023 Oct 26;11(1):191."
 
   - name: "DISCOvERIE"
     line: symptoms
@@ -48,6 +83,15 @@ projects:
       Development, diagnosis and prevention of gender-related somatic and
       mental comorbidities in irritable bowel syndrome, and the central
       nervous system mechanisms that underlie them.
+    detail:
+      duration: "2020-2024"
+      funding: "EU Framework Programme for Research and Innovation (Horizon 2020)"
+      investigators: "Lukas Van Oudenhove (LaBGAS), Ricard Farré (TARGID), Jan Tack (TARGID), Jeroen Raes (Raes Lab)"
+      team: "Maaike Van Den Houte (LaBGAS), Lieselot Holvoet (TARGID), Alice Rustichelli (TARGID), Kristin Verbeke (TARGID)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/discoverie"
+      description:
+        - "Irritable bowel syndrome (IBS) is a common chronic functional gastrointestinal (GI) disorder characterized by abdominal pain and altered bowel habits. Etiologically, IBS is defined as a disorder of gut-brain interaction, but the exact underlying pathophysiological mechanisms of IBS are incompletely understood. Different mechanisms have been demonstrated on several levels of the gut-brain axis, including host genetics, microbiota composition and function, mucosal barrier function, mucosal and systemic immunity, low-grade inflammation, GI motility, neuroendocrine stress sensitivity, the function of nociceptive and cognitive-affective neurocircuits, and previous traumatic exposure. Considering these different pathways, it is hypothesized that the pivotal mechanism in disease origination and perpetuation differs between subjects, but it is not known how to differentiate between these subgroups of patients. Additionally, symptoms are often associated with lifestyle factors, such as diet, physical activity, and sleep. How these factors exactly relate to symptom patterns and potential underlying mechanisms, and how this association differs between subjects, is however unclear. In addition, apart from the known abdominal symptoms characteristic for IBS, these patients often also suffer from comorbid problems, such as psychological or physical non-GI symptoms as well as an altered stress response. Moreover, subgroups of patients can be truly diagnosed with comorbid disorders, such as anxiety disorders, depressive disorders, chronic fatigue syndrome, or fibromyalgia. This heterogeneity in comorbidities adds even more complexity to the already extensive differences in (GI) symptom presentation between subjects. Current knowledge on the etiology and pathophysiology of these overlapping syndromes is poor, and consensus on whether these syndromes do or do not share pathophysiological mechanisms is not yet reached."
+        - "The aim of the Discoverie project, which is a European multi-center collaboration in which 19 centers are participating, is to extensively characterize a large pan-European IBS cohort, considering clinical and biological outcomes, based on GI symptomatology as well as comorbid psychological/physical problems. This will help to get better insight in underlying pathophysiology and stratify patients to different (pathophysiological) IBS entities, and herewith leads the way to personalized care in the field of IBS. We at LaBGAS are primarily interested in uncovering the mechanisms of central nervous system function underlying mental and non-mental comorbidities of IBS."
 
   - name: "From Pavlov to visceroception"
     line: symptoms
@@ -58,6 +102,17 @@ projects:
       The role of interoceptive fear conditioning in the development of fear
       of gastrointestinal symptoms, and its impact on perceptual habituation
       and discrimination of visceral sensations.
+    detail:
+      duration: "2021-2025"
+      funding: "Research Foundation - Flanders (FWO-Vlaanderen) research project granted to Ilse van Diest (Health Psychology), Lukas Van Oudenhove (LaBGAS) and Jonas Zaman (Health Psychology)"
+      investigators: "Ilse Van Diest (Health Psychology), Lukas Van Oudenhove (LaBGAS), Jonas Zaman (Health Psychology)"
+      team: "Lauren Pattyn (Health Psychology/LaBGAS), Livia Guadagnoli (LaBGAS)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/pavlov-visceroception"
+      description:
+        - "As a cardinal symptom of most functional gastrointestinal disorders, visceral pain and discomfort are very common and disabling. Unfortunately, such symptoms remain poorly understood and are hard to treat. There is a general consensus that fear towards gastrointestinal sensations may play an important role, but the mechanisms underlying such fear as well as its impact on visceral symptom perception are unclear. The project aims to elucidate these mechanisms, building on our previous work demonstrating that fear of gastrointestinal sensations can be experimentally established through Pavlovian learning processes and that such fear learning changes the way persons perceive gastrointestinal stimuli. In healthy volunteers, we will investigate the effects of fear learning to an intitially non-painful gastrointestinal stimulus on different perceptual outcomes that are relevant for chronic visceral pain, including discrimination (the ability to discriminate slightly different stimuli) and habituation (decreased intensity perception upon repeated administration of an identical stimulus). These effects will be studied both at the self-report and the neural level (using electroencephalography). This project has the potential to dramatically increase our understanding of the relationship between learned fear of gastrointestinal symptoms and the occurrence of those symptoms. Such knowledge will foster the treatment of thus far \"unexplained\" gastro-intestinal discomfort and pain."
+      publications:
+        - "Zaman, J., Weltens, N., Ly, H. G., Struyf, D., Vlaeyen, J. W. S., Van den Bergh, O., Wiech, K., Van Oudenhove, L., & Van Diest, I. (2016). Influence of Interoceptive Fear Learning on Visceral Perception. Psychosomatic Medicine, 78(2), 248–258. https://doi.org/10.1097/PSY.0000000000000257"
+        - "Ceunen, E., Zaman, J., Weltens, N., Sarafanova, E., Arijs, V., Vlaeyen, J. W. S., Van Oudenhove, L., & Van Diest, I. (2016). Learned Fear of Gastrointestinal Sensations in Healthy Adults. Clinical Gastroenterology and Hepatology : The Official Clinical Practice Journal of the American Gastroenterological Association, 14(11), 1552-1558.e2. https://doi.org/10.1016/j.cgh.2016.04.035"
 
   - name: "INBODY"
     line: symptoms
@@ -66,6 +121,14 @@ projects:
       Whether interoception is a general ability with shared neural
       characteristics across the cardiovascular, respiratory and
       gastrointestinal systems, or a set of domain-specific capacities.
+    detail:
+      duration: "2021-2024"
+      funding: "Research Foundation - Flanders (FWO-Vlaanderen) and the Luxembourg National Research Fund (FNR)"
+      investigators: "Nathalie Weltens (LaBGAS), Andreas von Leupoldt (Health Psychology), André Schulz (University of Luxembourg)"
+      team: "Livia Guadagnoli (LaBGAS), Maaike Van Den Houte (LaBGAS)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/inbody"
+      description:
+        - "Functional somatic syndromes (FSS) are characterized by chronic, disabling symptoms that do not correspond to observable organic dysfunction. FSS are present across different organ domains (e.g. respiratory, gastrointestinal) and include diagnoses such as functional hyperventilation syndrome, irritable bowel syndrome, and functional heartburn. Treatment options for FSS are limited, which is largely due to insufficient knowledge about the mechanisms underlying these symptoms. Disturbed interoception, the ability to process and perceive sensory signals from within the body, is believed to be crucially involved. The INBODY project seeks to examine several important aspects of interoception in healthy individuals and patients with FSS. The project will examine interoception systematically at all stages of interoceptive signal processing (e.g., early neural processing, perception, and interpretation) across different organ systems in healthy individuals and patients with FSS. The primary aim is to investigate whether interoception is a general ability that shares neural processing characteristics across multiple organ domains and that predicts affective responses. We will also test whether altered interoceptive processing of bodily signals from different organs can explain the heterogeneity of somatic symptoms, especially in FSS, and how this can be modified by new treatment approaches. The INBODY project contains interrelated observational and experimental work packages that combine state-of-the-art methods including psychophysiological, neural and behavioural measures to improve the understanding of interoception within and across multiple organ domains and to establish interoception-based intervention strategies to reduce symptom burden in FSS patients."
 
   - name: "Biopsychosocial mechanisms of chronic fatigue syndrome"
     line: symptoms
@@ -76,6 +139,14 @@ projects:
       Identifying (psycho)physiologically based subgroups in myalgic
       encephalomyelitis/chronic fatigue syndrome and testing their relevance
       for rehabilitation.
+    detail:
+      duration: "2021-2024"
+      funding: "Research Foundation - Flanders (FWO-Vlaanderen)"
+      investigators: "Lukas Van Oudenhove (LaBGAS) and Katleen Bogaerts (REVAL, UHasselt)"
+      team: "Maaike Van Den Houte (LaBGAS and REVAL, UHasselt), Omer Van den Bergh (Health Psychology), Stephan Claes (UPCKULeuven, Mind-Body Research), Elfi Vergaelen (UPCKULeuven)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/CFS"
+      description:
+        - "About 20,000 people in Belgium suffer from Chronic Fatigue Syndrome (CFS), a disorder characterized by persistent fatigue insufficiently explained by known medical or psychiatric conditions. Dysfunction of several (psycho)physiological systems, such as the stress response system (including the hypothalamo-pituitary-adrenal axis and the autonomic nervous system), the immune system (systemic inflammation), and the central nervous system (including neuroinflammation and changes in functional connectivity in the brain) has been shown in CFS. Health psychology research, on the other hand, has demonstrated distortions in symptom perception in CFS. However, both research lines have not sufficiently been integrated, which is needed to overcome dualistic wars that have hampered progress in understanding and treating CFS. Specifically, it is poorly understood how the abovementioned dysfunctions relate to the experience of physical symptoms by CFS patients, particularly the perception of physical and mental fatigue. The aim of this project is therefore to investigate the complex relationships between fatigue perception and different psychophysiological dysfunctions in CFS patients, to identify subgroups based on these (psycho)physiological dysfunctions and relate these to rehabilitation success. This is urgently needed to develop a refined integrative pathophysiological model of this disabling though poorly understood disorder, for which treatment options are currently limited."
 
   - name: "SY-NAPS"
     line: symptoms
@@ -85,6 +156,14 @@ projects:
       Whether neuroinflammation mediates the bidirectional sleep-pain
       relationship, and the role of microglia in insomnia and chronic low back
       pain.
+    detail:
+      duration: "2023-2027"
+      funding: "Research Foundation - Flanders (FWO-Vlaanderen) research project granted to Iris Coppieters"
+      investigators: "Lukas Van Oudenhove, Iris Coppieters, Nathalie Weltens, Liesbet De Baets, Maarten Van Den Bossche"
+      team: "Elin Johansson, Casper Vananderoye"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/unraveling-the-neurobiological-mechanisms-underlying-the-bidirectional-sleep-pain-relationship-in-people-with-non-specific-chronic-low-back-pain"
+      description:
+        - "Chronic low back pain (CLBP) with and without insomnia is a highly prevalent and debilitating disorder characterized by huge socioeconomic burden. Sleep disturbances contribute significantly to CLBP severity and have a bidirectional relationship with chronic pain. This project will fill a critical knowledge gap by unraveling the underlying neurobiological brain mechanisms of this sleep-pain link in CLBP patients compared to pain-free controls with and without insomnia. We hypothesize that altered glial and neural brain mechanisms are linked to increased pain severity and sensitivity in response to acute and chronic sleep disruption. The effect of experimentally-induced acute insomnia will be studied with a randomized controlled crossover study in CLBP patients and pain-free controls. The impact of chronic sleep disturbances will be assessed via a cross-sectional case-control study in CLBP patients and pain-free controls with and without chronic insomnia. We will address our hypothesis by uniquely and ambitiously combining cutting-edge methods in neuroscience (PET-MRI to assess glial activation and neural responses to painful stimuli), pain (quantitative sensory testing to measure pain sensitivity and endogenous pain modulation), and sleep medicine research (ecologically valid sleep disturbance protocol and sleep assessments). Such research is urgently needed to develop effective and novel treatments for CLBP and insomnia that target the involved neurobiological mechanisms."
 
   - name: "Gut-immune-brain axis in IBD fatigue"
     line: symptoms
@@ -93,6 +172,14 @@ projects:
     summary: >-
       Whether the gut-immunity-brain axis holds the key to understanding
       persistent fatigue in inflammatory bowel disease.
+    detail:
+      duration: "2024-2028"
+      funding: "Category 1 internal KU Leuven funding, Research Foundation - Flanders (FWO-Vlaanderen)"
+      investigators: "Bram Verstockt (IBD group), Maaike Van Den Houte (LaBGAS), Elfi Vergaelen (Mind-body Research), Lukas Van Oudenhove (LaBGAS)"
+      team: "Sybren Rinckhout (LaBGAS and IBD Group) and Tuur Abts (LaBGAS and IBD Group)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/copy_of_the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-scfas-on-regulating-stress-responses-eating-behavior-and-nutritional-state-in-anorexia-nervosa"
+      description:
+        - "Inflammatory bowel disease (IBD), comprising Crohn’s disease (CD) and ulcerative colitis (UC), is an inflammatory disorder of the gut, causing diarrhea, abdominal pain and blood loss. Fatigue is a common, debilitating comorbidity of IBD, severely impacting the QoL of IBD patients. Current anti-inflammatory treatments, used to alleviate the gastrointestinal symptoms, are inadequate in relieving fatigue symptoms, as 50% of IBD patients in remission still suffer from fatigue, indicating an urgent need to identify fatigue-related treatment targets. Although several possible causes have been identified, such as depression and sleep disturbance, the high prevalence of IBD-related fatigue is still unexplained, especially in remission. Emerging research has shown that fatigue, often present during acute inflammation as part of the sickness response, is a result of circulating pro-inflammatory proteins triggering neuroinflammation. Thus, we hypothesize that residual neuroinflammation, as a result of the mucosal-systemic-neuroinflammation cascade during active disease, is responsible for the persisting fatigue during remission. The aim of our study is to characterize the gut-immune-brain axis in IBD patients in a longitudinal study, where patients will be assessed during active disease and in remission. Inflammation will be assessed in the gut, systemic and brain, and correlated to fatigue, microbial composition, fecal short-chain fatty acid (SCFA) concentration and functioning of the hypothalamic-pituitary-adrenal (HPA) axis and autonomic nervous system (ANS). This will allow us to identify the inflammatory pathways that are involved in IBD-related fatigue, which could lead to new treatment targets."
 
   - name: "Erythritol: satiation and reward without the calories?"
     line: appetite
@@ -103,6 +190,14 @@ projects:
       Whether the natural non-caloric sweetener erythritol can replace sugar
       while preserving the satiating and rewarding properties of sweet taste,
       studied from gut hormone release through to brain reward responses.
+    detail:
+      duration: "2020-2023"
+      funding: "Research Foundation - Flanders (FWO-Vlaanderen) and the Swiss National Science Foundation (SNSF)"
+      investigators: "Lukas Van Oudenhove (LaBGAS), Anne Christin Meyer-Gerspach (St Clara Research & University of Basel, Switzerland)"
+      team: "Aleksandra Budzinska (LaBGAS), Nathalie Weltens (LaBGAS), Fabienne Teysseire (St Clara Research/University of Basel)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/erythritol-project"
+      description:
+        - "Food intake is regulated by an intricate communication system between the gut and the brain. Hunger/satiety hormones released from the gut convey information on nutritional status of the body to homeostatic brain circuits sensing energy balance, but also influence reward system responses to food, hence its subjective pleasantness. Sweet is an innately attractive taste to humans because of the caloric value of carbohydrates, but sugar consumption is an important contributor to the obesity epidemic. Therefore, replacing sugar with artificial non-caloric sweeteners (NCS) has been proposed to reduce caloric intake and body weight. However, NCS may lack the satiating and rewarding properties of sugar because of their inability to influence the release of hunger/satiety hormones (in addition to lack of calories). The non-caloric natural sweetener erythritol may be an ideal alternative substitute for sugar, since we recently showed that it increases satiety hormone levels. Therefore, our aim is to study the effects of replacing sugar with erythritol (versus the artificial sweetener sucralose) on food intake regulation in healthy humans, and identify the (hormonal) gut-brain communication and brain mechanisms underlying these effects. This will generate much needed mechanistic-physiological knowledge, a necessary first step towards developing novel strategies for weight loss management and obesity prevention, and the role of NCS in general, and erythritol in particular, herein"
 
   - name: "Food reward after bariatric surgery"
     line: appetite
@@ -112,6 +207,13 @@ projects:
       Gut-brain mechanisms mediating the effects of bariatric surgery on food
       reward, investigated with PET-MR imaging of dopamine and endocannabinoid
       signalling.
+    detail:
+      duration: "2021-2025"
+      investigators: "Roman Vangoitsenhoven (Clinical and Experimental Endocrinology), Nathalie Weltens (LaBGAS), Lukas Van Oudenhove (LaBGAS), Bart Van der Schueren (Clinical and Experimental Endocrinology)"
+      team: "Nele Mattelaer (Clinical and Experimental Endocrinology, LaBGAS)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1"
+      description:
+        - "Bariatric surgery (e.g., gastric bypass or sleeve gastrectomy) is currently the most effective method to induce significant and durable weight loss, which is mediated by caloric restriction, alterations in gut hormones, and eating behaviour (besides the decreased volume of the stomach). However, the neurochemical underpinnings of these effects remain poorly understood. The endocannabinoid (EC) and dopamine (DA) systems are key players in the regulation of food intake and energy balance, but how obesity and bariatric surgery affect EC and DA signaling both centrally and peripherally, and how this is related to altered metabolic hormone levels along the gut-brain axis remains unclear. The overall aim of this project is to gain fundamental insight in the interplay between the central and peripheral ECS and DA system and metabolic hormones before and after bariatric surgery, and their role in altered eating behaviour. To this end, we are conducting a longitudinal study in patients undergoing bariatric surgery in which we combine cutting-edge multimodal neuroimaging methods (PET, fMRI) with a set of innovative biochemical measurements (circulating and urinary EC and DA levels, metabolic hormones), and eating behaviour assessment. The results of this project may help pave the way for the development of novel, less invasive treatment options for obesity by identifying the neurochemical basis of the aberrant eating behaviour they should target."
 
   - name: "GLP-1 pharmacotherapy optimisation"
     line: appetite
@@ -121,6 +223,14 @@ projects:
       A neuropsychobiological approach to improving the selection of patients
       for GLP-1-based pharmacotherapy for weight management across the
       binge-eating spectrum.
+    detail:
+      duration: "2025-2029"
+      funding: "Categorie 2 Maatschappelijk (C2M)-project"
+      investigators: "Roman Vangoitsenhoven (Clinical and Experimental Endocrinology), Nathalie Weltens (LaBGAS), Elske Vrieze (Mind Body Research), Lukas Van Oudenhove (LaBGAS), Bart Van der Schueren (Clinical and Experimental Endocrinology)"
+      team: "Alexine Mennes (Clinical and Experimental Endocrinology and LaBGAS) and Annelies Falter (Clinical and Experimental Endocrinology and Mind Body Research)"
+      source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"
+      description:
+        - "GLP1-agonists including semaglutide have emerged as game changing drugs to support weight loss in obesity and are receiving increased attention for their potential role in treating maladaptive food reward behaviors, particularly binge eating (BE). However, how GLP1-agonists impact mechanisms regulating eating behavior and body weight loss is not well understood. Moreover, there is considerable variability in individual sensitivity to these drugs. Combined with the increasing demand for GLP1-based medications, this raises an urgent need for a more personalized treatment approach. Our aim is to improve patient selection for GLP1-based pharmacotherapy by investigating the impact of semaglutide on three distinct, but highly interacting motivational psychobiological processes crucial for changing individual eating behaviors and achieving weight loss in the treatment of obesity across the BE spectrum: i) gut-brain hunger/satiety signaling, ii) reward processing and its dopaminergic neural correlates and iii) emotional state."
 
   - name: "Neuropsychobiology of human obesity"
     line: appetite
