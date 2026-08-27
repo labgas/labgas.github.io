@@ -1,0 +1,59 @@
+/* ==========================================================================
+   LaBGAS skin
+   Deep KU Leuven-adjacent blue with a warm clay accent, tuned for long-form
+   scientific reading rather than marketing punch.
+   ========================================================================== */
+
+/* Colours ================================================================= */
+$background-color: #fdfdfc !default;
+$text-color: #22303c !default;
+$muted-text-color: #5c6b7a !default;
+$primary-color: #10556e !default;
+$border-color: #e2e5e9 !default;
+$form-background-color: #f3f5f7 !default;
+$footer-background-color: #10556e !default;
+$link-color: #0f6b8c !default;
+$link-color-hover: #0b4f68 !default;
+$link-color-visited: #4a5f8a !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $primary-color !default;
+$navicon-link-color-hover: mix(#fff, $primary-color, 80%) !default;
+
+$accent-color: #b4622f !default;
+
+/* Syntax highlighting ===================================================== */
+$base00: #f6f8fa;
+$base01: #eef1f4;
+$base02: #dfe4e9;
+$base03: #8a96a3;
+$base04: #5c6b7a;
+$base05: #22303c;
+$base06: #10556e;
+$base07: #0f6b8c;
+$base08: #b4622f;
+$base09: #a8451f;
+$base0a: #8a6d1f;
+$base0b: #2f6b4f;
+$base0c: #10556e;
+$base0d: #0f6b8c;
+$base0e: #6b4a8a;
+$base0f: #7a4a2f;
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa,
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+.page__footer {
+  color: mix(#fff, $footer-background-color, 82%) !important;
+
+  a {
+    color: mix(#fff, $footer-background-color, 92%);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+# Active and recent research projects.
+#
+# Public-facing names and summaries follow the lab's own project pages;
+# funder and period are taken from the FRIS research portal record
+# (researchportal.be) where the mapping is unambiguous. Projects without a
+# confidently matched FRIS record carry no funder field rather than a guess.
+#
+# `line` maps a project onto one of the three research lines used on the
+# Research page: symptoms | appetite | microbiota
+
+projects:
+  - name: "MoodBugs"
+    line: microbiota
+    tagline: "Do our gut microbes influence our emotions?"
+    funder: "European Research Council — Consolidator Grant (H2020)"
+    period: "2021 – present"
+    summary: >-
+      Bacterial metabolites and inflammation as mediators of human
+      microbiota-affect relationships. MoodBugs tests how gut microbial
+      signals — short-chain fatty acids in particular — shape the response to
+      psychosocial stress and fear learning in humans.
+    featured: true
+
+  - name: "GUTSIE"
+    line: microbiota
+    tagline: "Short-chain fatty acids and executive function under stress"
+    funder: "International public funder"
+    period: "2023 – 2026"
+    summary: >-
+      Whether the gut bacterial metabolites known as short-chain fatty acids
+      protect core executive functions against the effects of acute stress.
+
+  - name: "Short-chain fatty acids in anorexia nervosa"
+    line: microbiota
+    tagline: "Microbial metabolites, stress responses and eating behaviour"
+    period: "2021 – 2025"
+    summary: >-
+      The psychobiological impact of undernutrition on cognition and emotion in
+      anorexia nervosa, and the role of gut bacterial metabolites in
+      regulating stress responses, eating behaviour and nutritional state.
+
+  - name: "DISCOvERIE"
+    line: symptoms
+    tagline: "Comorbidities of IBS across Europe"
+    funder: "European Commission — Horizon 2020"
+    period: "2020 – 2024"
+    summary: >-
+      Development, diagnosis and prevention of gender-related somatic and
+      mental comorbidities in irritable bowel syndrome, and the central
+      nervous system mechanisms that underlie them.
+
+  - name: "From Pavlov to visceroception"
+    line: symptoms
+    tagline: "Fear learning and the perception of visceral sensations"
+    funder: "FWO — Research Project"
+    period: "2018 – 2021"
+    summary: >-
+      The role of interoceptive fear conditioning in the development of fear
+      of gastrointestinal symptoms, and its impact on perceptual habituation
+      and discrimination of visceral sensations.
+
+  - name: "INBODY"
+    line: symptoms
+    tagline: "Interoception across organ domains"
+    summary: >-
+      Whether interoception is a general ability with shared neural
+      characteristics across the cardiovascular, respiratory and
+      gastrointestinal systems, or a set of domain-specific capacities.
+
+  - name: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+    line: symptoms
+    tagline: "Psychophysiology-based subgroups in ME/CFS"
+    funder: "FWO — Research Project"
+    period: "2021 – 2024"
+    summary: >-
+      Identifying (psycho)physiologically based subgroups in myalgic
+      encephalomyelitis/chronic fatigue syndrome and testing their relevance
+      for rehabilitation.
+
+  - name: "SY-NAPS"
+    line: symptoms
+    tagline: "The sleep-pain relationship"
+    period: "2023 – present"
+    summary: >-
+      Whether neuroinflammation mediates the bidirectional sleep-pain
+      relationship, and the role of microglia in insomnia and chronic low back
+      pain.
+
+  - name: "Gut-immune-brain axis in IBD fatigue"
+    line: symptoms
+    tagline: "Understanding fatigue in inflammatory bowel disease"
+    period: "2025 – present"
+    summary: >-
+      Whether the gut-immunity-brain axis holds the key to understanding
+      persistent fatigue in inflammatory bowel disease.
+
+  - name: "Erythritol: satiation and reward without the calories?"
+    line: appetite
+    tagline: "A natural sweetener as an alternative to sugar"
+    funder: "FWO — Research Project (with SNSF)"
+    period: "2020 – 2024"
+    summary: >-
+      Whether the natural non-caloric sweetener erythritol can replace sugar
+      while preserving the satiating and rewarding properties of sweet taste,
+      studied from gut hormone release through to brain reward responses.
+
+  - name: "Food reward after bariatric surgery"
+    line: appetite
+    tagline: "Dopamine and the endocannabinoid system in food reward"
+    period: "2021 – 2025"
+    summary: >-
+      Gut-brain mechanisms mediating the effects of bariatric surgery on food
+      reward, investigated with PET-MR imaging of dopamine and endocannabinoid
+      signalling.
+
+  - name: "GLP-1 pharmacotherapy optimisation"
+    line: appetite
+    tagline: "Patient selection across the binge-eating spectrum"
+    period: "2025 – present"
+    summary: >-
+      A neuropsychobiological approach to improving the selection of patients
+      for GLP-1-based pharmacotherapy for weight management across the
+      binge-eating spectrum.
+
+  - name: "Neuropsychobiology of human obesity"
+    line: appetite
+    funder: "FWO — Research Project"
+    period: "2026 – present"
+    summary: >-
+      Study of the neuropsychobiological mechanisms underlying human obesity.

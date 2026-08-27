@@ -1,0 +1,160 @@
+# ---------------------------------------------------------------------------
+# labgas.github.io — Laboratory for Brain-Gut Axis Studies, KU Leuven
+# Built on Minimal Mistakes, pulled in via remote_theme so GitHub Pages can
+# build the site server-side without a committed theme copy.
+# ---------------------------------------------------------------------------
+
+# --- Theme -----------------------------------------------------------------
+remote_theme            : "mmistakes/minimal-mistakes@4.27.1"
+minimal_mistakes_skin   : "labgas"   # custom skin in _sass/minimal-mistakes/skins/
+
+# --- Site identity ---------------------------------------------------------
+locale                  : "en-GB"
+title                   : "LaBGAS"
+title_separator         : "·"
+subtitle                : "Laboratory for Brain-Gut Axis Studies"
+name                    : "Laboratory for Brain-Gut Axis Studies"
+description             : >-
+  The Laboratory for Brain-Gut Axis Studies (LaBGAS) at KU Leuven studies how
+  signals from the gut shape symptom perception, appetite, and affect in
+  humans — using fMRI, PET, and psychophysiology. We also build and share the
+  open analysis tools behind that work.
+url                     : "https://labgas.github.io"
+baseurl                 : ""
+repository              : "labgas/labgas.github.io"
+teaser                  : /assets/images/teaser-default.svg
+logo                    : /assets/images/labgas-mark.svg
+masthead_title          : "LaBGAS"
+breadcrumbs             : true
+words_per_minute        : 200
+
+# --- Search ----------------------------------------------------------------
+search                  : true
+search_full_content     : true
+search_provider         : lunr
+lunr:
+  search_within_pages   : true
+
+# --- Social / outbound -----------------------------------------------------
+github_username         : labgas
+twitter:
+  username              : "labgas_kuleuven"
+og_image                : /assets/images/og-image.svg
+
+social:
+  type                  : Organization
+  name                  : Laboratory for Brain-Gut Axis Studies
+  links:
+    - "https://github.com/labgas"
+    - "https://x.com/labgas_kuleuven"
+
+# --- Author sidebar --------------------------------------------------------
+author:
+  name                  : "LaBGAS"
+  avatar                : /assets/images/labgas-mark.svg
+  bio                   : "Brain–gut axis research & open neuroimaging tools at KU Leuven."
+  location              : "Leuven, Belgium"
+  email                 : "labgas@kuleuven.be"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/labgas"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/labgas_kuleuven"
+    - label: "KU Leuven"
+      icon: "fas fa-fw fa-university"
+      url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/labgas"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/labgas_kuleuven"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:labgas@kuleuven.be"
+
+# --- Build -----------------------------------------------------------------
+markdown                : kramdown
+highlighter             : rouge
+permalink               : /:categories/:title/
+timezone                : Europe/Brussels
+future                  : false
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# `plugins` above is honoured by GitHub Pages; `whitelist` keeps local
+# --safe builds behaving the same way.
+whitelist:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+include:
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - node_modules
+  - README.md
+  - scripts
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# --- Collections -----------------------------------------------------------
+collections:
+  docs:
+    output: true
+    permalink: /docs/:name/
+
+# --- Defaults --------------------------------------------------------------
+defaults:
+  # Regular pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      sidebar:
+        nav: false
+  # Pipeline documentation
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: false
+      toc: true
+      toc_sticky: true
+      sidebar:
+        nav: "docs"
+  # News posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true

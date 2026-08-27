@@ -1,0 +1,304 @@
+/* ==========================================================================
+   LaBGAS — components layered on top of Minimal Mistakes
+   ========================================================================== */
+
+/* Reading measure ---------------------------------------------------------
+   The theme's default page width is wide for body text; ease it back a
+   little on large screens without disturbing the grid. */
+.page__content {
+  p,
+  li {
+    font-size: 0.95em;
+    line-height: 1.7;
+  }
+}
+
+/* Research lines ---------------------------------------------------------- */
+.line-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.line-card {
+  border: 1px solid $border-color;
+  border-top: 3px solid $primary-color;
+  border-radius: 4px;
+  padding: 1.1rem 1.2rem;
+  background: #fff;
+
+  h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.02em;
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.87em;
+    color: $muted-text-color;
+    line-height: 1.6;
+  }
+}
+
+/* Project entries --------------------------------------------------------- */
+.project {
+  border-left: 3px solid $border-color;
+  padding: 0.15rem 0 0.15rem 1rem;
+  margin-bottom: 1.6rem;
+
+  &.is-featured {
+    border-left-color: $accent-color;
+  }
+
+  h3 {
+    margin: 0 0 0.15rem;
+    font-size: 1.02em;
+  }
+
+  .project__tagline {
+    color: $accent-color;
+    font-size: 0.87em;
+    font-style: italic;
+    margin: 0 0 0.35rem;
+  }
+
+  .project__meta {
+    font-size: 0.78em;
+    color: $muted-text-color;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0.35rem 0 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+}
+
+/* Team -------------------------------------------------------------------- */
+.team-group {
+  margin-bottom: 2.2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 1rem;
+}
+
+.person {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+}
+
+.person__avatar {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: mix(#fff, $primary-color, 85%);
+  color: $primary-color;
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+.person__body {
+  min-width: 0;
+}
+
+.person__name {
+  font-weight: 600;
+  font-size: 0.92em;
+  line-height: 1.25;
+  display: block;
+}
+
+.person__title {
+  font-size: 0.78em;
+  color: $muted-text-color;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+.person__focus {
+  font-size: 0.79em;
+  color: $muted-text-color;
+  margin: 0.35rem 0 0;
+  line-height: 1.5;
+}
+
+.person__links {
+  margin-top: 0.3rem;
+  font-size: 0.75em;
+
+  a {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Publications ------------------------------------------------------------ */
+.pub {
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.pub__title {
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.2rem;
+}
+
+.pub__authors {
+  font-size: 0.82em;
+  color: $muted-text-color;
+  margin: 0 0 0.15rem;
+  line-height: 1.5;
+}
+
+.pub__venue {
+  font-size: 0.82em;
+  margin: 0;
+
+  em {
+    color: $text-color;
+  }
+}
+
+.pub__links {
+  font-size: 0.78em;
+  margin-top: 0.25rem;
+
+  a {
+    margin-right: 0.6rem;
+  }
+}
+
+.pub__self {
+  font-weight: 700;
+  color: $text-color;
+}
+
+/* Repository index -------------------------------------------------------- */
+.repo-table {
+  font-size: 0.85em;
+
+  td:first-child {
+    white-space: nowrap;
+  }
+
+  code {
+    font-size: 0.95em;
+  }
+}
+
+.lang-tag {
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: $form-background-color;
+  color: $muted-text-color;
+  white-space: nowrap;
+}
+
+/* CANlab attribution callout --------------------------------------------- */
+.canlab-note {
+  border: 1px solid mix($primary-color, $border-color, 25%);
+  border-left: 4px solid $primary-color;
+  background: mix(#fff, $primary-color, 96%);
+  border-radius: 3px;
+  padding: 0.85rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.87em;
+
+  p {
+    margin: 0 0 0.4rem;
+    font-size: 1em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+/* Pipeline step header ---------------------------------------------------- */
+.step-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  font-size: 0.8em;
+  color: $muted-text-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding: 0.5rem 0;
+  margin-bottom: 1.4rem;
+  // Script and guide filenames are long single tokens with no break
+  // opportunity; without this they push the page sideways on narrow screens.
+  min-width: 0;
+  overflow-wrap: anywhere;
+
+  span {
+    min-width: 0;
+  }
+
+  span strong {
+    color: $text-color;
+    font-weight: 600;
+  }
+}
+
+/* Long identifiers — file names, results fields — must not force the page
+   wider than the viewport. Block code keeps its own horizontal scroll. */
+.page__content p code,
+.page__content li code,
+.page__content td code {
+  overflow-wrap: anywhere;
+}
+
+/* Home page --------------------------------------------------------------- */
+.home-lede {
+  font-size: 1.12em;
+  line-height: 1.65;
+  color: $text-color;
+  max-width: 46rem;
+}
+
+.funders {
+  font-size: 0.8em;
+  color: $muted-text-color;
+  border-top: 1px solid $border-color;
+  padding-top: 0.9rem;
+  margin-top: 2.5rem;
+}
+
+/* Tables should never push the page sideways ------------------------------ */
+.page__content {
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}

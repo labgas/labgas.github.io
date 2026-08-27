@@ -1,0 +1,11 @@
+# Normalise line endings. The site is built on Linux by GitHub Pages, and
+# contributors work on Windows, macOS and the lab's Linux server.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

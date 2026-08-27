@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+     aria-label="LaBGAS — Laboratory for Brain-Gut Axis Studies, KU Leuven">
+  <title>LaBGAS — Laboratory for Brain-Gut Axis Studies</title>
+  <rect width="1200" height="630" fill="#10556e"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#b4622f"/>
+  <g transform="translate(96,180)">
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="112"
+          font-weight="700" fill="#ffffff" letter-spacing="-1">LaBGAS</text>
+    <text x="0" y="72" font-family="Helvetica, Arial, sans-serif" font-size="38" fill="#c9dbe4">
+      Laboratory for Brain-Gut Axis Studies
+    </text>
+    <line x1="0" y1="126" x2="220" y2="126" stroke="#b4622f" stroke-width="4"/>
+    <text x="0" y="188" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#9fbecb">
+      KU Leuven · TARGID
+    </text>
+    <text x="0" y="232" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#9fbecb">
+      Gut-brain research and open neuroimaging tools
+    </text>
+  </g>
+</svg>

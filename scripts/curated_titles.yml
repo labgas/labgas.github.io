@@ -1,0 +1,52 @@
+# Seed list for the curated Publications page.
+#
+# Titles were selected from the full FRIS record for Lukas Van Oudenhove
+# (researchportal.be, 305 items) as representative of each research line.
+# `scripts/enrich_publications.py` resolves each title against PubMed and
+# writes _data/publications.yml with authors, journal, year, PMID and DOI.
+#
+# To add a paper: append a title under the right line and re-run the script.
+# lines: symptoms | appetite | microbiota | methods
+
+symptoms:
+  - "The psychobiological model of disorders of gut-brain interaction: introduction of a novel, integrated, and testable model"
+  - "Biopsychosocial Aspects of Functional Gastrointestinal Disorders: How Central and Environmental Processes Contribute to the Development and Expression of Functional Gastrointestinal Disorders"
+  - "Determinants of symptoms in functional dyspepsia: gastric sensorimotor function, psychosocial factors or somatisation?"
+  - "A multidimensional model of psychobiological interactions in functional dyspepsia: a structural equation modeling approach"
+  - "Visceral hypersensitivity is associated with GI symptom severity in functional GI disorders: consistent findings from five different patient cohorts"
+  - "Psychological Processes, Not Physiological Parameters, Are Most Important Contributors to Symptom Severity in Patients With Refractory Heartburn/Regurgitation Symptoms"
+  - "Role of brain imaging in disorders of brain-gut interaction: a Rome Working Team Report"
+  - "Psychological stress and corticotropin-releasing hormone increase intestinal permeability in humans by a mast cell-dependent mechanism"
+  - "Rome Foundation Working Team Report on overlap in disorders of gut-brain interaction"
+  - "Learned fear of gastrointestinal sensations in healthy adults"
+  - "Gut-brain axis dysfunction underlies FODMAP-induced symptom generation in irritable bowel syndrome"
+  - "Multimodal approach to identify neuropsychophysiological subgroups in myalgic encephalomyelitis/chronic fatigue syndrome and their relevance for rehabilitation"
+
+appetite:
+  - "Fatty acid-induced gut-brain signaling attenuates neural and behavioral effects of sad emotion in humans"
+  - "Does the gut-brain axis control anticipatory food reward? Novel insights from bariatric surgery"
+  - "Where is the comfort in comfort foods? Mechanisms linking fat signaling, reward, and emotion"
+  - "Motilin-induced gastric contractions signal hunger in man"
+  - "Neural responses to oral administration of erythritol vs. sucrose and sucralose explain differences in subjective liking ratings"
+  - "Caloric labels do not influence taste pleasantness and neural responses to erythritol and sucrose"
+  - "The circulating and central endocannabinoid system in obesity and weight loss"
+  - "Erythritol and xylitol differentially impact brain networks involved in appetite regulation in healthy volunteers"
+
+microbiota:
+  - "The role of short-chain fatty acids in microbiota-gut-brain communication"
+  - "The neuroactive potential of the human gut microbiota in quality of life and depression"
+  - "Colonic butyrate administration modulates fear memory but not the acute stress response in men: A randomized, triple-blind, placebo-controlled trial"
+  - "The HDAC inhibitor sodium butyrate moderately enhances long-term fear extinction memory retrieval in humans"
+  - "Variability in threat processing is related to endogenous butyrate levels in healthy men"
+  - "Circulating short chain fatty acids are associated with depression severity and predict remission from major depressive disorder"
+  - "Lactobacillus rhamnosus CNCM I-3690 decreases subjective academic stress in healthy adults: a randomized placebo-controlled trial"
+  - "Probiotic-mediated modulation of gut microbiome in students exposed to academic stress: a randomized controlled trial"
+
+methods:
+  - "Common and distinct neural representations of aversive somatic and visceral stimulation in healthy individuals"
+  - "Generalizable representations of pain, cognitive control, and negative emotion in medial frontal cortex"
+  - "Convergent and selective representations of pain, appetitive processes, aversive processes, and cognitive control in the insula"
+  - "The neurobiological basis of affect is consistent with psychological construction theory and shares a common neural basis across emotional categories"
+  - "Cross-paradigm integration shows a common neural basis for aversive and appetitive conditioning"
+  - "Omissions of threat trigger subjective relief and prediction error-like signaling in the human reward and salience systems"
+  - "The Brain Activation-Based Sexual Image Classifier (BASIC): A Sensitive and Specific fMRI Activity Pattern for Sexual Image Processing"

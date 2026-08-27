@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="LaBGAS">
+  <title>LaBGAS</title>
+  <rect width="400" height="250" fill="#10556e"/>
+  <rect x="0" y="0" width="400" height="4" fill="#b4622f"/>
+  <text x="28" y="132" font-family="Georgia, 'Times New Roman', serif" font-size="44"
+        font-weight="700" fill="#ffffff">LaBGAS</text>
+  <text x="30" y="164" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#9fbecb">
+    Brain-Gut Axis Studies · KU Leuven
+  </text>
+</svg>

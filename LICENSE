@@ -1,0 +1,20 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Laboratory for Brain-Gut Axis Studies (LaBGAS), KU Leuven
+
+The textual content of this website is licensed under the Creative Commons
+Attribution 4.0 International License. You are free to share and adapt the
+material for any purpose, including commercially, provided you give appropriate
+credit and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/
+
+EXCEPTIONS
+----------
+- Software referenced by this site is licensed separately in its own repository.
+  LaBGAScore is distributed under the GNU General Public License v3.0; see
+  https://github.com/labgas/LaBGAScore for its terms.
+- The Minimal Mistakes Jekyll theme is (c) Michael Rose, MIT licensed, and is
+  pulled in at build time via remote_theme rather than vendored here.
+- Photographs of lab members remain the property of the individuals depicted and
+  are not covered by the CC BY grant above.

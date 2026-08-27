@@ -1,0 +1,53 @@
+# Masthead ------------------------------------------------------------------
+main:
+  - title: "Research"
+    url: /research/
+  - title: "Team"
+    url: /team/
+  - title: "Publications"
+    url: /publications/
+  - title: "Tools"
+    url: /tools/
+  - title: "Docs"
+    url: /docs/
+  - title: "News"
+    url: /news/
+  - title: "Join us"
+    url: /join/
+  - title: "Search"
+    url: /search/
+
+# Sidebar for the _docs collection ------------------------------------------
+docs:
+  - title: "Getting started"
+    children:
+      - title: "Overview"
+        url: /docs/
+      - title: "Setup & dependencies"
+        url: /docs/setup/
+  - title: "Core fMRI pipeline"
+    children:
+      - title: "1 · BIDS conversion & prep"
+        url: /docs/prep-bids/
+      - title: "2 · First-level models"
+        url: /docs/firstlevel/
+      - title: "3 · Second-level analysis"
+        url: /docs/secondlevel/
+  - title: "Multivariate pipelines"
+    children:
+      - title: "PLS-DA (classification)"
+        url: /docs/mvpa-plsda/
+      - title: "PLSR (regression)"
+        url: /docs/mvpa-plsr/
+      - title: "Elastic Net"
+        url: /docs/mvpa-enet/
+  - title: "Other modalities"
+    children:
+      - title: "PET"
+        url: /docs/pet/
+      - title: "MR spectroscopy"
+        url: /docs/mrs/
+      - title: "Connectivity & RSA"
+        url: /docs/connectivity-rsa/
+      - title: "Atlases & masks"
+        url: /docs/atlases-masks/

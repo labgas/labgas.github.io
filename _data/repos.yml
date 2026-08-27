@@ -1,0 +1,164 @@
+# Index of the github.com/labgas organisation.
+#
+# `category` drives which table a repo appears in on the Tools page:
+#   methods  — reusable pipelines and toolboxes
+#   study    — code (and sometimes data) accompanying a specific project
+# `updated` is the last-push date observed when this index was compiled;
+# it is indicative only — GitHub is always the source of truth.
+
+compiled: "2026-08-27"
+
+repos:
+  # --- Methods ----------------------------------------------------------
+  - name: LaBGAScore
+    category: methods
+    lang: MATLAB
+    updated: "2026-08-27"
+    desc: >-
+      Core scripts and templates for the LaBGAS standard neuroimaging
+      workflow: BIDS conversion, first-level modelling, second-level and
+      MVPA pipelines, PET, MRS, atlases and auxiliary toolkits.
+
+  - name: CANlab_help_examples
+    category: methods
+    lang: HTML
+    updated: "2026-08-26"
+    desc: >-
+      LaBGAS fork of the CANlab help repository — how-to examples and the
+      batch pipeline used for second-level neuroimaging analysis and
+      date-stamped HTML reporting.
+
+  # --- Study code -------------------------------------------------------
+  - name: proj_threat_esophagus
+    category: study
+    lang: SAS
+    updated: "2026-03-16"
+    desc: "FWO post-doc project on the impact of threat on esophageal symptom perception."
+
+  - name: proj_bodymaps_IBS
+    category: study
+    lang: MATLAB
+    updated: "2026-01-30"
+    desc: "Bodily maps of emotions in irritable bowel syndrome."
+
+  - name: proj_pfi-x
+    category: study
+    lang: SAS
+    updated: "2025-01-08"
+    desc: "Data and code for the polyfoodintake-xylitol project."
+
+  - name: van_den_houte_fatigue_senior_postdoc_FWO
+    category: study
+    updated: "2024-11-29"
+    desc: "FWO senior post-doctoral project on fatigue perception."
+
+  - name: proj_erythritol_2
+    category: study
+    lang: SAS
+    updated: "2024-08-08"
+    desc: "FWO-SNSF erythritol project, work package 2 — data and code."
+
+  - name: proj_erythritol_4a_code
+    category: study
+    lang: MATLAB
+    updated: "2024-05-14"
+    desc: "FWO-SNSF erythritol project, work package 4a — code subdataset."
+
+  - name: proj_bitter-reward-code
+    category: study
+    lang: MATLAB
+    updated: "2024-02-14"
+    desc: "Bitter tastant administration and reward sensitivity."
+
+  - name: proj_ncgs
+    category: study
+    lang: SAS
+    updated: "2024-01-04"
+    desc: "Non-coeliac gluten sensitivity gluten-challenge study analyses."
+
+  - name: proj_erythritol_4b-code
+    category: study
+    lang: MATLAB
+    updated: "2023-08-30"
+    desc: "FWO-SNSF erythritol project, work package 4b — code subdataset."
+
+  - name: proj_erythritol_5
+    category: study
+    lang: SAS
+    updated: "2023-07-13"
+    desc: "FWO-SNSF erythritol project, work package 5."
+
+  - name: proj_reflux_database_1
+    category: study
+    lang: SAS
+    updated: "2023-07-13"
+    desc: >-
+      Psychological and physiological contributors to symptom severity in
+      refractory reflux.
+
+  - name: proj_erythritol_1
+    category: study
+    lang: SAS
+    updated: "2023-07-13"
+    desc: "FWO-SNSF erythritol project, work package 1 — data and code."
+
+  - name: proj_reflux_database_2
+    category: study
+    lang: SAS
+    updated: "2023-06-21"
+    desc: >-
+      Psychological factors across the organic-functional GERD spectrum.
+
+  - name: proj_CFS_treatment
+    category: study
+    lang: SAS
+    updated: "2023-06-08"
+    desc: "Chronic fatigue syndrome treatment-response analyses."
+
+  - name: proj_Rome_IV_network_analysis
+    category: study
+    lang: R
+    updated: "2023-01-31"
+    desc: "Network analysis of the Rome IV global epidemiology survey."
+
+  - name: dalile_junior_postdoc_FWO
+    category: study
+    updated: "2022-11-30"
+    desc: "FWO junior post-doctoral project on short-chain fatty acids."
+
+  - name: proj-emosymp
+    category: study
+    lang: MATLAB
+    updated: "2022-03-23"
+    desc: >-
+      fMRI study of emotion-induced somatic symptoms in healthy controls and
+      functional somatic syndrome patients.
+
+  - name: proj-fodmap-fmri
+    category: study
+    lang: SAS
+    updated: "2022-03-04"
+    desc: "FODMAP-induced gut-brain axis dysfunction in IBS."
+
+  - name: proj-IBS-somatization
+    category: study
+    lang: MATLAB
+    updated: "2022-03-04"
+    desc: "Graph-theoretical measures on brain connectivity data in IBS."
+
+  - name: proj_discoverie_code
+    category: study
+    updated: "2021-11-29"
+    desc: "DISCOvERIE H2020 project, work package 4 — code subdataset."
+
+  - name: proj-whiplash
+    category: study
+    lang: MATLAB
+    updated: "2021-10-01"
+    desc: "fMRI study of neck pain-inducing movements."
+
+  - name: proj-sert-fmri
+    category: study
+    lang: MATLAB
+    updated: "2021-02-04"
+    desc: "Emotional modulation of esophageal pain."
