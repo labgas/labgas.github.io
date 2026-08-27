@@ -33,7 +33,7 @@ OUT = os.path.join(ROOT, "_data", "publications.yml")
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 # NCBI asks for identification and <=3 requests/second without an API key.
 TOOL = "labgas-github-io"
-EMAIL = "labgas@kuleuven.be"
+EMAIL = "lukas.vanoudenhove@kuleuven.be"
 DELAY = 0.4
 
 LINE_ORDER = ["symptoms", "appetite", "microbiota", "methods"]

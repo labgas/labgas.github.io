@@ -161,6 +161,23 @@ items:
       - "Tack J"
       - "Whitehead WE"
   - line: symptoms
+    title: "Neuromodulators for Functional Gastrointestinal Disorders (Disorders of Gut-Brain Interaction): A Rome Foundation Working Team Report"
+    journal: "Gastroenterology"
+    year: "2018"
+    volume: "154"
+    issue: "4"
+    pages: "1140-1171.e1"
+    pmid: "29274869"
+    doi: "10.1053/j.gastro.2017.11.279"
+    verified: true
+    authors:
+      - "Drossman DA"
+      - "Tack J"
+      - "Ford AC"
+      - "Szigethy E"
+      - "T\u00f6rnblom H"
+      - "Van Oudenhove L"
+  - line: symptoms
     title: "Biopsychosocial Aspects of Functional Gastrointestinal Disorders"
     journal: "Gastroenterology"
     year: "2016"
@@ -225,6 +242,28 @@ items:
       - "Verbeke K"
       - "Tack J"
   - line: symptoms
+    title: "Impaired duodenal mucosal integrity and low-grade inflammation in functional dyspepsia"
+    journal: "Gut"
+    year: "2014"
+    volume: "63"
+    issue: "2"
+    pages: "262-71"
+    pmid: "23474421"
+    doi: "10.1136/gutjnl-2012-303857"
+    verified: true
+    authors:
+      - "Vanheel H"
+      - "Vicario M"
+      - "Vanuytsel T"
+      - "Van Oudenhove L"
+      - "Martinez C"
+      - "Keita \u00c5V"
+      - "Pardon N"
+      - "Santos J"
+      - "S\u00f6derholm JD"
+      - "Tack J"
+      - "Farr\u00e9 R"
+  - line: symptoms
     title: "A multidimensional model of psychobiological interactions in functional dyspepsia: a structural equation modelling approach"
     journal: "Gut"
     year: "2013"
@@ -242,6 +281,19 @@ items:
       - "Luyten P"
       - "Tack J"
       - "Van Oudenhove L"
+  - line: symptoms
+    title: "The role of psychosocial factors and psychiatric disorders in functional dyspepsia"
+    journal: "Nature reviews. Gastroenterology & hepatology"
+    year: "2013"
+    volume: "10"
+    issue: "3"
+    pages: "158-67"
+    pmid: "23358396"
+    doi: "10.1038/nrgastro.2013.10"
+    verified: true
+    authors:
+      - "Van Oudenhove L"
+      - "Aziz Q"
   - line: symptoms
     title: "Determinants of symptoms in functional dyspepsia: gastric sensorimotor function, psychosocial factors or somatisation?"
     journal: "Gut"
@@ -261,6 +313,23 @@ items:
       - "Fischler B"
       - "Demyttenaere K"
       - "Tack J"
+  - line: symptoms
+    title: "A controlled crossover study of the selective serotonin reuptake inhibitor citalopram in irritable bowel syndrome"
+    journal: "Gut"
+    year: "2006"
+    volume: "55"
+    issue: "8"
+    pages: "1095-103"
+    pmid: "16401691"
+    doi: "10.1136/gut.2005.077503"
+    verified: true
+    authors:
+      - "Tack J"
+      - "Broekaert D"
+      - "Fischler B"
+      - "Van Oudenhove L"
+      - "Gevers AM"
+      - "Janssens J"
   - line: appetite
     title: "Caloric labels do not influence taste pleasantness and neural responses to erythritol and sucrose"
     journal: "NeuroImage"
@@ -519,6 +588,22 @@ items:
       - "Raes J"
       - "Tack J"
       - "Vanuytsel T"
+  - line: microbiota
+    title: "Colon-delivered short-chain fatty acids attenuate the cortisol response to psychosocial stress in healthy men: a randomized, placebo-controlled trial"
+    journal: "Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology"
+    year: "2020"
+    volume: "45"
+    issue: "13"
+    pages: "2257-2266"
+    pmid: "32521538"
+    doi: "10.1038/s41386-020-0732-x"
+    verified: true
+    authors:
+      - "Dalile B"
+      - "Vervliet B"
+      - "Bergonzelli G"
+      - "Verbeke K"
+      - "Van Oudenhove L"
   - line: microbiota
     title: "The role of short-chain fatty acids in microbiota-gut-brain communication"
     journal: "Nature reviews. Gastroenterology & hepatology"

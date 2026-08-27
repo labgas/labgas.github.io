@@ -33,4 +33,4 @@ The [Tools page]({{ '/tools/' | relative_url }}) indexes every repository in the
 and includes a table setting out which layer of the stack comes from where.
 
 Corrections and additions are welcome at
-[labgas@kuleuven.be](mailto:labgas@kuleuven.be).
+[lukas.vanoudenhove@kuleuven.be](mailto:lukas.vanoudenhove@kuleuven.be).

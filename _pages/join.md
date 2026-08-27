@@ -19,8 +19,8 @@ Studies vary widely in what they ask of participants — some are a single sessi
 several visits, dietary periods, or MRI and PET scanning. What is involved, and any compensation,
 is explained in full before you agree to anything.
 
-To hear about current opportunities, write to
-[labgas@kuleuven.be](mailto:labgas@kuleuven.be) with a short note about yourself.
+To hear about current opportunities, write to our research coordinator
+[Liene Bervoets](mailto:liene.bervoets@kuleuven.be) with a short note about yourself.
 
 ## Master's and medical students
 
@@ -52,8 +52,11 @@ influence on affect and cognition, we are glad to discuss a fellowship applicati
 
 ## How to get in touch
 
-Email [labgas@kuleuven.be](mailto:labgas@kuleuven.be), or contact
-[Lukas Van Oudenhove](mailto:lukas.vanoudenhove@kuleuven.be) directly for research positions.
+For **research positions** — PhD, post-doc, internships and thesis projects — contact
+[Lukas Van Oudenhove](mailto:lukas.vanoudenhove@kuleuven.be).
+
+For **taking part in a study** and other practical matters, contact our research coordinator
+[Liene Bervoets](mailto:liene.bervoets@kuleuven.be).
 
 For enquiries about a specific project, mentioning it by name helps — see
 [Research]({{ '/research/' | relative_url }}).

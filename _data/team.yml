@@ -25,6 +25,7 @@ groups:
 members:
   # --- PI --------------------------------------------------------------
   - name: "Lukas Van Oudenhove"
+    photo: lukas-van-oudenhove.jpg
     group: pi
     title: "Research Professor, head of LaBGAS"
     focus: >-
@@ -34,6 +35,7 @@ members:
       signals on affect and cognition.
     email: "lukas.vanoudenhove@kuleuven.be"
     orcid: "0000-0002-6540-3113"
+    scholar: "https://scholar.google.com/citations?user=xYPdgr8AAAAJ"
     kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00027997"
     github: "lukasvo76"
 
@@ -47,6 +49,7 @@ members:
     kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00140676"
 
   - name: "Iris Coppieters"
+    photo: iris-coppieters.jpg
     group: guest
     title: "Guest professor"
     focus: >-
@@ -56,12 +59,15 @@ members:
 
   # --- Coordination -----------------------------------------------------
   - name: "Liene Bervoets"
+    photo: liene-bervoets.jpg
     group: coordinator
     title: "Research coordinator"
+    email: "liene.bervoets@kuleuven.be"
     kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00154051"
 
   # --- Post-docs --------------------------------------------------------
   - name: "Nathalie Weltens"
+    photo: nathalie-weltens.jpg
     group: postdoc
     title: "Post-doctoral researcher"
     focus: >-
@@ -78,6 +84,7 @@ members:
     kuleuven: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/staff-folder/labgasmembers/00092786"
 
   - name: "Boushra Dalile"
+    photo: boushra-dalile.jpg
     group: postdoc
     title: "Post-doctoral researcher"
     focus: >-
@@ -90,51 +97,62 @@ members:
     group: phd
     title: "PhD student"
   - name: "Annalena Fuchs"
+    photo: annalena-fuchs.jpg
     group: phd
     title: "PhD student"
   - name: "Nele Mattelaer"
+    photo: nele-mattelaer.jpg
     group: phd
     title: "PhD student"
   - name: "Tabea Eimer"
+    photo: tabea-eimer.jpg
     group: phd
     title: "PhD student"
     focus: >-
       Interoceptive ability across the respiratory, esophageal and cardiac
       domains.
   - name: "Ynse Dooms"
+    photo: ynse-dooms.jpg
     group: phd
     title: "PhD student"
     focus: >-
       Neuropsychophysiological subgroups in myalgic encephalomyelitis/chronic
       fatigue syndrome.
   - name: "Dina Satriawan"
+    photo: dina-satriawan.jpg
     group: phd
     title: "PhD student"
   - name: "Casper Vananderoye"
     group: phd
     title: "PhD student"
   - name: "Lixin Qiu"
+    photo: lixin-qiu.jpg
     group: phd
     title: "PhD student"
   - name: "Franco Ruiz"
+    photo: franco-ruiz.jpg
     group: phd
     title: "PhD student"
   - name: "Elin Marie Johansson"
+    photo: elin-marie-johansson.jpg
     group: phd
     title: "PhD student"
   - name: "Robin Quagebeur"
     group: phd
     title: "PhD student"
   - name: "Sybren Rinckhout"
+    photo: sybren-rinckhout.jpg
     group: phd
     title: "PhD student"
   - name: "Jim Draux"
     group: phd
     title: "PhD student"
   - name: "Tuur Abts"
+    photo: tuur-abts.jpg
     group: phd
     title: "PhD student"
   - name: "Alexine Mennes"
+    photo: alexine-mennes.jpg
     group: phd
     title: "PhD student"
 

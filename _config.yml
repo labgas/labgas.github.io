@@ -23,7 +23,7 @@ url                     : "https://labgas.github.io"
 baseurl                 : ""
 repository              : "labgas/labgas.github.io"
 teaser                  : /assets/images/teaser-default.svg
-logo                    : /assets/images/labgas-mark.svg
+logo                    : /assets/images/labgas-logo-small.png
 masthead_title          : "LaBGAS"
 breadcrumbs             : true
 words_per_minute        : 200
@@ -39,7 +39,7 @@ lunr:
 github_username         : labgas
 twitter:
   username              : "labgas_kuleuven"
-og_image                : /assets/images/og-image.svg
+og_image                : /assets/images/og-image.jpg
 
 social:
   type                  : Organization
@@ -51,10 +51,10 @@ social:
 # --- Author sidebar --------------------------------------------------------
 author:
   name                  : "LaBGAS"
-  avatar                : /assets/images/labgas-mark.svg
+  avatar                : /assets/images/labgas-logo-small.png
   bio                   : "Brain–gut axis research & open neuroimaging tools at KU Leuven."
   location              : "Leuven, Belgium"
-  email                 : "labgas@kuleuven.be"
+  email                 : "lukas.vanoudenhove@kuleuven.be"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -76,7 +76,7 @@ footer:
       url: "https://x.com/labgas_kuleuven"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:labgas@kuleuven.be"
+      url: "mailto:lukas.vanoudenhove@kuleuven.be"
 
 # --- Build -----------------------------------------------------------------
 markdown                : kramdown

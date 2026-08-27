@@ -14,13 +14,16 @@ to more than 300 items and lives on the profiles below, which are always current
 <div class="canlab-note" markdown="1">
 **Complete and up-to-date lists**
 [ORCID](https://orcid.org/0000-0002-6540-3113) ·
+[Google Scholar](https://scholar.google.com/citations?user=xYPdgr8AAAAJ) ·
 [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Van+Oudenhove+L%5BAuthor%5D&sort=date) ·
 [FRIS research portal](https://www.researchportal.be/nl/onderzoeker/lukas-van-oudenhove) ·
 [KU Leuven Lirias](https://lirias.kuleuven.be/)
 
+The FRIS portal holds the fullest record — over 300 items, identity-linked to KU Leuven.
+
 A caution for anyone searching by name: PubMed's `Van Oudenhove L` also returns work by an
-unrelated researcher in entomology. The FRIS and ORCID profiles are identity-linked and do not
-have this problem. Every entry below was checked against its PubMed author list.
+unrelated researcher in entomology. The FRIS and ORCID profiles do not have this problem, and
+every entry below was checked against its PubMed author list.
 </div>
 
 {% assign pubs = site.data.publications %}

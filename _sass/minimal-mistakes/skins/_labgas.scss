@@ -1,25 +1,31 @@
 /* ==========================================================================
    LaBGAS skin
-   Deep KU Leuven-adjacent blue with a warm clay accent, tuned for long-form
-   scientific reading rather than marketing punch.
+
+   Palette sampled from the lab logo: navy #104078 (the wordmark block) and
+   teal #1888b0 (the brain). The teal only reaches 3.98:1 against the page
+   background, so it is used decoratively — borders and rules — while text
+   that needs to be readable uses the darker #0f6a8c (5.96:1) or the navy.
    ========================================================================== */
 
 /* Colours ================================================================= */
 $background-color: #fdfdfc !default;
 $text-color: #22303c !default;
 $muted-text-color: #5c6b7a !default;
-$primary-color: #10556e !default;
+$primary-color: #104078 !default;
 $border-color: #e2e5e9 !default;
 $form-background-color: #f3f5f7 !default;
-$footer-background-color: #10556e !default;
-$link-color: #0f6b8c !default;
+$footer-background-color: #104078 !default;
+$link-color: #0f6a8c !default;
 $link-color-hover: #0b4f68 !default;
 $link-color-visited: #4a5f8a !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $primary-color !default;
 $navicon-link-color-hover: mix(#fff, $primary-color, 80%) !default;
 
-$accent-color: #b4622f !default;
+/* Brand teal — decorative use only (borders, rules, fills). */
+$brand-teal: #1888b0 !default;
+/* Text-safe teal for small type that still needs to read as brand colour. */
+$accent-color: #0f6a8c !default;
 
 /* Syntax highlighting ===================================================== */
 $base00: #f6f8fa;
@@ -30,8 +36,8 @@ $base04: #5c6b7a;
 $base05: #22303c;
 $base06: #10556e;
 $base07: #0f6b8c;
-$base08: #b4622f;
-$base09: #a8451f;
+$base08: #a8551f;
+$base09: #8f3d1a;
 $base0a: #8a6d1f;
 $base0b: #2f6b4f;
 $base0c: #10556e;

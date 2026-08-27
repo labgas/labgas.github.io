@@ -6,6 +6,10 @@ author_profile: false
 toc: true
 toc_sticky: true
 toc_label: "Groups"
+header:
+  image: /assets/images/lab-group.jpg
+  image_description: "The LaBGAS team"
+  caption: "The LaBGAS team, KU Leuven"
 ---
 
 LaBGAS is a strongly interdisciplinary group — medicine, psychology, nutrition, neuroscience,
@@ -42,10 +46,11 @@ closely with microbiology, nutrition, psychology and neuroscience groups in Leuv
       <span class="person__name">{{ m.name }}</span>
       {% if m.title %}<span class="person__title">{{ m.title }}</span>{% endif %}
       {% if m.focus %}<p class="person__focus">{{ m.focus }}</p>{% endif %}
-      {% if m.kuleuven or m.orcid or m.github or m.email %}
+      {% if m.kuleuven or m.orcid or m.scholar or m.github or m.email %}
       <div class="person__links">
         {% if m.kuleuven %}<a href="{{ m.kuleuven }}">Profile</a>{% endif %}
         {% if m.orcid %}<a href="https://orcid.org/{{ m.orcid }}">ORCID</a>{% endif %}
+        {% if m.scholar %}<a href="{{ m.scholar }}">Scholar</a>{% endif %}
         {% if m.github %}<a href="https://github.com/{{ m.github }}">GitHub</a>{% endif %}
         {% if m.email %}<a href="mailto:{{ m.email }}">Email</a>{% endif %}
       </div>
@@ -61,4 +66,5 @@ closely with microbiology, nutrition, psychology and neuroscience groups in Leuv
 ---
 
 Interested in joining? See [Join us]({{ '/join/' | relative_url }}), or write to
-[labgas@kuleuven.be](mailto:labgas@kuleuven.be).
+[Lukas Van Oudenhove](mailto:lukas.vanoudenhove@kuleuven.be) about research positions and to
+[Liene Bervoets](mailto:liene.bervoets@kuleuven.be) about taking part in a study.

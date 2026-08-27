@@ -4,6 +4,10 @@ title: "Laboratory for Brain-Gut Axis Studies"
 permalink: /
 author_profile: false
 classes: wide
+header:
+  image: /assets/images/lab-group.jpg
+  image_description: "The LaBGAS team"
+  caption: "The LaBGAS team, KU Leuven"
 ---
 
 {: .home-lede}
@@ -77,8 +81,9 @@ Our neuroimaging analyses run on an openly developed MATLAB codebase built on to
 ## Take part
 
 We regularly recruit healthy volunteers and patients for our studies, and we host master's
-students, PhD candidates and post-docs. See [Join us]({{ '/join/' | relative_url }}) or write to
-[labgas@kuleuven.be](mailto:labgas@kuleuven.be).
+students, PhD candidates and post-docs. See [Join us]({{ '/join/' | relative_url }}), or write to
+[Liene Bervoets](mailto:liene.bervoets@kuleuven.be) about taking part in a study and to
+[Lukas Van Oudenhove](mailto:lukas.vanoudenhove@kuleuven.be) about research positions.
 
 {: .funders}
 Our work is supported by the European Research Council (ERC), Research Foundation – Flanders
