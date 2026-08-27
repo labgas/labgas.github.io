@@ -15,7 +15,7 @@ through mechanisms we can measure and manipulate experimentally.
 
 Three research lines organise that work. They overlap heavily in method and in people.
 
-## Gastrointestinal/bodily symptom perception
+## Gastrointestinal symptom, pain, and fatigue perception
 
 Why do some people experience severe, disabling gastrointestinal symptoms with little or no
 detectable organic abnormality, while others with clear pathology report almost nothing? This
@@ -29,8 +29,36 @@ induction, fear conditioning and attentional focus. Recurring themes include vis
 hypersensitivity, interoceptive fear learning, hypervigilance, and the relative contribution of
 physiological versus psychological processes to symptom severity.
 
-This line also covers fatigue — in ME/CFS and in inflammatory bowel disease — and the
-sleep-pain relationship in chronic low back pain.
+### Fatigue
+
+Fatigue has grown into a substantial strand of this line in its own right, led by
+[Maaike Van Den Houte]({{ '/team/#maaike-van-den-houte' | relative_url }}).
+
+Two research traditions have approached fatigue separately and largely without talking to each
+other. One documents dysfunction in (psycho)physiological systems — the stress response system,
+including the hypothalamic-pituitary-adrenal axis and the autonomic nervous system; the immune
+system and systemic inflammation; and the central nervous system, including neuroinflammation
+and altered functional connectivity. The other, from health psychology, documents distortions in
+how bodily sensations are perceived and interpreted. Our work integrates the two, on the premise
+that neither alone accounts for why fatigue is experienced as severely as it is.
+
+In **myalgic encephalomyelitis/chronic fatigue syndrome**, which affects roughly 20,000 people
+in Belgium, we test an integrative psychophysiological model and use it to identify
+[subgroups]({{ '/research/#biopsychosocial-mechanisms-of-chronic-fatigue-syndrome' | relative_url }})
+defined by combinations of these parameters — subgroups intended to be clinically useful as
+predictors of who responds to which rehabilitation approach.
+
+In **inflammatory bowel disease**, fatigue is a common and disabling comorbidity that current
+anti-inflammatory treatment does not resolve: around half of patients in clinical remission
+remain fatigued. That dissociation between inflammation and symptom is the starting point for
+our work on the
+[gut-immune-brain axis]({{ '/research/#gut-immune-brain-axis-in-ibd-fatigue' | relative_url }}),
+which asks what maintains fatigue once the gut has healed, and treats the immune-brain axis as a
+moderator of fatigue perception rather than simply its cause.
+
+Related work in this line examines the bidirectional
+[sleep-pain relationship]({{ '/research/#sy-naps' | relative_url }}) in chronic low back pain,
+and the role of neuroinflammation and microglia within it.
 
 ## Appetite, food intake & reward
 

@@ -5,7 +5,7 @@
 
 lines:
   - id: symptoms
-    label: "Gastrointestinal/bodily symptom perception"
+    label: "Gastrointestinal symptom, pain, and fatigue perception"
   - id: appetite
     label: "Appetite, food intake & reward"
   - id: microbiota
@@ -41,6 +41,12 @@ items:
       - "Van Oudenhove L"
       - "Van Den Houte M"
       - "Bogaerts K"
+    lab_authors:
+      - "Dooms Y"
+      - "Qiu L"
+      - "Coppieters I"
+      - "Van Oudenhove L"
+      - "Van Den Houte M"
   - line: symptoms
     title: "The psychobiological model of disorders of gut-brain interaction: introduction of a novel, integrated, and testable model"
     journal: "The lancet. Gastroenterology & hepatology"
@@ -57,6 +63,9 @@ items:
       - "Van Oudenhove L"
       - "Elsenbruch S"
       - "Keefer L"
+    lab_authors:
+      - "Guadagnoli L"
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Rome Foundation Working Team Report on overlap in disorders of gut-brain interaction"
     journal: "Nature reviews. Gastroenterology & hepatology"
@@ -81,6 +90,8 @@ items:
       - "Siah KTH"
       - "Van Oudenhove L"
       - "Simr\u00e9n M"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Psychological Processes, Not Physiological Parameters, Are Most Important Contributors to Symptom Severity in Patients With Refractory Heartburn/Regurgitation Symptoms"
     journal: "Gastroenterology"
@@ -98,6 +109,9 @@ items:
       - "Pauwels A"
       - "Vanuytsel T"
       - "Tack J"
+      - "Van Oudenhove L"
+    lab_authors:
+      - "Guadagnoli L"
       - "Van Oudenhove L"
   - line: symptoms
     title: "Gut-brain axis dysfunction underlies FODMAP-induced symptom generation in irritable bowel syndrome"
@@ -122,6 +136,8 @@ items:
       - "Taylor SA"
       - "Tack J"
       - "Van Oudenhove L"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Role of brain imaging in disorders of brain-gut interaction: a Rome Working Team Report"
     journal: "Gut"
@@ -142,6 +158,8 @@ items:
       - "Schweinhardt P"
       - "Van Oudenhove L"
       - "Borsook D"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Visceral hypersensitivity is associated with GI symptom severity in functional GI disorders: consistent findings from five different patient cohorts"
     journal: "Gut"
@@ -160,6 +178,8 @@ items:
       - "Van Oudenhove L"
       - "Tack J"
       - "Whitehead WE"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Neuromodulators for Functional Gastrointestinal Disorders (Disorders of Gut-Brain Interaction): A Rome Foundation Working Team Report"
     journal: "Gastroenterology"
@@ -176,6 +196,8 @@ items:
       - "Ford AC"
       - "Szigethy E"
       - "T\u00f6rnblom H"
+      - "Van Oudenhove L"
+    lab_authors:
       - "Van Oudenhove L"
   - line: symptoms
     title: "Biopsychosocial Aspects of Functional Gastrointestinal Disorders"
@@ -197,6 +219,8 @@ items:
       - "Murphy TB"
       - "Naliboff BD"
       - "Levy RL"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Learned Fear of Gastrointestinal Sensations in Healthy Adults"
     journal: "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association"
@@ -216,6 +240,9 @@ items:
       - "Vlaeyen JW"
       - "Van Oudenhove L"
       - "Van Diest I"
+    lab_authors:
+      - "Weltens N"
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Psychological stress and corticotropin-releasing hormone increase intestinal permeability in humans by a mast cell-dependent mechanism"
     journal: "Gut"
@@ -241,6 +268,8 @@ items:
       - "Boeckxstaens G"
       - "Verbeke K"
       - "Tack J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Impaired duodenal mucosal integrity and low-grade inflammation in functional dyspepsia"
     journal: "Gut"
@@ -263,6 +292,8 @@ items:
       - "S\u00f6derholm JD"
       - "Tack J"
       - "Farr\u00e9 R"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "A multidimensional model of psychobiological interactions in functional dyspepsia: a structural equation modelling approach"
     journal: "Gut"
@@ -281,6 +312,8 @@ items:
       - "Luyten P"
       - "Tack J"
       - "Van Oudenhove L"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "The role of psychosocial factors and psychiatric disorders in functional dyspepsia"
     journal: "Nature reviews. Gastroenterology & hepatology"
@@ -294,6 +327,8 @@ items:
     authors:
       - "Van Oudenhove L"
       - "Aziz Q"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "Determinants of symptoms in functional dyspepsia: gastric sensorimotor function, psychosocial factors or somatisation?"
     journal: "Gut"
@@ -313,6 +348,8 @@ items:
       - "Fischler B"
       - "Demyttenaere K"
       - "Tack J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: symptoms
     title: "A controlled crossover study of the selective serotonin reuptake inhibitor citalopram in irritable bowel syndrome"
     journal: "Gut"
@@ -330,6 +367,8 @@ items:
       - "Van Oudenhove L"
       - "Gevers AM"
       - "Janssens J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: appetite
     title: "Caloric labels do not influence taste pleasantness and neural responses to erythritol and sucrose"
     journal: "NeuroImage"
@@ -348,6 +387,9 @@ items:
       - "Dupont P"
       - "W\u00f6lnerhanssen B"
       - "Meyer-Gerspach AC"
+      - "Van Oudenhove L"
+      - "Weltens N"
+    lab_authors:
       - "Van Oudenhove L"
       - "Weltens N"
   - line: appetite
@@ -369,6 +411,9 @@ items:
       - "Meyer-Gerspach AC"
       - "Van Oudenhove L"
       - "Weltens N"
+    lab_authors:
+      - "Van Oudenhove L"
+      - "Weltens N"
   - line: appetite
     title: "The circulating and central endocannabinoid system in obesity and weight loss"
     journal: "International journal of obesity (2005)"
@@ -385,6 +430,10 @@ items:
       - "Van Oudenhove L"
       - "Weltens N"
       - "Vangoitsenhoven R"
+    lab_authors:
+      - "Mattelaer N"
+      - "Van Oudenhove L"
+      - "Weltens N"
   - line: appetite
     title: "Erythritol and xylitol differentially impact brain networks involved in appetite regulation in healthy volunteers"
     journal: "Nutritional neuroscience"
@@ -406,6 +455,8 @@ items:
       - "O'Daly O"
       - "Van Oudenhove L"
       - "W\u00f6lnerhanssen BK"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: appetite
     title: "Motilin-induced gastric contractions signal hunger in man"
     journal: "Gut"
@@ -424,6 +475,8 @@ items:
       - "Vanuytsel T"
       - "Van Oudenhove L"
       - "Depoortere I"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: appetite
     title: "Does the gut-brain axis control anticipatory food reward? Novel insights from bariatric surgery"
     journal: "Gut"
@@ -435,6 +488,8 @@ items:
     doi: "10.1136/gutjnl-2013-305488"
     verified: true
     authors:
+      - "Van Oudenhove L"
+    lab_authors:
       - "Van Oudenhove L"
   - line: appetite
     title: "Where is the comfort in comfort foods? Mechanisms linking fat signaling, reward, and emotion"
@@ -449,6 +504,9 @@ items:
     authors:
       - "Weltens N"
       - "Zhao D"
+      - "Van Oudenhove L"
+    lab_authors:
+      - "Weltens N"
       - "Van Oudenhove L"
   - line: appetite
     title: "Fatty acid-induced gut-brain signaling attenuates neural and behavioral effects of sad emotion in humans"
@@ -470,6 +528,8 @@ items:
       - "Gregory L"
       - "Tack J"
       - "Aziz Q"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: microbiota
     title: "The HDAC inhibitor sodium butyrate moderately enhances long-term fear extinction memory retrieval in humans"
     journal: "Molecular psychiatry"
@@ -486,6 +546,9 @@ items:
       - "Van Oudenhove L"
       - "Vervliet B"
       - "Dalile B"
+    lab_authors:
+      - "Van Oudenhove L"
+      - "Dalile B"
   - line: microbiota
     title: "Variability in threat processing is related to endogenous butyrate levels in healthy men"
     journal: "Biological psychology"
@@ -501,6 +564,9 @@ items:
       - "Van Oudenhove L"
       - "Verbeke K"
       - "Vervliet B"
+    lab_authors:
+      - "Dalile B"
+      - "Van Oudenhove L"
   - line: microbiota
     title: "Circulating short chain fatty acids are associated with depression severity and predict remission from major depressive disorder"
     journal: "Brain, behavior, & immunity - health"
@@ -525,6 +591,9 @@ items:
       - "Verbeke K"
       - "van Oudenhove L"
       - "Edwin Thanarajah S"
+    lab_authors:
+      - "Dalile B"
+      - "van Oudenhove L"
   - line: microbiota
     title: "Probiotic-mediated modulation of gut microbiome in students exposed to academic stress: a randomized controlled trial"
     journal: "NPJ biofilms and microbiomes"
@@ -548,6 +617,8 @@ items:
       - "Vanuytsel T"
       - "Derrien M"
       - "Raes J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: microbiota
     title: "Colonic butyrate administration modulates fear memory but not the acute stress response in men: A randomized, triple-blind, placebo-controlled trial"
     journal: "Progress in neuro-psychopharmacology & biological psychiatry"
@@ -565,6 +636,10 @@ items:
       - "Vervliet B"
       - "Van Oudenhove L"
       - "Verbeke K"
+    lab_authors:
+      - "Dalile B"
+      - "Fuchs A"
+      - "Van Oudenhove L"
   - line: microbiota
     title: "Lactobacillus rhamnosus CNCM I-3690 decreases subjective academic stress in healthy adults: a randomized placebo-controlled trial"
     journal: "Gut microbes"
@@ -588,6 +663,8 @@ items:
       - "Raes J"
       - "Tack J"
       - "Vanuytsel T"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: microbiota
     title: "Colon-delivered short-chain fatty acids attenuate the cortisol response to psychosocial stress in healthy men: a randomized, placebo-controlled trial"
     journal: "Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology"
@@ -604,6 +681,9 @@ items:
       - "Bergonzelli G"
       - "Verbeke K"
       - "Van Oudenhove L"
+    lab_authors:
+      - "Dalile B"
+      - "Van Oudenhove L"
   - line: microbiota
     title: "The role of short-chain fatty acids in microbiota-gut-brain communication"
     journal: "Nature reviews. Gastroenterology & hepatology"
@@ -619,6 +699,9 @@ items:
       - "Van Oudenhove L"
       - "Vervliet B"
       - "Verbeke K"
+    lab_authors:
+      - "Dalile B"
+      - "Van Oudenhove L"
   - line: microbiota
     title: "The neuroactive potential of the human gut microbiota in quality of life and depression"
     journal: "Nature microbiology"
@@ -645,6 +728,8 @@ items:
       - "Zhernakova A"
       - "Vieira-Silva S"
       - "Raes J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "Convergent and selective representations of pain, appetitive processes, aversive processes, and cognitive control in the insula"
     journal: "Nature communications"
@@ -662,6 +747,8 @@ items:
       - "Kragel PA"
       - "Van Oudenhove L"
       - "Wager TD"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "Omissions of threat trigger subjective relief and prediction error-like signaling in the human reward and salience systems"
     journal: "eLife"
@@ -676,6 +763,8 @@ items:
       - "Willems AL"
       - "Van Oudenhove L"
       - "Vervliet B"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "The neurobiological basis of affect is consistent with psychological construction theory and shares a common neural basis across emotional categories"
     journal: "Communications biology"
@@ -699,6 +788,8 @@ items:
       - "Vandenbulcke M"
       - "Feldman Barrett L"
       - "Van den Stock J"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "Cross-paradigm integration shows a common neural basis for aversive and appetitive conditioning"
     journal: "NeuroImage"
@@ -718,6 +809,8 @@ items:
       - "Klucken T"
       - "Wager TD"
       - "Stark R"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "The Brain Activation-Based Sexual Image Classifier (BASIC): A Sensitive and Specific fMRI Activity Pattern for Sexual Image Processing"
     journal: "Cerebral cortex (New York, N.Y. : 1991)"
@@ -737,6 +830,8 @@ items:
       - "Kragel PA"
       - "Stark R"
       - "Wager TD"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "Common and distinct neural representations of aversive somatic and visceral stimulation in healthy individuals"
     journal: "Nature communications"
@@ -762,6 +857,8 @@ items:
       - "Fukudo S"
       - "Kano M"
       - "Wager TD"
+    lab_authors:
+      - "Van Oudenhove L"
   - line: methods
     title: "Generalizable representations of pain, cognitive control, and negative emotion in medial frontal cortex"
     journal: "Nature neuroscience"
@@ -788,3 +885,5 @@ items:
       - "Woo CW"
       - "Nichols TE"
       - "Wager TD"
+    lab_authors:
+      - "Van Oudenhove L"

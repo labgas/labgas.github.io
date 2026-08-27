@@ -36,10 +36,17 @@ every entry below was checked against its PubMed author list.
 {% for p in items %}
 <div class="pub" markdown="0">
   <p class="pub__title">{{ p.title }}</p>
+  {%- comment -%}
+    `lab_authors` holds the exact author strings belonging to lab members, worked
+    out in scripts/enrich_publications.py by matching surname and first initial
+    against the roster. The whole string is wrapped, so surname particles stay
+    inside the bold — "Van Den Houte M", not "Van **Den Houte M**". A wrapping
+    line could otherwise split a name, so the span also gets nowrap.
+  {%- endcomment -%}
   {% if p.authors and p.authors.size > 0 %}
   <p class="pub__authors">
     {%- for a in p.authors -%}
-      {%- if a contains "Oudenhove" -%}<span class="pub__self">{{ a }}</span>{%- else -%}{{ a }}{%- endif -%}
+      {%- if p.lab_authors contains a -%}<span class="pub__self">{{ a }}</span>{%- else -%}{{ a }}{%- endif -%}
       {%- unless forloop.last %}, {% endunless -%}
     {%- endfor -%}
   </p>

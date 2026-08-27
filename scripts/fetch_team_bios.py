@@ -59,8 +59,8 @@ def get(url: str) -> str:
 # House-style edits applied to the harvested text. Without these a re-run would
 # silently revert wording the lab has asked us to change.
 SUBSTITUTIONS = [
-    ("gastrointestinal symptom perception", "gastrointestinal/bodily symptom perception"),
-    ("Gastrointestinal symptom perception", "Gastrointestinal/bodily symptom perception"),
+    ("gastrointestinal symptom perception", "gastrointestinal symptom, pain, and fatigue perception"),
+    ("Gastrointestinal symptom perception", "Gastrointestinal symptom, pain, and fatigue perception"),
 ]
 
 

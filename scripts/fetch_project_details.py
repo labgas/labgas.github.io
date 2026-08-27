@@ -64,8 +64,8 @@ SLUG_ALIASES = {
 
 # Wording the lab has asked us to change; re-applied on every run.
 SUBSTITUTIONS = [
-    ("gastrointestinal symptom perception", "gastrointestinal/bodily symptom perception"),
-    ("Gastrointestinal symptom perception", "Gastrointestinal/bodily symptom perception"),
+    ("gastrointestinal symptom perception", "gastrointestinal symptom, pain, and fatigue perception"),
+    ("Gastrointestinal symptom perception", "Gastrointestinal symptom, pain, and fatigue perception"),
 ]
 
 # Labels in the PROJECT INFORMATION block -> field name in projects.yml.

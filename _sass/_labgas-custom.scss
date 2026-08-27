@@ -460,9 +460,13 @@
     }
   }
 
+  /* Keep a lab member's name whole: without this a line break can fall between
+     a surname particle and the rest ("Van" / "Den Houte M"), which reads as if
+     only part of the name were emphasised. */
   .pub__self {
     font-weight: 700;
     color: $text-color;
+    white-space: nowrap;
   }
 
   /* --- Repository index -------------------------------------------------- */

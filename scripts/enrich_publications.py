@@ -38,11 +38,76 @@ DELAY = 0.4
 
 LINE_ORDER = ["symptoms", "appetite", "microbiota", "methods"]
 LINE_LABELS = {
-    "symptoms": "Gastrointestinal/bodily symptom perception",
+    "symptoms": "Gastrointestinal symptom, pain, and fatigue perception",
     "appetite": "Appetite, food intake & reward",
     "microbiota": "Microbiota-gut-brain signalling, stress & affect",
     "methods": "Neuroimaging methods & brain representations",
 }
+
+
+# Dutch/Flemish and other surname particles. PubMed keeps them as part of the
+# surname ("Van Den Houte M"), so they must be kept when building the match key
+# and used to find where the surname starts.
+PARTICLES = {
+    "van", "de", "den", "der", "det", "ten", "ter", "te", "vande", "vanden",
+    "op", "'t", "in", "di", "da", "del", "della", "dos", "du", "la", "le", "el",
+}
+
+
+def _surname_key(tokens: "list[str]") -> str:
+    return re.sub(r"[^a-z]", "", "".join(tokens).lower())
+
+
+def load_lab_members() -> "list[tuple[str, str]]":
+    """(surname key, first initial) for every current lab member.
+
+    Read straight out of _data/team.yml with a regex rather than a YAML parser to
+    keep this script dependency-free.
+    """
+    path = os.path.join(ROOT, "_data", "team.yml")
+    try:
+        text = open(path, encoding="utf-8").read()
+    except OSError:
+        return []
+    out = []
+    for name in re.findall(r'^\s*- name: "(.+)"\s*$', text, re.M):
+        tokens = name.split()
+        if len(tokens) < 2:
+            continue
+        # The surname starts at the first particle, or at the last token.
+        start = len(tokens) - 1
+        for i, t in enumerate(tokens[1:], start=1):
+            if t.lower().strip(".") in PARTICLES:
+                start = i
+                break
+        surname, given = tokens[start:], tokens[:start]
+        if not given:
+            continue
+        out.append((_surname_key(surname), given[0][0].upper()))
+    return out
+
+
+def lab_authors(authors: "list[str]", members: "list[tuple[str, str]]") -> "list[str]":
+    """Which of a paper's PubMed author strings are lab members.
+
+    PubMed formats authors as "Surname II". Match on the surname and require the
+    member's first initial to appear in the initials, so "Johansson EM" matches
+    Elin Marie Johansson while a different Johansson does not.
+    """
+    hits = []
+    for a in authors:
+        parts = a.split()
+        if len(parts) < 2:
+            continue
+        initials = parts[-1]
+        if not initials.isupper() or len(initials) > 3:
+            continue
+        key = _surname_key(parts[:-1])
+        for m_key, m_initial in members:
+            if key == m_key and m_initial in initials:
+                hits.append(a)
+                break
+    return hits
 
 
 def _get(url: str) -> dict:
@@ -169,6 +234,8 @@ def yq(s: str) -> str:
 
 
 def main() -> int:
+    members = load_lab_members()
+    print(f"Matching authors against {len(members)} lab members\n")
     seeds = read_seed(SEED)
     if not seeds:
         print("No titles found in seed file", file=sys.stderr)
@@ -201,6 +268,7 @@ def main() -> int:
                         "pmid": pmid,
                         "doi": doi,
                         "verified": any("oudenhove" in a.lower() for a in authors),
+                        "lab_authors": lab_authors(authors, members),
                     }
                 )
                 if not rec["verified"]:
@@ -236,6 +304,13 @@ def main() -> int:
                 fh.write("    authors:\n")
                 for a in authors:
                     fh.write(f"      - {yq(a)}\n")
+                # Author strings belonging to lab members, so the Publications
+                # page can bold them without re-deriving the match in Liquid.
+                marked = r.get("lab_authors") or []
+                if marked:
+                    fh.write("    lab_authors:\n")
+                    for a in marked:
+                        fh.write(f"      - {yq(a)}\n")
 
     print(f"\nWrote {OUT} ({sum(len(v) for v in by_line.values())} records)")
     if problems:
