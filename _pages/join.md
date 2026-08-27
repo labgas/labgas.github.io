@@ -8,6 +8,24 @@ toc_sticky: true
 toc_label: "On this page"
 ---
 
+<div class="scope-notice" markdown="1">
+### Please read first: we are an exclusively human research laboratory
+
+**Every study we run is conducted in human participants** — healthy volunteers and patients.
+Our methods are brain imaging (fMRI, PET, PET-MR), psychophysiology, and controlled
+nutritional, microbial and pharmacological interventions in people.
+
+We do **not** run *in vitro* experiments, wet-lab microbiology, or animal and rodent studies,
+and we have no facilities or supervision for them. If you are looking for a position in
+cell culture, bench microbiology, or preclinical animal work, **this is not the lab for you**,
+and we would rather you found that out here than after applying.
+
+This does not mean we are uninterested in those levels of explanation — the gut microbiota is
+central to [our third research line]({{ '/research/#microbiota-gut-signals--the-mind' | relative_url }}).
+We study it through its measurable effects in humans, and we collaborate with microbiology and
+preclinical groups who do the bench and animal work.
+</div>
+
 ## Take part in a study
 
 We regularly recruit **healthy volunteers** and **patients** for studies involving brain imaging,

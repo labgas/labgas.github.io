@@ -88,6 +88,45 @@ def apply_substitutions(text: str) -> str:
     return text
 
 
+# Abbreviations that end in a full stop but do not end a sentence. Without these
+# the teaser would cut at "Dr." or "e.g." and stop mid-clause.
+ABBREV = (
+    "dr", "prof", "mr", "mrs", "ms", "st", "vs", "etc", "eg", "ie", "cf", "approx",
+    "inc", "no", "phd", "md", "msc", "bsc", "univ", "dept", "fig", "al",
+)
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z(])")
+
+
+def make_lead(paragraphs: "list[str]", target: int = 190, hard_cap: int = 300) -> str:
+    """First sentence or two of a bio, for the collapsed teaser on the Team page.
+
+    Accumulates whole sentences until roughly `target` characters, so the teaser
+    always ends on a sentence boundary rather than mid-word.
+    """
+    if not paragraphs:
+        return ""
+    text = paragraphs[0].strip()
+    parts, buf = [], ""
+    for chunk in _SENTENCE_END.split(text):
+        buf = f"{buf} {chunk}".strip() if buf else chunk
+        tail = re.sub(r"[^a-z]", "", buf.split()[-1].lower()) if buf.split() else ""
+        if tail in ABBREV:
+            continue  # a false boundary — keep absorbing
+        parts.append(buf)
+        buf = ""
+    if buf:
+        parts.append(buf)
+
+    lead = ""
+    for s in parts:
+        if lead and len(lead) + len(s) + 1 > hard_cap:
+            break
+        lead = f"{lead} {s}".strip() if lead else s
+        if len(lead) >= target:
+            break
+    return lead
+
+
 def strip_tags(fragment: str) -> str:
     fragment = re.sub(r"<br\s*/?>", " ", fragment, flags=re.I)
     fragment = re.sub(r"<[^>]+>", "", fragment)
@@ -230,7 +269,7 @@ def merge(harvest: dict) -> int:
             nxt = lines[i]
             if re.match(r'^\s*- name: "', nxt) or re.match(r"^[a-zA-Z#]", nxt):
                 break
-            if re.match(rf"^{indent}  (bio|projects):", nxt):
+            if re.match(rf"^{indent}  (bio|bio_lead|projects):", nxt):
                 i += 1
                 while i < len(lines) and re.match(rf"^{indent}    ", lines[i]):
                     i += 1
@@ -247,6 +286,8 @@ def merge(harvest: dict) -> int:
         rec = harvest.get(name)
         if rec:
             if rec["bio"]:
+                if rec.get("lead"):
+                    out.append(f"{indent}  bio_lead: {yq(rec['lead'])}")
                 out.append(f"{indent}  bio:")
                 for p in rec["bio"]:
                     out.append(f"{indent}    - {yq(p)}")
@@ -297,7 +338,7 @@ def main() -> int:
                         continue
                     seen_ref.add(key)
                     projects.append({"title": title, "url": p["url"], "ref": ref})
-            harvest[name] = {"bio": bio, "projects": projects}
+            harvest[name] = {"bio": bio, "lead": make_lead(bio), "projects": projects}
             chars = sum(len(p) for p in bio)
             flag = "" if bio else "   <-- no bio found"
             print(f"  {name:<24} {len(bio)} para {chars:>5} chars  {len(projects)} projects{flag}")

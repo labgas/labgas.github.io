@@ -1,3 +1,32 @@
+/* Page banner ------------------------------------------------------------
+   The KU Leuven logo sits in the hero rather than being baked into the image,
+   so it stays crisp at any size and can be swapped without regenerating the
+   photo. The official mark carries its own solid navy panel, so it needs no
+   plate behind it. */
+.page__hero {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    width: 116px;
+    height: 41px;
+    background: url("/assets/images/kuleuven-logo.svg") no-repeat center / contain;
+    pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    &::after {
+      top: 0.6rem;
+      right: 0.6rem;
+      width: 84px;
+      height: 30px;
+    }
+  }
+}
+
 /* ==========================================================================
    LaBGAS — components layered on top of Minimal Mistakes
 
@@ -181,6 +210,45 @@
     margin: 0.6rem 0 0;
   }
 
+  /* Collapsed biography. Uses native <details> so it works without JavaScript
+     and the full text stays in the document for search and printing. */
+  .person__bio-toggle {
+    margin: 0;
+
+    > summary {
+      cursor: pointer;
+      list-style: none;          // Firefox
+      display: block;            // Safari puts summary in a flex-ish box
+
+      &::-webkit-details-marker { display: none; }
+
+      &::after {
+        content: "Read more";
+        display: inline-block;
+        margin-left: 0.35rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: $link-color;
+        white-space: nowrap;
+      }
+
+      &:hover::after,
+      &:focus-visible::after {
+        text-decoration: underline;
+      }
+    }
+
+    &[open] > summary::after {
+      content: "Show less";
+    }
+
+    /* The lead is a <span> inside <summary>; give it the block spacing a <p>
+       would have had. */
+    .person__bio.is-lead {
+      display: inline;
+    }
+  }
+
   .person__projects {
     margin: 0.7rem 0 0;
     font-size: 0.75rem;
@@ -299,6 +367,43 @@
     background: $form-background-color;
     color: $muted-text-color;
     white-space: nowrap;
+  }
+
+  /* --- Scope notice (Join us) -------------------------------------------
+     Deliberately the loudest element on the page: it exists to stop people
+     applying for work this lab does not do. */
+  /* Warm rather than teal: the informational callouts elsewhere on the site are
+     brand teal, and this box needs to read as "read before applying", not as
+     more of the same. #a8551f clears 5.18:1 on the page background. */
+  $scope-accent: #a8551f;
+
+  .scope-notice {
+    border: 2px solid $scope-accent;
+    border-left-width: 6px;
+    border-radius: 4px;
+    background: mix(#fff, $scope-accent, 95%);
+    padding: 1.1rem 1.3rem 1.2rem;
+    margin: 0 0 2rem;
+
+    h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.02rem;
+      color: $scope-accent;
+    }
+
+    p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin: 0 0 0.65rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $text-color;
+    }
   }
 
   /* --- CANlab attribution callout --------------------------------------- */

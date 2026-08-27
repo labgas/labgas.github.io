@@ -9,17 +9,18 @@ toc_label: "Groups"
 header:
   image: /assets/images/lab-group.jpg
   image_description: "The LaBGAS team"
-  caption: "The LaBGAS team, KU Leuven"
+  caption: "The LaBGAS team"
 ---
 
 LaBGAS is a strongly interdisciplinary group — medicine, psychology, nutrition, neuroscience,
 bioengineering and biostatistics all sit in the same lab meeting. We are embedded in
-[TARGID](https://gbiomed.kuleuven.be/english/research/50000625/50000628/) at KU Leuven and work
+[TARGID](https://gbiomed.kuleuven.be/english/research/50000625/50000628/) at KU Leuven, are a
+member of the [Leuven Brain Institute](https://www.kuleuven.be/brain-institute), and work
 closely with microbiology, nutrition, psychology and neuroscience groups in Leuven and beyond.
 
-Each **KU Leuven profile** link opens that person's entry in the university's
-[who's who](https://www.kuleuven.be/wieiswie/en/) directory, with their publications,
-memberships and contact details.
+Click a biography to read it in full. Each **KU Leuven profile** link opens that person's entry
+in the university's [who's who](https://www.kuleuven.be/wieiswie/en/) directory, with their
+publications, memberships and contact details.
 
 {% for g in site.data.team.groups %}
 {% assign people = site.data.team.members | where: "group", g.id %}
@@ -49,11 +50,33 @@ memberships and contact details.
       {% endif %}
     </div>
     <div class="person__body">
-      <h3 class="person__name" id="{{ m.name | slugify }}">{{ m.name }}</h3>
+      {%- comment -%}
+        `no_toc` keeps the 23 individual names out of the sidebar, which is a
+        list of groups — the heading level is still right for document structure
+        and each person keeps a linkable anchor.
+      {%- endcomment -%}
+      <h3 class="person__name no_toc" id="{{ m.name | slugify: 'latin' }}">{{ m.name }}</h3>
       {% if m.title %}<p class="person__title">{{ m.title }}</p>{% endif %}
 
+      {%- comment -%}
+        Bios run to several hundred words. Show the opening sentences and put the
+        remainder behind a native <details> toggle — no JavaScript, and the full
+        text is still in the page for search and for anyone printing it.
+        `bio_lead` is always a clean prefix of bio[0], so removing it leaves the
+        rest of that paragraph without duplicating anything.
+      {%- endcomment -%}
       {% if m.bio %}
-        {% for para in m.bio %}<p class="person__bio">{{ para }}</p>{% endfor %}
+        {% assign lead = m.bio_lead | default: m.bio[0] %}
+        {% assign rest_first = m.bio[0] | remove_first: lead | strip %}
+        {% if rest_first != "" or m.bio.size > 1 %}
+        <details class="person__bio-toggle">
+          <summary><span class="person__bio is-lead">{{ lead }}</span></summary>
+          {% if rest_first != "" %}<p class="person__bio">{{ rest_first }}</p>{% endif %}
+          {% for para in m.bio offset: 1 %}<p class="person__bio">{{ para }}</p>{% endfor %}
+        </details>
+        {% else %}
+        <p class="person__bio">{{ lead }}</p>
+        {% endif %}
       {% endif %}
 
       {% if m.projects_all %}
