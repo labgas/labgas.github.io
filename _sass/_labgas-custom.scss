@@ -1,28 +1,59 @@
-/* Page banner ------------------------------------------------------------
-   The KU Leuven logo sits in the hero rather than being baked into the image,
-   so it stays crisp at any size and can be swapped without regenerating the
-   photo. The official mark carries its own solid navy panel, so it needs no
-   plate behind it. */
-.page__hero {
+/* Masthead ---------------------------------------------------------------
+   The KU Leuven mark sits in the white bar alongside the menu rather than over
+   the group photo, where it competed with the faces. It stays an SVG so it is
+   crisp at any size; the official mark carries its own solid navy panel, so it
+   needs no plate behind it.
+
+   It is absolutely positioned inside the nav's wrapper — which is what centres
+   the content column on wide screens — and the wrapper carries a matching
+   right padding. The greedy-nav script measures the nav's *content* width, so
+   padding keeps its arithmetic correct and the menu links can never run
+   underneath the mark.
+
+   Overriding ::after here also replaces the theme's clearfix on this element;
+   that is harmless, since the wrapper is a flex container. */
+.masthead__inner-wrap {
   position: relative;
+  /* Both the offset and the padding are in px, not rem: the mark itself is a
+     fixed pixel size, and the theme scales the root font up at wide
+     breakpoints, which would otherwise open a growing gap beside it. */
+  padding-right: 170px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 0.9rem;
-    right: 0.9rem;
-    width: 116px;
-    height: 41px;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 134px;
+    height: 48px;
     background: url("/assets/images/kuleuven-logo.svg") no-repeat center / contain;
     pointer-events: none;
   }
 
   @media (max-width: 600px) {
+    padding-right: 124px;
+
     &::after {
-      top: 0.6rem;
-      right: 0.6rem;
-      width: 84px;
-      height: 30px;
+      right: 12px;
+      width: 98px;
+      height: 35px;
+    }
+  }
+}
+
+/* The lab mark reads too small at the theme's default 2rem. It is a flex item
+   in a crowded bar, so it also needs flex-shrink disabled: without it the link
+   collapses on narrow screens and `max-width: 100%` on the image scales the
+   mark down well below the height set here. The site title shrinks instead. */
+.site-logo {
+  flex-shrink: 0;
+
+  img {
+    max-height: 3rem;
+
+    @media (max-width: 600px) {
+      max-height: 2.5rem;
     }
   }
 }
