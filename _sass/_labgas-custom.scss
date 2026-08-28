@@ -677,19 +677,54 @@
      a loading error. */
   opacity: 1;
 
+  /* The theme caps the column's height and scrolls it, which is right for a
+     long list of author links. Here it would clip the mark as soon as the
+     negative margin below nudges it out of the column. */
+  overflow: visible;
+  max-height: none;
+
   > img {
     /* Fills the column at $large and above, so the mark is at its largest
        exactly where there is room for it. */
     width: 100%;
     height: auto;
+
+    /* Vertical: the theme lines the column's first child up with the page
+       title, which leaves the mark riding high against the intro paragraph.
+       Drop it so the two share a centre line. Past 1280px the content column
+       stops widening, so the paragraph always wraps to the same height and
+       this offset is exact; below that it is an approximation. */
+    margin-top: 4rem;
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      margin-top: 5.4rem;
+    }
+
+    /* Horizontal: #main is centred under a 1280px cap, so past that width the
+       window grows a margin outside it. The mark fills its column, which puts
+       it hard against the text with every pixel of slack on its far side.
+       Shifting left by half that outer margin centres it in the whole white
+       band between the window edge and the text. */
+    @media (min-width: 1281px) {
+      margin-left: calc((1280px - 100vw) / 4);
+    }
+
+    /* Past this the band is wide enough that tracking it exactly would strand
+       the mark out by the window edge, far from anything it belongs to. */
+    @media (min-width: 1921px) {
+      margin-left: -160px;
+    }
   }
 
   /* Below $large the column becomes a full-width block above the content, and
-     a full-width mark would dwarf the page title under it. */
+     a full-width mark would dwarf the page title under it. Nothing to centre
+     against here either — the mark sits above the text, not beside it. */
   @media (max-width: 1023px) {
     > img {
       width: 190px;
       max-width: 45%;
+      margin-top: 1em;
+      margin-left: 0;
     }
   }
 }
