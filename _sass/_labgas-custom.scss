@@ -141,6 +141,47 @@
   }
 
   /* --- Home page ------------------------------------------------------- */
+
+  /* The lab mark sits beside the opening paragraphs, below the group photo.
+     Flex rather than a float, so the mark centres against text of any length
+     and drops above it on narrow screens instead of squeezing it. */
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .intro__logo {
+    flex: 0 0 auto;
+    width: 240px;
+    /* Percentage cap so the mark yields to the text on mid-width screens
+       rather than the two fighting over a narrow column. */
+    max-width: 34%;
+    height: auto;
+  }
+
+  /* The paragraphs keep their own rhythm, but must not push the flex row
+     taller than the text it contains. */
+  .intro__text > :first-child {
+    margin-top: 0;
+  }
+
+  .intro__text > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .intro {
+      display: block;
+    }
+
+    .intro__logo {
+      width: 148px;
+      max-width: 45%;
+      margin-bottom: 1rem;
+    }
+  }
+
   .home-lede {
     font-size: 1.1em;
     line-height: 1.65;

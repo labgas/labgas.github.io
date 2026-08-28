@@ -10,15 +10,24 @@ header:
   caption: "The LaBGAS team, KU Leuven"
 ---
 
+<div class="intro">
+<img class="intro__logo" src="{{ '/assets/images/labgas-logo.png' | relative_url }}"
+     alt="LaBGAS — Laboratory for Brain-Gut Axis Studies" width="900" height="683">
+<div class="intro__text" markdown="1">
+
 {: .home-lede}
 LaBGAS is a strongly interdisciplinary **human** research group at **KU Leuven**, embedded in
-the Translational Research Center for Gastrointestinal Disorders (TARGID) and a member of the
+the [Translational Research Center for Gastrointestinal Disorders
+(TARGID)](https://gbiomed.kuleuven.be/english/research/50000625/50000628) and a member of the
 [Leuven Brain Institute](https://www.kuleuven.be/brain-institute). We study how signals
 travelling between the gut and the brain shape what people feel — bodily symptoms, appetite,
 mood and fear — combining functional brain imaging, PET, psychophysiology and controlled
 nutritional and microbial interventions in humans.
 
 We also build the analysis software behind that work, and release it openly.
+
+</div>
+</div>
 
 ## Research lines
 

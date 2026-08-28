@@ -80,6 +80,6 @@ For enquiries about a specific project, mentioning it by name helps — see
 [Research]({{ '/research/' | relative_url }}).
 
 **LaBGAS**
-Translational Research Center for Gastrointestinal Disorders (TARGID)
+[Translational Research Center for Gastrointestinal Disorders (TARGID)](https://gbiomed.kuleuven.be/english/research/50000625/50000628)
 KU Leuven — ON2 Herestraat 49, box 701, 3000 Leuven, Belgium
 {: .notice}
