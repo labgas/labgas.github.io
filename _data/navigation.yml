@@ -14,8 +14,10 @@ main:
     url: /news/
   - title: "Join us"
     url: /join/
-  - title: "Search"
-    url: /search/
+# No "Search" entry: the magnifier button the theme puts in the masthead opens
+# the same search, so a link beside it was pure duplication — and it cost the
+# menu about 70px, which is what pushed the last item into the overflow menu on
+# smaller laptops. The /search/ page itself still exists and is linked from 404.
 
 # Sidebar for the _docs collection ------------------------------------------
 docs:

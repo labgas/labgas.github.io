@@ -35,6 +35,11 @@ search_provider         : lunr
 lunr:
   search_within_pages   : true
 
+# Loaded after the theme's own main.min.js. Currently only makes the browser's
+# Back button close the search overlay; see assets/js/labgas.js.
+after_footer_scripts:
+  - /assets/js/labgas.js
+
 # --- Social / outbound -----------------------------------------------------
 github_username         : labgas
 twitter:

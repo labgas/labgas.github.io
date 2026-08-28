@@ -67,6 +67,30 @@
   margin-inline: 0.45rem;
 }
 
+/* Search -----------------------------------------------------------------
+   The theme's search form labels its input with `class="sr-only"`, but no
+   `.sr-only` rule exists anywhere in Minimal Mistakes 4.27.1 — its own
+   visually-hidden helper is `.visually-hidden` / `.screen-reader-text`. The
+   label therefore renders as ordinary text, so opening the search showed
+   "Enter your search term..." twice: once as the label, once as the input's
+   placeholder. Alias it onto the treatment the theme meant to use, which keeps
+   the label available to screen readers. */
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  overflow: hidden;
+}
+
+/* The search page renders its own search box, so the masthead magnifier would
+   lay a second, identical one over it — two inputs sharing one id. The page is
+   the search, so it does not need the button. */
+.layout--search .search__toggle {
+  display: none;
+}
+
 /* The lab mark reads too small at the theme's default 2rem. It is a flex item
    in a crowded bar, so it also needs flex-shrink disabled: without it the link
    collapses on narrow screens and `max-width: 100%` on the image scales the
