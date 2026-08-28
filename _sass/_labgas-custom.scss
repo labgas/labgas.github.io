@@ -142,54 +142,6 @@
 
   /* --- Home page ------------------------------------------------------- */
 
-  /* The lab mark sits in the white column to the left of the opening
-     paragraphs, below the group photo.
-
-     Grid rather than flex, because the column has to hold its width while the
-     mark inside it is much narrower: the text's indent is set by the track, not
-     by the image, so the mark can be resized without shifting the paragraphs.
-
-     `align-items: start` keeps it beside the first lines of the text. Centred,
-     it drifted down into the gap between the page title and the text and read
-     as a band across the page rather than as a margin element. */
-  .intro {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    align-items: start;
-    gap: 1.75rem;
-  }
-
-  .intro__logo {
-    width: 112px;
-    max-width: 100%;
-    height: auto;
-    /* The text's first line carries leading above its cap height; without this
-       the mark sits a touch proud of it. */
-    margin-top: 0.3rem;
-  }
-
-  /* The paragraphs keep their own rhythm, but must not push the flex row
-     taller than the text it contains. */
-  .intro__text > :first-child {
-    margin-top: 0;
-  }
-
-  .intro__text > :last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 600px) {
-    .intro {
-      display: block;
-    }
-
-    .intro__logo {
-      width: 96px;
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-  }
-
   .home-lede {
     font-size: 1.1em;
     line-height: 1.65;
@@ -705,6 +657,39 @@
     span strong {
       color: $text-color;
       font-weight: 600;
+    }
+  }
+}
+
+/* Home page sidebar --------------------------------------------------------
+   The single layout always reserves a left column for the author profile —
+   200px at $large, 300px at $x-large — and the home page has that profile
+   switched off, so the column was standing empty while the intro text was
+   indented past it. The lab mark now fills it: the text lines up with the page
+   title and every block below it, and the theme's own breakpoints collapse the
+   column above the content below 1024px without any work here.
+
+   Scoped to .home-page, because the docs pages put their navigation in the
+   same slot and must keep the theme's treatment. */
+.home-page .sidebar {
+  /* The theme fades the sidebar to 0.75 and lifts it on hover. That reads as
+     restraint behind a list of author links; behind a logo it just looks like
+     a loading error. */
+  opacity: 1;
+
+  > img {
+    /* Fills the column at $large and above, so the mark is at its largest
+       exactly where there is room for it. */
+    width: 100%;
+    height: auto;
+  }
+
+  /* Below $large the column becomes a full-width block above the content, and
+     a full-width mark would dwarf the page title under it. */
+  @media (max-width: 1023px) {
+    > img {
+      width: 190px;
+      max-width: 45%;
     }
   }
 }

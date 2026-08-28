@@ -3,17 +3,21 @@ layout: single
 title: "Laboratory for Brain-Gut Axis Studies"
 permalink: /
 author_profile: false
-classes: wide
+classes:
+  - wide
+  - home-page
 header:
   image: /assets/images/lab-group.jpg
   image_description: "The LaBGAS team"
   caption: "The LaBGAS team, KU Leuven"
+# The lab mark goes in the theme's own left column, which the author profile
+# would otherwise fill. Putting it there rather than in the content keeps the
+# intro text aligned with every other block on the page, and the theme's
+# breakpoints collapse it to a single column below 1024px for free.
+sidebar:
+  - image: /assets/images/labgas-logo.png
+    image_alt: "LaBGAS — Laboratory for Brain-Gut Axis Studies"
 ---
-
-<div class="intro">
-<img class="intro__logo" src="{{ '/assets/images/labgas-logo.png' | relative_url }}"
-     alt="LaBGAS — Laboratory for Brain-Gut Axis Studies" width="900" height="683">
-<div class="intro__text" markdown="1">
 
 {: .home-lede}
 LaBGAS is a strongly interdisciplinary **human** research group at **KU Leuven**, embedded in
@@ -25,9 +29,6 @@ mood and fear — combining functional brain imaging, PET, psychophysiology and 
 nutritional and microbial interventions in humans.
 
 We also build the analysis software behind that work, and release it openly.
-
-</div>
-</div>
 
 ## Research lines
 
