@@ -129,6 +129,46 @@ def do_portraits(source: str, greyscale: bool = False) -> "tuple[int, list]":
     return done, missing
 
 
+def do_normalise_existing(greyscale: bool = False) -> "tuple[int, list]":
+    """Square-crop and resize any portrait already sitting in assets/images/team/.
+
+    The Drive folder is not the only way a photo arrives — someone drops a file
+    straight into the repo named after the person's slug. Those are full-size
+    originals (several MB, arbitrary aspect ratio) where every other portrait is
+    a 480px square, so normalise them in place.
+
+    Files already at the target size are left alone, which makes this safe to
+    re-run: re-cropping an already-cropped image would zoom in a little further
+    each time.
+    """
+    done, problems = 0, []
+    if not os.path.isdir(TEAM):
+        return 0, problems
+    for name in sorted(os.listdir(TEAM)):
+        path = os.path.join(TEAM, name)
+        if not os.path.isfile(path) or not name.lower().endswith((".jpg", ".jpeg", ".png")):
+            continue
+        try:
+            with Image.open(path) as im:
+                if im.size == (PORTRAIT_PX, PORTRAIT_PX):
+                    continue
+                if min(im.size) < 100:
+                    problems.append(f"{name} (too small: {im.size[0]}x{im.size[1]})")
+                    continue
+                slug = os.path.splitext(name)[0]
+                before = im.size
+                cropped = square_crop(im, PORTRAIT_PX, CROP_OVERRIDES.get(slug), greyscale)
+            out = os.path.join(TEAM, slug + ".jpg")
+            save_jpeg(cropped, out)
+            if out != path:
+                os.remove(path)
+            done += 1
+            print(f"  normalise {slug}.jpg  {before[0]}x{before[1]} -> {PORTRAIT_PX}x{PORTRAIT_PX}")
+        except Exception as exc:
+            problems.append(f"{name} ({type(exc).__name__}: {exc})")
+    return done, problems
+
+
 def do_logo(source: str) -> "list[str]":
     problems = []
     src = os.path.join(source, "LabGAS-logo.png")
@@ -205,9 +245,18 @@ def main() -> int:
     )
     args = ap.parse_args()
 
+    # Photos dropped straight into assets/images/team/ are normalised whether or
+    # not the Drive folder is reachable, so this works on any machine.
+    n_local, problems_local = do_normalise_existing(args.greyscale)
+
     if not os.path.isdir(args.source):
-        print(f"Source folder not available: {args.source}")
-        print("Nothing to do — existing images in assets/images/ are left untouched.")
+        if n_local:
+            print(f"\nNormalised {n_local} portrait(s) already in {rel(TEAM)}/")
+        else:
+            print(f"Source folder not available: {args.source}")
+            print("Nothing to do — existing images in assets/images/ are left untouched.")
+        for p in problems_local:
+            print(f"  · {p}")
         return 0
 
     print(f"Source: {args.source}\n")
@@ -215,7 +264,9 @@ def main() -> int:
     missing += do_logo(args.source)
     missing += do_group(args.source)
 
-    print(f"\n{n}/{len(PORTRAITS)} portraits written to {rel(TEAM)}/")
+    missing += problems_local
+    print(f"\n{n}/{len(PORTRAITS)} portraits written to {rel(TEAM)}/"
+          + (f", {n_local} normalised in place" if n_local else ""))
     if missing:
         print(f"\n{len(missing)} skipped:")
         for m in missing:

@@ -23,6 +23,8 @@ groups:
     label: "Post-doctoral researchers"
   - id: phd
     label: "PhD students"
+  - id: clinical_phd
+    label: "Clinical PhD students"
   - id: students
     label: "Master's & medical students"
   - id: alumni
@@ -330,6 +332,16 @@ members:
     kuleuven_id: "00183708"
     group: phd
     title: "PhD student"
+
+  # --- Clinical PhD students --------------------------------------------
+  - name: "Bep Keersmaekers"
+    photo: bep-keersmaekers.jpg
+    group: clinical_phd
+    title: "Clinical psychologist, IBD team UZ Leuven"
+    bio_lead: "Bep is a clinical psychologist working within the IBD team at UZ Leuven, where she provides psychological care to patients with inflammatory bowel disease (IBD)."
+    bio:
+      - "Bep is a clinical psychologist working within the IBD team at UZ Leuven, where she provides psychological care to patients with inflammatory bowel disease (IBD). Alongside her clinical work, she is pursuing a PhD focused on psychological interventions for patients with IBD, with a particular interest in improving wellbeing and reducing fatigue."
+      - "As part of her PhD research, Bep is conducting the PEARL study, a 14-week psychological intervention for patients with IBD experiencing significant fatigue. The intervention combines Acceptance and Commitment Therapy (ACT), structured napping and graded physical activity, with the aim of reducing fatigue and improving daily functioning and wellbeing. In addition to evaluating the clinical effects of the intervention, the study also investigates potential underlying mechanisms by examining changes in metabolic and physiological markers before and after the intervention, including magnetic resonance spectroscopy (MRS)."
 
   # --- Master's & medical students --------------------------------------
   # Intentionally empty between academic years. The Team page skips any group
