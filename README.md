@@ -120,13 +120,33 @@ layout or HTML.
 | Team bios and their project links | `_data/team.yml` (`bio_lead`, `bio`, `projects`) |
 | Projects on the Research page — name, tagline, summary | `_data/projects.yml` |
 | Project descriptions, funding, people | `_data/projects.yml` (`detail:`) |
-| The repository index on the Tools page | `_data/repos.yml` |
+| The repository index on the Tools page | `_data/repos.yml` (`category`, `desc`; the rest refreshes itself — below) |
 | Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
 | Masthead and docs sidebar navigation | `_data/navigation.yml` |
 | Site title, description, social links | `_config.yml` |
 
 Page prose lives in `_pages/`, the pipeline documentation in `_docs/`, and news posts in
 `_posts/`.
+
+### The repository index keeps itself current
+
+`_data/repos.yml` carries two facts GitHub already knows — each repo's last-push date and its
+language — and those go stale the moment anyone pushes anywhere. A scheduled workflow,
+[`.github/workflows/refresh-repo-index.yml`](.github/workflows/refresh-repo-index.yml), runs
+`scripts/refresh_repos.py` once a day and commits any change, so the index is at most a day
+behind. **`category` and `desc` are editorial and are never touched** — GitHub's own descriptions
+are terser and less useful than the ones written for the site.
+
+Run it yourself any time, or check without writing:
+
+```bash
+python scripts/refresh_repos.py
+```
+
+The script also reports what it cannot fix alone: a new repository in the organisation with no
+entry yet (adding one needs a category and a description), an entry whose repository has gone,
+and any LaBGAScore script name cited in `_docs/` or `_pages/` that no longer exists upstream.
+Those appear in the workflow's run summary on the Actions tab.
 
 ### Adding a team member
 

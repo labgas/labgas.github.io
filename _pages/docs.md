@@ -84,4 +84,6 @@ git-annex — tracks both code and data, with code pushed to GitHub and data to
 {: .notice--warning}
 These pages summarise the repository as it stood when they were written. For anything
 operational — exact arguments, current script names — treat
-[the repository](https://github.com/labgas/LaBGAScore) as the source of truth.
+[the repository](https://github.com/labgas/LaBGAScore) as the source of truth, and in particular
+[`LaBGAS_fMRI_analysis_workflow.md`](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md),
+which walks the fMRI workflow end to end and is maintained alongside the code it describes.

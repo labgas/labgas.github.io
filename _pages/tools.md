@@ -59,7 +59,7 @@ Scripts carry numbered prefixes (`s0`, `s1`, `s2` …) marking the order of the 
 | `prep/` | BIDS conversion, directory definition, event timing files, smoothing |
 | `firstlevel/` | SPM + CANlab GLM specification, estimation, diagnostic reports |
 | `secondlevel/` | Group statistics and the MVPA/machine-learning pipelines, with seven usage guides |
-| `stats_tools/` | FDR correction and related helpers |
+| `stats_tools/` | FDR correction and related helpers in `functions/`, plus `sas_macros/` — SAS macros for effect sizes on the fixed effects of a `PROC MIXED` model |
 | `atlas_mask_tools/` | Atlas and mask generation, plus ready-made brain templates |
 | `pet/` | PET workflows including kinetic modelling |
 | `mrs/` | MR spectroscopy, built on [Osprey](https://github.com/schorschinho/osprey) |

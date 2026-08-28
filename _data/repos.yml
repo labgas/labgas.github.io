@@ -6,14 +6,14 @@
 # `updated` is the last-push date observed when this index was compiled;
 # it is indicative only — GitHub is always the source of truth.
 
-compiled: "2026-08-27"
+compiled: "2026-08-28"
 
 repos:
   # --- Methods ----------------------------------------------------------
   - name: LaBGAScore
     category: methods
     lang: MATLAB
-    updated: "2026-08-27"
+    updated: "2026-08-28"
     desc: >-
       Core scripts and templates for the LaBGAS standard neuroimaging
       workflow: BIDS conversion, first-level modelling, second-level and
