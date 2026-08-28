@@ -42,6 +42,31 @@
   }
 }
 
+/* The bar carries two marks and an eight-item menu, more than the theme
+   anticipates, and the theme scales the root font to 22px at its widest
+   breakpoint — which inflates the link text *and* the 1rem side margins on
+   every link, 44px of dead space per item. Tightening both keeps the whole
+   menu in the bar on any normal desktop; on narrower screens the greedy-nav
+   script folds the tail into the overflow menu, as designed.
+
+   The binding case is a viewport at or just above 1280px: the root font jumps
+   to 22px there while the wrapper stops widening at its 1280px max, so the
+   menu is at its largest in the narrowest column it will ever have. Anything
+   that fits there fits everywhere wider, and the sub-1280px sizes are
+   proportionally smaller against a nearly identical column.
+
+   Scoped to the visible links so the overflow menu keeps its roomier spacing. */
+.greedy-nav .visible-links a {
+  margin: 0 0.3rem;
+  font-size: 0.88em;
+}
+
+/* The search button's 1rem side margins cost 44px at the widest breakpoint —
+   more than a menu item. Match it to the link spacing. */
+.search__toggle {
+  margin-inline: 0.45rem;
+}
+
 /* The lab mark reads too small at the theme's default 2rem. It is a flex item
    in a crowded bar, so it also needs flex-shrink disabled: without it the link
    collapses on narrow screens and `max-width: 100%` on the image scales the
