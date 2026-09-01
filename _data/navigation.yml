@@ -53,3 +53,7 @@ docs:
         url: /docs/connectivity-rsa/
       - title: "Atlases & masks"
         url: /docs/atlases-masks/
+  - title: "Reproducibility"
+    children:
+      - title: "Dependencies & provenance"
+        url: /docs/dependencies/
