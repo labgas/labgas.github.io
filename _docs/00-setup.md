@@ -32,6 +32,16 @@ model that everything below is written against.
 | [Neuroimaging_Pattern_Masks](https://github.com/canlab/Neuroimaging_Pattern_Masks) | Atlases, parcellations, and published multivariate signatures |
 | [LaBGAScore](https://github.com/labgas/LaBGAScore) | Our scripts and templates |
 | [CANlab_help_examples](https://github.com/labgas/CANlab_help_examples) | The second-level batch pipeline and reporting |
+| [CanlabPrivate](https://github.com/canlab/CanlabPrivate) — **private** | Called by the second-level pipeline; you need CANlab access to clone it |
+| [canlab_single_trials](https://github.com/labgas/canlab_single_trials) | The `fmri_data_st` object the pipeline loads image data into |
+
+The last two are cloned automatically by `a_set_up_paths_always_run_first.m` if they are
+missing — but `CanlabPrivate` is a **private repository**, so that clone fails unless your
+GitHub account has been granted access. Ask CANlab for it before your first run rather than
+discovering it mid-analysis.
+
+Signature analyses (`prep_4_apply_signatures_and_save.m`) additionally need
+[MasksPrivate](https://github.com/canlab/MasksPrivate), also private.
 
 ## Optional, per analysis domain
 
@@ -39,8 +49,15 @@ Install these only when the corresponding pipeline is used:
 [CoSMoMVPA](https://www.cosmomvpa.org/) (RSA),
 [The Decoding Toolbox](https://sites.google.com/site/tdtdecodingtoolbox/) (classification
 accuracy), [GraphVar](https://www.nitrc.org/projects/graphvar/) (graph-theoretical connectivity),
-[JuSpace](https://github.com/juryxy/JuSpace) (receptor–spatial correlation), and
-[Osprey](https://github.com/schorschinho/osprey) (MR spectroscopy).
+[JuSpace](https://github.com/juryxy/JuSpace) (receptor–spatial correlation),
+[Osprey](https://github.com/schorschinho/osprey) (MR spectroscopy), and
+[ooFmriDataObjML](https://github.com/canlab/ooFmriDataObjML) (the object-oriented
+machine-learning path used by the SVM scripts).
+
+This page lists what you need **installed**. It is not the full dependency picture: a
+script also reaches repositories indirectly, through CanlabCore. The complete,
+machine-generated per-script list is in each repository's `DEPENDENCIES.md` — see
+[Dependencies & provenance](/docs/dependencies/).
 
 ## Preprocessing and data management
 
@@ -87,6 +104,8 @@ git clone https://github.com/labgas/LaBGAScore.git
 git clone https://github.com/labgas/CANlab_help_examples.git
 git clone https://github.com/canlab/CanlabCore.git
 git clone https://github.com/canlab/Neuroimaging_Pattern_Masks.git
+git clone https://github.com/labgas/canlab_single_trials.git
+git clone https://github.com/canlab/CanlabPrivate.git      # private: needs CANlab access
 ```
 
 ## Checking your scripts

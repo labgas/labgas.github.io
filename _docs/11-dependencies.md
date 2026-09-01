@@ -115,9 +115,18 @@ dependency the script already has, but never create one.
 {% endfor %}
 
 {% if repo[1].scripts.size > 40 %}
+{%- comment -%}
+The two repositories differ: LaBGAScore publishes DEPENDENCIES.md from its root on main,
+the CANlab fork from Second_level_analysis_template_scripts/ on master. A single hardcoded
+link 404s for one of them.
+{%- endcomment -%}
+{% if repo[0] == "CANlab_help_examples" %}
+{% assign depurl = "https://github.com/labgas/CANlab_help_examples/blob/master/Second_level_analysis_template_scripts/DEPENDENCIES.md" %}
+{% else %}
+{% assign depurl = "https://github.com/labgas/LaBGAScore/blob/main/DEPENDENCIES.md" %}
+{% endif %}
 Showing 40 of {{ repo[1].scripts | size }}. See
-[`DEPENDENCIES.md`](https://github.com/labgas/{{ repo[0] }}/blob/main/DEPENDENCIES.md)
-for the rest.
+[`DEPENDENCIES.md`]({{ depurl }}) for the rest.
 {% endif %}
 
 {% endfor %}
