@@ -6,14 +6,14 @@
 # `updated` is the last-push date observed when this index was compiled;
 # it is indicative only — GitHub is always the source of truth.
 
-compiled: "2026-09-02"
+compiled: "2026-09-03"
 
 repos:
   # --- Methods ----------------------------------------------------------
   - name: LaBGAScore
     category: methods
     lang: MATLAB
-    updated: "2026-09-02"
+    updated: "2026-09-03"
     desc: >-
       Core scripts and templates for the LaBGAS standard neuroimaging
       workflow: BIDS conversion, first-level modelling, second-level and
@@ -22,7 +22,7 @@ repos:
   - name: CANlab_help_examples
     category: methods
     lang: HTML
-    updated: "2026-09-01"
+    updated: "2026-09-02"
     desc: >-
       LaBGAS fork of the CANlab help repository — how-to examples and the
       batch pipeline used for second-level neuroimaging analysis and
