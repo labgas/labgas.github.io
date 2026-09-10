@@ -52,7 +52,10 @@ figures and tables — univariate maps, multivariate predictions, signature resp
 decompositions. Each works independently once the data are prepared, so you can iterate on one
 analysis without re-running everything.
 
-**5 · Publish.** The `z_batch_*` scripts render the collection into date-stamped HTML.
+**5 · Publish.** Scripts are run headless from the Linux command line via
+`labgascore_run_headless.sh`, which renders each into a date-stamped HTML report, records
+the commit of every dependency it reached, and fails loudly if the script errored — `publish`
+otherwise catches errors into the report and returns as if nothing were wrong.
 
 ## What comes out
 

@@ -36,6 +36,24 @@ publish('cfs_secondlevel_m14_s7_c2a_second_level_regression', 'outputDir', htmls
 LaBGAScore_prov_publish('cfs_secondlevel_m14_s7_c2a_second_level_regression', htmlsavedir)
 ```
 
+In practice you rarely call it by hand. Scripts are normally run **headless**, from the
+Linux command line, which publishes through `LaBGAScore_prov_publish` and additionally
+checks that the run actually worked:
+
+```bash
+labgascore_run_headless.sh -d /data/proj_xxx \
+    -s proj_secondlevel_m1_s0_a_set_up_paths_always_run_first \
+    -a data_objects.mat \
+    proj_secondlevel_m1_s4_prep_2_load_image_data_and_save
+```
+
+That last point is easy to miss and expensive: **`publish` catches a script's error into
+the HTML report and then returns normally.** No exception, exit status 0, report file
+present. A chain of scripts can report success from beginning to end while one of them died
+partway — sometimes after an hour of computation and before anything was saved.
+`LaBGAScore_run_reports`, which the wrapper calls, reads each report back and fails on the
+error markup, and can assert that the results file the script should have written exists.
+
 **Looking back — reconstruct it.** For analyses already run,
 `LaBGAScore_prov_resolve_retrospective` recovers the same information after the fact.
 It works because two records survive independently. Every artifact carries its own date:
@@ -57,11 +75,16 @@ afterwards — a commit's own date says nothing about when your clone moved to i
 `clean/labgascore_prov_protect_reflogs.sh` once per machine to disable expiry.
 </div>
 
-## Figures depend on the screen that made them
+## Figures depend on how you ran the script
 
-`publish()` captures figures from the screen, so the size and DPI of your X2go session
-decide how figures in a report come out — and a figure larger than the session window is
-captured at display size instead. Two consequences the workflow now handles explicitly:
+Headless — the default — `publish()` **prints** figures rather than capturing them from a
+screen, so no display setting affects them and their size is not limited by the 1024×768,
+72 dpi virtual screen headless MATLAB reports. The only thing you give up is pixel density.
+
+Run interactively in X2go when you want higher-resolution figures (96–144 dpi). There
+`publish()` **captures** figures from the screen, so the size and DPI of your session decide
+how they come out — and a figure larger than the session window is captured at display size
+instead. Two consequences the workflow handles explicitly:
 
 - Figure size is set in **inches**, not pixels, because MATLAB font sizes are in points.
   The request is treated as a maximum and scaled down to fit the display, preserving the
@@ -71,8 +94,9 @@ captured at display size instead. Two consequences the workflow now handles expl
   script — so a difference between two people's reports is measurable rather than
   puzzling.
 
-Run `LaBGAScore_check_display` to see what your own session can produce. Recommended X2go
-settings per screen size are in the
+Run `LaBGAScore_check_display` to see what your own session can produce — it applies to the
+interactive route only. Both routes, and the recommended X2go settings per screen size, are
+in section 2 of the
 [fMRI analysis workflow](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md).
 
 ## What a commit hash does and does not tell you
