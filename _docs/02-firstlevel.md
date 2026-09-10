@@ -13,6 +13,20 @@ excerpt: "Subject-level GLM with SPM and CANlab: design specification, estimatio
 The first level fits a general linear model to each subject's preprocessed time series, and
 produces the contrast images that group analysis consumes.
 
+<div class="canlab-note" markdown="1">
+**Reference documentation.** This page is an orientation. The authoritative guides live in
+the repositories:
+
+- [`firstlevel/README.md`](https://github.com/labgas/LaBGAScore/blob/main/firstlevel/README.md)
+  — the reference guide for the task-fMRI first-level chain: the `DSGN` struct, the scripts
+  in order, the options, and the diagnostics.
+- [`firstlevel/README_phMRI.md`](https://github.com/labgas/LaBGAScore/blob/main/firstlevel/README_phMRI.md)
+  — the pharmacological-challenge variant, which does **not** feed the second level.
+- [`LaBGAS_fMRI_analysis_workflow.md` § First-level analysis](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#first-level-analysis)
+  — the step-by-step protocol: creating the subdataset, downloading and adapting the
+  scripts, running them, and checking the results.
+</div>
+
 ## What this stage produces
 
 - A specified and estimated SPM design per subject and model
@@ -78,3 +92,5 @@ predictable names. Getting that right at the first level is what makes
 
 **Next:** [Second-level analysis]({{ '/docs/secondlevel/' | relative_url }})
 [Source: `firstlevel/`](https://github.com/labgas/LaBGAScore/tree/main/firstlevel){: .btn .btn--inverse}
+[`firstlevel/README.md`](https://github.com/labgas/LaBGAScore/blob/main/firstlevel/README.md){: .btn .btn--inverse}
+[Workflow protocol](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#first-level-analysis){: .btn .btn--inverse}

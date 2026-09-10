@@ -22,6 +22,22 @@ are documented at [canlab.github.io/batch](https://canlab.github.io/batch/) and
 follows is an orientation, not a replacement.
 </div>
 
+<div class="canlab-note" markdown="1">
+**Reference documentation.** This page is an orientation. The authoritative guides live in
+the repositories:
+
+- [`Second_level_analysis_template_scripts/README.md`](https://github.com/labgas/CANlab_help_examples/blob/master/Second_level_analysis_template_scripts/README.md)
+  — how LaBGAS uses the CANlab framework: the two script groups, the shared `DAT` data
+  model, the 19 scripts we maintain, and the notes on TFCE and its reporting options.
+- [`LaBGAS_fMRI_analysis_workflow.md` § Second-level analysis](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#second-level-analysis)
+  — the step-by-step protocol: creating the subdataset, downloading and adapting the
+  scripts, and running them (headless by default — see
+  [§ Before you start](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#before-you-start)).
+- The multivariate pipelines have their own guides in
+  [LaBGAScore `secondlevel/`](https://github.com/labgas/LaBGAScore/tree/main/secondlevel):
+  one per method for the neuroimaging pipeline and one for the plotting.
+</div>
+
 ## The philosophy, briefly
 
 The design goals behind the batch system explain why it looks the way it does:
@@ -92,4 +108,6 @@ covering both the neuroimaging pipeline and the plotting for each method.
 
 **Next:** [PLS-DA]({{ '/docs/mvpa-plsda/' | relative_url }})
 [Batch scripts](https://github.com/labgas/CANlab_help_examples){: .btn .btn--inverse}
+[Template scripts README](https://github.com/labgas/CANlab_help_examples/blob/master/Second_level_analysis_template_scripts/README.md){: .btn .btn--inverse}
+[Workflow protocol](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#second-level-analysis){: .btn .btn--inverse}
 [CANlab batch docs](https://canlab.github.io/batch/){: .btn .btn--inverse}
