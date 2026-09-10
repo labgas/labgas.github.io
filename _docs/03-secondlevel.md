@@ -50,6 +50,28 @@ The design goals behind the batch system explain why it looks the way it does:
 That last point is the one that matters most in practice. A result from eighteen months ago can
 be inspected without re-running anything, and the report says exactly what was run.
 
+## How models are named
+
+A second-level model is named after the **first-level model it is built on**:
+
+```
+model_<firstlevel number><letter>_<description>
+```
+
+`model_2a_casecontrol_cov_scanner` is built on `firstlevel/model_2_basic`, is the first
+second-level analysis derived from it, and controls for scanner. Scripts inside follow
+`<proj>_secondlevel_m<N><letter>_s<step>_<template name>.m`.
+
+The first-level model is otherwise invisible from a second-level name, and it is the thing
+most likely to change underneath an analysis — a refit, a different noise model, a different
+high-pass filter. Two second-level results are only comparable if they share it, so the name
+records it. The description is a claim about the design: if the covariates change, the model
+gets a new name rather than a quietly widened old one.
+
+Models named before this convention keep their names, because renaming would break the paths
+recorded inside saved `.mat` files and every published report. For those, `s0` names the
+first-level options script it runs.
+
 ## The five steps
 
 **1 · Create the analysis folder and run setup.** Establishes the standard directory structure
