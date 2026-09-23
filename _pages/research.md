@@ -114,6 +114,17 @@ academic stress, and the role of microbial metabolites in anorexia nervosa.
       {% for ref in p.detail.publications %}<li>{{ ref }}</li>{% endfor %}
     </ul>
     {% endif %}
+
+    {%- comment -%}
+      A study that is recruiting can carry a plain-language site for people
+      thinking of taking part. Last in the block, since it addresses a different
+      reader than everything above it.
+    {%- endcomment -%}
+    {% if p.detail.participants_url %}
+    <p class="project__participate">
+      <a class="btn btn--primary" href="{{ p.detail.participants_url }}">Taking part in this study</a>
+    </p>
+    {% endif %}
   </div>
 </details>
 {% else %}

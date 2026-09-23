@@ -7,6 +7,10 @@
 #
 # `line` maps a project onto one of the three research lines used on the
 # Research page: symptoms | appetite | microbiota
+#
+# `detail.source` records where the harvested description came from and is not
+# rendered. `detail.participants_url` is — it points at a plain-language study
+# site for people considering taking part, and is shown as a call to action.
 
 projects:
   - name: "MoodBugs"
@@ -215,7 +219,7 @@ projects:
       description:
         - "Bariatric surgery (e.g., gastric bypass or sleeve gastrectomy) is currently the most effective method to induce significant and durable weight loss, which is mediated by caloric restriction, alterations in gut hormones, and eating behaviour (besides the decreased volume of the stomach). However, the neurochemical underpinnings of these effects remain poorly understood. The endocannabinoid (EC) and dopamine (DA) systems are key players in the regulation of food intake and energy balance, but how obesity and bariatric surgery affect EC and DA signaling both centrally and peripherally, and how this is related to altered metabolic hormone levels along the gut-brain axis remains unclear. The overall aim of this project is to gain fundamental insight in the interplay between the central and peripheral ECS and DA system and metabolic hormones before and after bariatric surgery, and their role in altered eating behaviour. To this end, we are conducting a longitudinal study in patients undergoing bariatric surgery in which we combine cutting-edge multimodal neuroimaging methods (PET, fMRI) with a set of innovative biochemical measurements (circulating and urinary EC and DA levels, metabolic hormones), and eating behaviour assessment. The results of this project may help pave the way for the development of novel, less invasive treatment options for obesity by identifying the neurochemical basis of the aberrant eating behaviour they should target."
 
-  - name: "GLP-1 pharmacotherapy optimisation"
+  - name: "SEM-BEAT — GLP-1 pharmacotherapy optimisation"
     line: appetite
     tagline: "Patient selection across the binge-eating spectrum"
     period: "2025 – present"
@@ -229,6 +233,7 @@ projects:
       investigators: "Roman Vangoitsenhoven (Clinical and Experimental Endocrinology), Nathalie Weltens (LaBGAS), Elske Vrieze (Mind Body Research), Lukas Van Oudenhove (LaBGAS), Bart Van der Schueren (Clinical and Experimental Endocrinology)"
       team: "Alexine Mennes (Clinical and Experimental Endocrinology and LaBGAS) and Annelies Falter (Clinical and Experimental Endocrinology and Mind Body Research)"
       source: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"
+      participants_url: "https://sites.google.com/view/sem-beatstudie/home"
       description:
         - "GLP1-agonists including semaglutide have emerged as game changing drugs to support weight loss in obesity and are receiving increased attention for their potential role in treating maladaptive food reward behaviors, particularly binge eating (BE). However, how GLP1-agonists impact mechanisms regulating eating behavior and body weight loss is not well understood. Moreover, there is considerable variability in individual sensitivity to these drugs. Combined with the increasing demand for GLP1-based medications, this raises an urgent need for a more personalized treatment approach. Our aim is to improve patient selection for GLP1-based pharmacotherapy by investigating the impact of semaglutide on three distinct, but highly interacting motivational psychobiological processes crucial for changing individual eating behaviors and achieving weight loss in the treatment of obesity across the BE spectrum: i) gut-brain hunger/satiety signaling, ii) reward processing and its dopaminergic neural correlates and iii) emotional state."
 

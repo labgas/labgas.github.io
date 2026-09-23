@@ -72,6 +72,9 @@ VERTICAL_BIAS = 0.38
 # the image width/height. Add an entry here rather than editing the source photo.
 CROP_OVERRIDES = {
     "ynse-dooms": (0.59, 0.42, 0.44),
+    # Tall 3:4 phone portrait: the default upward bias leaves the face low in
+    # the square with a band of empty wall above it.
+    "anne-sophie-nobel": (0.48, 0.58, 0.92),
 }
 
 

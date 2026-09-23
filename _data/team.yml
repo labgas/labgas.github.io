@@ -26,7 +26,7 @@ groups:
   - id: clinical_phd
     label: "Clinical PhD students"
   - id: students
-    label: "Master's & medical students"
+    label: "Master's students & interns"
   - id: alumni
     label: "Alumni"
 
@@ -325,9 +325,9 @@ members:
     bio:
       - "Alexine earned her Master of Biomedical Sciences (Clinical Sciences) at KU Leuven in 2025. During her master’s thesis at LaBGAS, she investigated how a microbiota-modulating antibiotic influences brain responses to acute stress and neuroinflammatory processes in healthy volunteers, using fMRI and ¹H-MRS. This work deepened her fascination with the microbiota-gut-brain axis and sparked a lasting interest in neuroimaging and psychobiological research. Building on this interest, she is currently pursuing a PhD at LaBGAS and the Department of Clinical and Experimental Endocrinology, focusing on the neuropsychobiological mechanisms through which the GLP-1 receptor agonist semaglutide influences eating behavior and weight regulation. Using a multimodal approach, her work aims to clarify drivers of individual differences in response to GLP-1-based pharmacotherapy in obesity across the binge eating spectrum, paving the way for more personalized obesity care."
     projects:
-      - title: "GLP-1 pharmacotherapy optimisation"
+      - title: "SEM-BEAT"
         url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"
-        ref: "glp-1-pharmacotherapy-optimisation"
+        ref: "sem-beat-glp-1-pharmacotherapy-optimisation"
   - name: "Annelies Falter"
     kuleuven_id: "00183708"
     group: phd
@@ -343,13 +343,25 @@ members:
       - "Bep is a clinical psychologist working within the IBD team at UZ Leuven, where she provides psychological care to patients with inflammatory bowel disease (IBD). Alongside her clinical work, she is pursuing a PhD focused on psychological interventions for patients with IBD, with a particular interest in improving wellbeing and reducing fatigue."
       - "As part of her PhD research, Bep is conducting the PEARL study, a 14-week psychological intervention for patients with IBD experiencing significant fatigue. The intervention combines Acceptance and Commitment Therapy (ACT), structured napping and graded physical activity, with the aim of reducing fatigue and improving daily functioning and wellbeing. In addition to evaluating the clinical effects of the intervention, the study also investigates potential underlying mechanisms by examining changes in metabolic and physiological markers before and after the intervention, including magnetic resonance spectroscopy (MRS)."
 
-  # --- Master's & medical students --------------------------------------
-  # Intentionally empty between academic years. The Team page skips any group
-  # with no members, so this section simply does not render until names are
-  # added back — no template change needed.
-  #
-  #  - name: "Given Family"
-  #    group: students
+  # --- Master's students & interns ---------------------------------------
+  # The Team page skips any group with no members, so this section simply
+  # stops rendering between academic years — no template change needed.
+  - name: "Anne-Sophie Nobel"
+    photo: anne-sophie-nobel.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Sophie obtained her BSc in Psychology (NL) in 2025 at Tilburg University, where she majored in Neuropsychology."
+    bio:
+      - "Sophie obtained her BSc in Psychology (NL) in 2025 at Tilburg University, where she majored in Neuropsychology. Currently, she is a student at Radboud University (Nijmegen) in the Research Master Cognitive Neuroscience, from which she will graduate in 2027. During this Master’s, she will complete her internship at KU Leuven as part of the BEACON project."
+      - "During her Bachelor’s, she worked as a student assistant in Prof. Dr. Tineke Snijders’ team, where they studied multimodal speech processing using EEG. At the same time, she wrote her Bachelor’s thesis on the role of cognitive reserve as a protective factor in Alzheimer’s Disease, where she worked on existing data."
+      - "For the completion of her Master’s, she will join Dr. Boushra Dalile’s research, together with Febe Vanherck, where they investigate the mechanisms underlying the effects of butyrate on PTSD, using fMRI and ELISA as key methods. Additionally, she will assist Annalena’s research on the effects of SCFAs on affective brain circuits and neuroepigenetics, using PET-CT. The data obtained will be used to write her Master’s thesis and thereby complete her MSc in Cognitive Neuroscience."
+    projects:
+      # BEACON is not on the Research page yet; the chip resolves as soon as a
+      # project named "BEACON" is added there, since the anchor is its slug.
+      - title: "BEACON"
+        ref: "beacon"
+      - title: "MoodBugs"
+        ref: "moodbugs"
 
   # --- Alumni -----------------------------------------------------------
   # TODO (lab): add former members here — same fields, group: alumni.

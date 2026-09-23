@@ -78,7 +78,8 @@ Under your name, add or edit the `projects:` block:
 `ref` is the project's name in lower case with spaces and punctuation turned into hyphens, and it
 must match a project on the [Research page](https://labgas.github.io/research/) —
 `MoodBugs` → `moodbugs`, `SY-NAPS` → `sy-naps`,
-`GLP-1 pharmacotherapy optimisation` → `glp-1-pharmacotherapy-optimisation`. After saving, click
+`SEM-BEAT — GLP-1 pharmacotherapy optimisation` → `sem-beat-glp-1-pharmacotherapy-optimisation`.
+After saving, click
 your project chip on the [Team page](https://labgas.github.io/team/) to check it jumps to the
 right project. If it scrolls nowhere, the `ref` is wrong.
 
@@ -238,7 +239,8 @@ uncollapsed, which is fine for a short one.
 
 `ref` must match the project's `name` in `_data/projects.yml` slugified: lower case, spaces and
 punctuation to hyphens. `MoodBugs` → `moodbugs`, `SY-NAPS` → `sy-naps`,
-`GLP-1 pharmacotherapy optimisation` → `glp-1-pharmacotherapy-optimisation`. Get it wrong and
+`SEM-BEAT — GLP-1 pharmacotherapy optimisation` → `sem-beat-glp-1-pharmacotherapy-optimisation`.
+Get it wrong and
 the chip renders but scrolls nowhere; `scripts/validate_site.py` does not currently catch this,
 so check the link after editing.
 
