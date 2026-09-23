@@ -294,8 +294,9 @@ python scripts/prepare_images.py
 That crops it square, resizes to 480px and writes it to `assets/images/team/`. Sources are never
 committed — some are over 20 MB. If the automatic crop misses the face (full-length shots,
 mainly), add a `(centre_x, centre_y, side)` entry to `CROP_OVERRIDES` instead of editing the
-photo. `--greyscale` renders all portraits in black and white, if you would rather they were
-uniform than true to the originals.
+photo. Portraits are rendered in black and white, which is what lets photos shot in wildly
+different light sit in one grid; pass `--colour` if you would rather they were true to the
+originals.
 
 ### Adding a publication
 

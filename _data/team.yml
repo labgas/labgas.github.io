@@ -332,6 +332,10 @@ members:
     kuleuven_id: "00183708"
     group: phd
     title: "PhD student"
+    projects:
+      - title: "SEM-BEAT"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"
+        ref: "sem-beat-glp-1-pharmacotherapy-optimisation"
 
   # --- Clinical PhD students --------------------------------------------
   - name: "Bep Keersmaekers"

@@ -12,6 +12,11 @@ Pass --source to point at a different folder. Missing sources are reported and
 skipped rather than treated as errors, so the script is safe to run on a machine
 that does not have the Drive folder mounted.
 
+Portraits are rendered in greyscale. The sources are a mix of studio headshots,
+phone snaps and scans, shot under whatever light was going; draining the colour
+is what lets them sit in one grid without looking like a ransom note. Pass
+--colour to keep each photo's own colour instead.
+
 Requires: pillow, pillow-heif
 """
 
@@ -21,7 +26,7 @@ import argparse
 import os
 import sys
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageChops, ImageOps
 
 try:
     import pillow_heif
@@ -101,6 +106,23 @@ def square_crop(im: Image.Image, size: int, override=None, greyscale: bool = Fal
     return im
 
 
+def is_greyscale(im: Image.Image) -> bool:
+    """True if an image carries no colour worth draining.
+
+    Used to leave already-converted portraits alone, so re-running the script
+    does not re-encode every file and fill the diff with noise. JPEG stores
+    colour as chroma planes and rounds on the way back, so a portrait saved in
+    greyscale can come back a hair off neutral — hence the tolerance rather
+    than an exact r == g == b test.
+    """
+    if im.mode == "L":
+        return True
+    r, g, b = im.convert("RGB").split()
+    worst = max(ImageChops.difference(r, g).getextrema()[1],
+                ImageChops.difference(g, b).getextrema()[1])
+    return worst <= 4
+
+
 def save_jpeg(im: Image.Image, path: str, quality: int = 86) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     im.convert("RGB").save(path, "JPEG", quality=quality, optimize=True, progressive=True)
@@ -153,12 +175,21 @@ def do_normalise_existing(greyscale: bool = False) -> "tuple[int, list]":
             continue
         try:
             with Image.open(path) as im:
+                slug = os.path.splitext(name)[0]
                 if im.size == (PORTRAIT_PX, PORTRAIT_PX):
+                    # Already cropped. The only thing left that can be out of
+                    # step is the colour, and draining it needs no crop — so do
+                    # that in place rather than re-cropping, which would zoom in
+                    # a little further on every run.
+                    if not greyscale or is_greyscale(im):
+                        continue
+                    save_jpeg(ImageOps.grayscale(im).convert("RGB"), path)
+                    done += 1
+                    print(f"  greyscale {slug}.jpg")
                     continue
                 if min(im.size) < 100:
                     problems.append(f"{name} (too small: {im.size[0]}x{im.size[1]})")
                     continue
-                slug = os.path.splitext(name)[0]
                 before = im.size
                 cropped = square_crop(im, PORTRAIT_PX, CROP_OVERRIDES.get(slug), greyscale)
             out = os.path.join(TEAM, slug + ".jpg")
@@ -241,16 +272,19 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--source", default=DEFAULT_SOURCE, help="folder holding the original images")
     ap.add_argument(
-        "--greyscale",
+        "--colour",
+        "--color",
+        dest="colour",
         action="store_true",
-        help="render all portraits in greyscale. The source photos are a mix of colour and "
-        "black-and-white, which reads as inconsistent on the team page; this makes them uniform.",
+        help="keep each portrait's own colour. The default is greyscale: the sources are a mix "
+        "of colour and black-and-white, which reads as inconsistent on the team page.",
     )
     args = ap.parse_args()
+    greyscale = not args.colour
 
     # Photos dropped straight into assets/images/team/ are normalised whether or
     # not the Drive folder is reachable, so this works on any machine.
-    n_local, problems_local = do_normalise_existing(args.greyscale)
+    n_local, problems_local = do_normalise_existing(greyscale)
 
     if not os.path.isdir(args.source):
         if n_local:
@@ -263,7 +297,7 @@ def main() -> int:
         return 0
 
     print(f"Source: {args.source}\n")
-    n, missing = do_portraits(args.source, args.greyscale)
+    n, missing = do_portraits(args.source, greyscale)
     missing += do_logo(args.source)
     missing += do_group(args.source)
 
