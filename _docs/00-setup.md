@@ -110,9 +110,33 @@ git clone https://github.com/canlab/CanlabPrivate.git      # private: needs CANl
 
 ## Checking your scripts
 
+Three checkers stand in for a test suite. Run all of them before launching a long chain —
+together they take seconds, and each exists because of a specific failure that cost hours.
+
 `LaBGAScore_check_all_scripts.m` runs MATLAB's Code Analyzer over every script in the
 repository. It catches syntax errors and style problems. It does **not** catch undefined
 variables or logic errors, so it complements code review rather than replacing it.
+
+Two further checkers in LaBGAScore's `clean/` catch failures the Code Analyzer is
+provably blind to — it reports zero messages on either of their test cases. Point them at
+your study's model script folder, not at the repository:
+
+```bash
+python3 clean/use_before_def.py /data/proj_xxx/code/secondlevel/model_N_name
+python3 clean/set_after_use.py  /data/proj_xxx/code/secondlevel/model_N_name
+```
+
+`use_before_def.py` finds an option **read above the line that defines it** — the script
+then dies late, after the expensive work and before anything is saved. `set_after_use.py`
+finds an option **set below the line that already consumed it** — nothing errors, the
+default silently wins, and runs quietly overwrite each other's output. The second is
+advisory: a variable legitimately reused for successive outputs trips it, so read those
+rather than chase them.
+
+Neither replaces reading the code. The catalogue they were distilled from is
+[**"Ten traps when adapting a template"**](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md)
+in the workflow document — every entry is a real analysis that ran cleanly to completion
+and produced the wrong answer. Read it before you adapt your first template.
 
 ---
 

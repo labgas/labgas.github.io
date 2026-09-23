@@ -71,9 +71,13 @@ Scripts carry numbered prefixes (`s0`, `s1`, `s2` …) marking the order of the 
 | `figures/` | Plotting utilities |
 | `clean/` | Housekeeping |
 
-A static-analysis helper, `LaBGAScore_check_all_scripts.m`, runs MATLAB's Code Analyzer across
-every file in the repository. It catches syntax problems, but not undefined variables or logic
-errors — code review is still required.
+Three checkers stand in for a test suite. `LaBGAScore_check_all_scripts.m` runs MATLAB's Code
+Analyzer across every file in the repository, catching syntax problems but not undefined
+variables or logic errors. Two Python checkers in `clean/` catch the option-ordering failures
+the Code Analyzer cannot see — an option read above the line that defines it
+(`use_before_def.py`), and an option set below the line that already consumed it
+(`set_after_use.py`). Both ship test cases that verify they still work. Code review is still
+required; see [Setup & dependencies]({{ '/docs/setup/' | relative_url }}).
 
 [Pipeline documentation]({{ '/docs/' | relative_url }}){: .btn .btn--primary}
 

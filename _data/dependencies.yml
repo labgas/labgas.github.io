@@ -5,10 +5,10 @@
 # regenerate in the source repository with LaBGAScore_dep_report and
 # commit that, then re-run this script.
 
-collected: "2026-09-10"
+collected: "2026-09-23"
 repos:
   CANlab_help_examples:
-    generated: "2026-09-10T13:09:34"
+    generated: "2026-09-23T09:38:54"
     matlab: "2021a"
     repo: "CANlab_help_examples (LaBGAS fork)"
     n_indexed_files: 167865
@@ -40,37 +40,47 @@ repos:
       - name: "c2a_second_level_regression"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/c2a_second_level_regression.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 18
+        n_direct: 19
         n_caveats: 2
         depends_on:
           - repo: "CanlabCore"
-            calls: ["addblobs", "apply_mask", "atlas2region", "canlab_results_fmridisplay", "downsample_parcellation", "fmri_mask_image", "load_atlas", "montage", "region", "resample_space", "table_of_atlas_regions_covered", "threshold", "title_montage"]
+            calls: ["addblobs", "apply_mask", "atlas2region", "canlab_results_fmridisplay", "downsample_parcellation", "fmri_mask_image", "get_wh_image", "load_atlas", "montage", "region", "resample_space", "table_of_atlas_regions_covered", "threshold", "title_montage"]
           - repo: "LaBGAScore"
             calls: ["LaBGAScore_region_table", "LaBGAScore_region_table_safe", "LaBGAScore_smart_parallel_pool_setup", "plugin_set_figure_size", "tfce_fwe_from_null"]
       - name: "c2f_run_MVPA_regression_single_trial"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/c2f_run_MVPA_regression_single_trial.m"
         domain: "Second_level_analysis_template_scripts"
         n_direct: 23
-        n_caveats: 18
+        n_caveats: 16
         depends_on:
           - repo: "CanlabCore"
             calls: ["addblobs", "apply_mask", "canlab_results_fmridisplay", "fit", "fmri_mask_image", "line_plot_multisubject", "pipeline", "plot", "region", "resample_space", "rescale", "test", "threshold", "title_montage"]
           - repo: "LaBGAScore"
             calls: ["plugin_set_figure_size"]
           - repo: "ooFmriDataObjML"
-            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_mse", "mlpcrRegressor", "pcrRegressor", "pipeline", "plsRegressor"]
+            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_mse", "mlpcrRegressor", "pcrRegressor", "plsRegressor"]
       - name: "c2g_run_multivariate_mediation_single_trial"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/c2g_run_multivariate_mediation_single_trial.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 12
+        n_direct: 13
         n_caveats: 4
         depends_on:
           - repo: "CanlabCore"
-            calls: ["apply_mask", "autolabel_regions_using_atlas", "fmri_mask_image", "history", "load_atlas", "montage", "region", "resample_space", "rescale", "title_montage"]
+            calls: ["apply_mask", "autolabel_regions_using_atlas", "fmri_mask_image", "get_wh_image", "history", "load_atlas", "montage", "region", "resample_space", "rescale", "title_montage"]
           - repo: "LaBGAScore"
             calls: ["plugin_set_figure_size"]
           - repo: "MediationToolbox"
             calls: ["multivariateMediation"]
+      - name: "c2h_run_multivariate_mediation"
+        path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/c2h_run_multivariate_mediation.m"
+        domain: "Second_level_analysis_template_scripts"
+        n_direct: 8
+        n_caveats: 1
+        depends_on:
+          - repo: "CanlabCore"
+            calls: ["apply_mask", "fmri_mask_image", "get_wh_image", "group", "load_atlas", "resample_space"]
+          - repo: "MediationToolbox"
+            calls: ["multivariateMediation", "plotPDM"]
       - name: "d10_signature_riverplots"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/d10_signature_riverplots.m"
         domain: "Second_level_analysis_template_scripts"
@@ -100,11 +110,13 @@ repos:
       - name: "h_signature_responses_group_diff"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/h_signature_responses_group_diff.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 5
-        n_caveats: 0
+        n_direct: 9
+        n_caveats: 1
         depends_on:
           - repo: "CanlabCore"
-            calls: ["barplot_columns", "create_figure", "mediansplit", "seaborn_colors", "ttest2_printout"]
+            calls: ["barplot_columns", "create_figure", "mediansplit", "region", "seaborn_colors", "ttest2_printout", "violinplot"]
+          - repo: "LaBGAScore"
+            calls: ["LaBGAScore_Storey_FDR", "plugin_set_figure_size"]
       - name: "prep_1_set_conditions_contrasts_colors"
         path: "Second_level_analysis_template_scripts/b_copy_to_local_scripts_dir_and_modify/prep_1_set_conditions_contrasts_colors.m"
         domain: "Second_level_analysis_template_scripts"
@@ -122,11 +134,13 @@ repos:
       - name: "prep_2_load_image_data_and_save"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/prep_2_load_image_data_and_save.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 10
+        n_direct: 11
         n_caveats: 1
         depends_on:
           - repo: "CanlabCore"
             calls: ["check_valid_imagename", "create_figure", "enforce_variable_types", "fmri_data", "fmri_mask_image", "qc_metrics_second_level"]
+          - repo: "ComBatHarmonization"
+            calls: ["combat"]
           - repo: "LaBGAScore"
             calls: ["plugin_set_figure_size"]
           - repo: "canlab_single_trials"
@@ -136,40 +150,42 @@ repos:
       - name: "prep_3_calc_univariate_contrast_maps_and_save"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/prep_3_calc_univariate_contrast_maps_and_save.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 5
+        n_direct: 6
         n_caveats: 0
         depends_on:
           - repo: "CanlabCore"
             calls: ["create_figure", "enforce_variable_types", "qc_metrics_second_level", "replace_empty"]
+          - repo: "ComBatHarmonization"
+            calls: ["combat"]
           - repo: "LaBGAScore"
             calls: ["plugin_set_figure_size"]
       - name: "prep_3a_run_second_level_regression_and_save"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/prep_3a_run_second_level_regression_and_save.m"
         domain: "Second_level_analysis_template_scripts"
-        n_direct: 32
+        n_direct: 33
         n_caveats: 4
         depends_on:
           - repo: "CanlabCore"
             calls: ["addblobs", "apply_mask", "apply_parcellation", "atlas2region", "barplot_columns", "canlab_results_fmridisplay", "create_figure", "downsample_parcellation", "estimateBayesFactor", "fmri_mask_image", "get_wh_image", "getvif", "hansen_neurotransmitter_maps", "load_atlas", "merge_atlases", "montage", "plot_correlation_matrix", "plot_vertical_line", "region", "resample_space", "robfit_parcelwise", "run_diagnostics", "scn_standard_colors", "ste", "test", "threshold", "title_montage", "validate_object"]
           - repo: "LaBGAScore"
-            calls: ["LaBGAScore_smart_parallel_pool_setup", "group_tfce_from_subject_maps", "plugin_set_figure_size", "thresholded_fmri_data_from_statistic_image"]
+            calls: ["LaBGAScore_Storey_FDR", "LaBGAScore_smart_parallel_pool_setup", "group_tfce_from_subject_maps", "plugin_set_figure_size", "thresholded_fmri_data_from_statistic_image"]
       - name: "prep_3c_run_SVMs_on_contrasts_masked"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/prep_3c_run_SVMs_on_contrasts_masked.m"
         domain: "Second_level_analysis_template_scripts"
         n_direct: 23
-        n_caveats: 5
+        n_caveats: 3
         depends_on:
           - repo: "CanlabCore"
             calls: ["apply_mask", "enforce_variable_types", "fit", "fmri_mask_image", "group", "montage", "pipeline", "region", "resample_space", "searchlight_disti_Lukas", "sec2hms", "stability_selection", "title_montage", "trim_mask"]
           - repo: "LaBGAScore"
             calls: ["LaBGAScore_smart_parallel_pool_setup", "plugin_set_figure_size"]
           - repo: "ooFmriDataObjML"
-            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_f1_macro", "get_hinge_loss", "linearSvmClf", "pipeline"]
+            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_f1_macro", "get_hinge_loss", "linearSvmClf"]
       - name: "prep_3f_create_fmri_data_single_trial_object"
         path: "Second_level_analysis_template_scripts/core_scripts_to_run_without_modifying/prep_3f_create_fmri_data_single_trial_object.m"
         domain: "Second_level_analysis_template_scripts"
         n_direct: 4
-        n_caveats: 1
+        n_caveats: 2
         depends_on:
           - repo: "CanlabCore"
             calls: ["get_wh_image", "remove_empty"]
@@ -200,7 +216,7 @@ repos:
           - repo: "Neuroimaging_Pattern_Masks"
             calls: ["apply_all_signatures"]
   LaBGAScore:
-    generated: "2026-09-10T13:09:31"
+    generated: "2026-09-17T13:26:16"
     matlab: "2021a"
     repo: "LaBGAScore"
     n_indexed_files: 167865
@@ -336,20 +352,28 @@ repos:
       - name: "LaBGAScore_decoding_SVM_between_subjects"
         path: "decoding_toolbox/LaBGAScore_decoding_SVM_between_subjects.m"
         domain: "decoding_toolbox"
-        n_direct: 8
+        n_direct: 10
         n_caveats: 1
         depends_on:
           - repo: "CANlab_help_examples"
             calls: ["a_set_up_paths_always_run_first"]
           - repo: "CanlabCore"
-            calls: ["fmri_mask_image", "load_atlas", "train"]
+            calls: ["fmri_mask_image", "load_atlas", "searchlight"]
+          - repo: "ComBatHarmonization"
+            calls: ["combat"]
           - repo: "spm12"
-            calls: ["decoding", "decoding_defaults", "make_design_cv", "make_design_permutation"]
+            calls: ["decoding", "decoding_defaults", "make_design_cv", "make_design_permutation", "predict"]
       - name: "LaBGAScore_decoding_template_xclass_acc"
         path: "decoding_toolbox/LaBGAScore_decoding_template_xclass_acc.m"
         domain: "decoding_toolbox"
         n_direct: 0
         n_caveats: 1
+        depends_on: []
+      - name: "LaBGAScore_export_scaled_contrasts"
+        path: "decoding_toolbox/LaBGAScore_export_scaled_contrasts.m"
+        domain: "decoding_toolbox"
+        n_direct: 0
+        n_caveats: 0
         depends_on: []
       - name: "canlabCmap"
         path: "figures/canlabCmap.m"
@@ -514,13 +538,13 @@ repos:
       - name: "LaBGAScore_prep_juspace_input"
         path: "juspace/LaBGAScore_prep_juspace_input.m"
         domain: "juspace"
-        n_direct: 7
+        n_direct: 8
         n_caveats: 4
         depends_on:
           - repo: "CANlab_help_examples"
             calls: ["a_set_up_paths_always_run_first"]
           - repo: "CanlabCore"
-            calls: ["apply_mask", "fmri_data", "fmri_mask_image", "load_atlas", "resample_space", "threshold"]
+            calls: ["apply_mask", "fmri_data", "fmri_mask_image", "get_wh_image", "load_atlas", "resample_space", "threshold"]
       - name: "LaBGAScore_mrs_osprey_jobfile_GE"
         path: "mrs/LaBGAScore_mrs_osprey_jobfile_GE.m"
         domain: "mrs"
@@ -839,6 +863,36 @@ repos:
         depends_on:
           - repo: "CanlabCore"
             calls: ["training"]
+      - name: "LaBGAScore_blob_montage"
+        path: "secondlevel/functions/LaBGAScore_blob_montage.m"
+        domain: "secondlevel"
+        n_direct: 3
+        n_caveats: 0
+        depends_on:
+          - repo: "CanlabCore"
+            calls: ["addblobs", "canlab_results_fmridisplay", "title_montage"]
+      - name: "LaBGAScore_pdm_regenerate_reports"
+        path: "secondlevel/LaBGAScore_pdm_regenerate_reports.m"
+        domain: "secondlevel"
+        n_direct: 4
+        n_caveats: 5
+        depends_on:
+          - repo: "CanlabCore"
+            calls: ["fmri_data", "load_atlas", "region", "table"]
+      - name: "LaBGAScore_pdm_report"
+        path: "secondlevel/functions/LaBGAScore_pdm_report.m"
+        domain: "secondlevel"
+        n_direct: 0
+        n_caveats: 0
+        depends_on: []
+      - name: "LaBGAScore_pdm_report_image"
+        path: "secondlevel/functions/LaBGAScore_pdm_report_image.m"
+        domain: "secondlevel"
+        n_direct: 6
+        n_caveats: 1
+        depends_on:
+          - repo: "CanlabCore"
+            calls: ["addblobs", "canlab_results_fmridisplay", "montage", "region", "table_of_atlas_regions_covered", "title_montage"]
       - name: "LaBGAScore_region_table"
         path: "secondlevel/functions/LaBGAScore_region_table.m"
         domain: "secondlevel"
@@ -875,22 +929,22 @@ repos:
         path: "secondlevel/scripts/LaBGAScore_secondlevel_mvpa_beta_maps_conn.m"
         domain: "secondlevel"
         n_direct: 18
-        n_caveats: 16
+        n_caveats: 14
         depends_on:
           - repo: "CanlabCore"
             calls: ["addblobs", "canlab_results_fmridisplay", "fit", "fmri_data", "fmri_mask_image", "pipeline", "plot", "predict", "region", "test", "title_montage"]
           - repo: "ooFmriDataObjML"
-            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_mse", "pcrRegressor", "pipeline", "plsRegressor"]
+            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "get_mse", "pcrRegressor", "plsRegressor"]
       - name: "LaBGAScore_secondlevel_ooFmriDataObjML_example"
         path: "secondlevel/scripts/LaBGAScore_secondlevel_ooFmriDataObjML_example.m"
         domain: "secondlevel"
         n_direct: 10
-        n_caveats: 2
+        n_caveats: 0
         depends_on:
           - repo: "CanlabCore"
             calls: ["pipeline"]
           - repo: "ooFmriDataObjML"
-            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "functionTransformer", "get_mse", "gridSearchCV", "pipeline", "plsRegressor", "zscoreVxlTransformer"]
+            calls: ["bayesOptCV", "crossValScore", "cvpartition2", "fmri2VxlFeatTransformer", "functionTransformer", "get_mse", "gridSearchCV", "plsRegressor", "zscoreVxlTransformer"]
       - name: "LaBGAScore_secondlevel_roi_run_plot_PLS_ENet_pipeline"
         path: "secondlevel/scripts/LaBGAScore_secondlevel_roi_run_plot_PLS_ENet_pipeline.m"
         domain: "secondlevel"
@@ -1193,6 +1247,26 @@ repos:
         depends_on: []
       - name: "LaBGAScore_Storey_FDR"
         path: "stats_tools/functions/LaBGAScore_Storey_FDR.m"
+        domain: "stats_tools"
+        n_direct: 0
+        n_caveats: 0
+        depends_on: []
+      - name: "LaBGAScore_combat_apply"
+        path: "stats_tools/functions/LaBGAScore_combat_apply.m"
+        domain: "stats_tools"
+        n_direct: 0
+        n_caveats: 0
+        depends_on: []
+      - name: "LaBGAScore_combat_fit"
+        path: "stats_tools/functions/LaBGAScore_combat_fit.m"
+        domain: "stats_tools"
+        n_direct: 1
+        n_caveats: 0
+        depends_on:
+          - repo: "ComBatHarmonization"
+            calls: ["combat"]
+      - name: "LaBGAScore_dummy_code"
+        path: "stats_tools/functions/LaBGAScore_dummy_code.m"
         domain: "stats_tools"
         n_direct: 0
         n_caveats: 0
