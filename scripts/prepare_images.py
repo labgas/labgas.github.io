@@ -80,6 +80,12 @@ CROP_OVERRIDES = {
     # Tall 3:4 phone portrait: the default upward bias leaves the face low in
     # the square with a band of empty wall above it.
     "anne-sophie-nobel": (0.48, 0.58, 0.92),
+    # The 2026 master's intake sent holiday and café snaps rather than
+    # headshots, so most of them need the face found by hand.
+    "amelie-bonne": (0.45, 0.38, 0.72),      # square source, face high and left
+    "fien-devroey": (0.49, 0.42, 0.80),
+    "lotte-bertels": (0.55, 0.48, 0.56),     # landscape; face right of centre
+    "luna-lenaerts": (0.47, 0.56, 0.80),     # 262px source — see README
 }
 
 

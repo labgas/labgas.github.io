@@ -350,6 +350,17 @@ members:
   # --- Master's students & interns ---------------------------------------
   # The Team page skips any group with no members, so this section simply
   # stops rendering between academic years — no template change needed.
+  - name: "Amélie Bonne"
+    photo: amelie-bonne.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Amélie is a master’s student in biomedical sciences at KU Leuven and is currently conducting her master’s thesis research at LaBGAS."
+    bio:
+      - "Amélie is a master’s student in biomedical sciences at KU Leuven and is currently conducting her master’s thesis research at LaBGAS. Her project investigates a neuropsychobiological approach to optimize patient selection for GLP-1-based pharmacotherapy for weight management across the binge-eating spectrum. During her first master’s year, she completed a research internship at the department of clinical and experimental endocrinology, where she contributed to clinical studies on physiological adaptations following bariatric surgery and obesity-related research. This experience sparked her interest in obesity, metabolic regulation and the physiological mechanisms underlying appetite and satiety. She conducts her master’s thesis under the guidance of Annelies Falter and Alexine Mennes, with Nathalie Weltens as her promoter. Her broader interests lie in metabolism, endocrinology, and gynaecology."
+    projects:
+      - title: "SEM-BEAT"
+        ref: "sem-beat-glp-1-pharmacotherapy-optimisation"
+
   - name: "Anne-Sophie Nobel"
     photo: anne-sophie-nobel.jpg
     group: students
@@ -366,6 +377,57 @@ members:
         ref: "beacon"
       - title: "MoodBugs"
         ref: "moodbugs"
+
+  - name: "Fien Devroey"
+    photo: fien-devroey.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Fien is currently pursuing a Master of Biomedical Sciences (Clinical Sciences) at KU Leuven, having previously graduated in Medical Laboratory Technology in 2024."
+    bio:
+      - "Fien is currently pursuing a Master of Biomedical Sciences (Clinical Sciences) at KU Leuven, having previously graduated in Medical Laboratory Technology in 2024. During her studies and internships in hospital laboratories in Belgium and Portugal, as well as in a clinical research setting at UZ Leuven, she gained experience in diagnostic techniques, physiological measurements and patient-oriented research."
+      - "Her current research interests focus on the interaction between the immune system, physiological processes and the brain, particularly how these processes are reflected in symptoms such as fatigue. For her master’s thesis, under the supervision of Dr. Maaike Van Den Houte, she is investigating the influence of acute inflammation on exercise-related fatigue using a virtual reality-based experimental setup."
+
+  - name: "Ilana Peeters"
+    photo: ilana-peeters.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "After earning a Professional Bachelor in Biomedical Laboratory Technology, Ilana is completing her master’s thesis at LaBGAS as part of her Master of Biomedical Sciences (Basic and Translational Sciences) at KU Leuven."
+    bio:
+      - "After earning a Professional Bachelor in Biomedical Laboratory Technology, Ilana is completing her master’s thesis at LaBGAS as part of her Master of Biomedical Sciences (Basic and Translational Sciences) at KU Leuven."
+      - "During her previous internship, she developed an interest in hormonal regulation, while her elective course on neurodegenerative diseases sparked a broader fascination with brain-driven mechanisms in health and disease. In her thesis project at LaBGAS, she brings these interests together by studying how endocrine and neuroendocrine signals shape appetite regulation and metabolic responses in obesity."
+      - "She is working with Alexine Mennes on her project, focusing on the neuropsychobiological mechanisms through which the GLP-1 receptor agonist semaglutide influences eating behavior and weight regulation. Using a multimodal approach, their work aims to clarify drivers of individual differences in response to GLP-1-based pharmacotherapy in obesity across the binge-eating spectrum, paving the way for more personalized obesity care."
+    projects:
+      - title: "SEM-BEAT"
+        ref: "sem-beat-glp-1-pharmacotherapy-optimisation"
+
+  # TODO (lab): Lotte's bio document arrived empty — no text to publish yet.
+  - name: "Lotte Bertels"
+    photo: lotte-bertels.jpg
+    group: students
+    title: "Master's student"
+
+  - name: "Luna Lenaerts"
+    photo: luna-lenaerts.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Luna is a clinical master’s student in Biomedical Sciences at KU Leuven, graduating in 2027."
+    bio:
+      - "Luna is a clinical master’s student in Biomedical Sciences at KU Leuven, graduating in 2027. She has always been fascinated by the human body and how it responds to various factors, and enjoys interacting with people, which led her to choose the clinical master’s. During a previous internship at Johnson & Johnson she gained insight into the industry side of clinical research, which made her eager to explore the field further in a different setting."
+      - "For her master’s thesis she is investigating the neurobiological mechanisms underlying the relationship between sleep and pain in people with non-specific chronic low back pain, under the supervision of Dr. Iris Coppieters, as part of the SY-NAPS project. She was drawn to the topic by her interest in neurobiology and in the interaction between sleep and pain, and is looking forward to working with a range of research methods."
+    projects:
+      - title: "SY-NAPS"
+        ref: "sy-naps"
+
+  - name: "Ona Vandermeiren"
+    photo: ona-vandermeiren.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Ona obtained her Bachelor’s degree in Biomedical Sciences from KU Leuven in 2025."
+    bio:
+      - "Ona obtained her Bachelor’s degree in Biomedical Sciences from KU Leuven in 2025. She chose the Clinical Master’s programme to further explore clinically relevant research questions, with the aim of contributing to the improvement of patient care at UZ Leuven. For her master’s thesis, she joined LaBGAS, where she investigates the gut-brain axis. Her project focuses on how microbiota-derived metabolites, including short-chain fatty acids, may influence executive functioning."
+    projects:
+      - title: "GUTSIE"
+        ref: "gutsie"
 
   # --- Alumni -----------------------------------------------------------
   # TODO (lab): add former members here — same fields, group: alumni.
