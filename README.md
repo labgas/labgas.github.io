@@ -148,6 +148,45 @@ entry yet (adding one needs a category and a description), an entry whose reposi
 and any LaBGAScore script name cited in `_docs/` or `_pages/` that no longer exists upstream.
 Those appear in the workflow's run summary on the Actions tab.
 
+### The dependency page is fetched, not built
+
+`_data/dependencies.yml` backs the [Dependencies](https://labgas.github.io/docs/dependencies/)
+page — which script calls into which external repository. The website cannot work this out for
+itself: it comes from parsing MATLAB source and resolving every called name against an index of
+the installed toolboxes, which needs MATLAB, and GitHub Actions has none.
+
+So the flow has three steps, in this order, and skipping the middle one is the usual mistake:
+
+1. **In the source repo**, regenerate with `LaBGAScore_dep_report` (LaBGAScore's `clean/`).
+   That writes `DEPENDENCIES.md`, `dependencies.tsv` and `dependencies.yml` there.
+2. **Commit and push** that repo. `refresh_dependencies.py` reads from the **GitHub API**, not
+   from your local clone, so an uncommitted regeneration is invisible to it.
+3. **Then**, here:
+
+   ```bash
+   python scripts/refresh_dependencies.py            # rewrite _data/dependencies.yml
+   python scripts/refresh_dependencies.py --check    # report drift only, exit 1 if drifted
+   ```
+
+It collects from two sources: `LaBGAScore` (repo root, `main`) and `CANlab_help_examples`
+(`Second_level_analysis_template_scripts/`, `master` — that folder's 20 maintained scripts, not
+the ~113 present). If a repository's `dependencies.yml` is stale or missing the script says so
+for a human to fix upstream; it deliberately cannot repair it here.
+
+The `collected:` date at the top of `_data/dependencies.yml` says when it last ran. If it
+predates a change you made in a source repo, the page is behind.
+
+### Checking the site before pushing
+
+```bash
+python scripts/validate_site.py
+```
+
+Catches broken internal links, missing photos and malformed front matter. It does **not** catch
+everything — a navigation chip pointing at a heading that does not exist still renders and
+scrolls nowhere (see [Editing a person's projects](#editing-a-persons-projects)) — so treat a
+clean run as necessary, not sufficient.
+
 ### Adding a team member
 
 Append to the `members:` list in `_data/team.yml`:

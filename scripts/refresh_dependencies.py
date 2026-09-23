@@ -36,7 +36,7 @@ DEPS_YML = os.path.join(ROOT, "_data", "dependencies.yml")
 
 # Repository -> (branch, path to its dependencies.yml). CANlab_help_examples
 # publishes from Second_level_analysis_template_scripts/ rather than the repo
-# root, because the file documents that folder's 19 maintained scripts and
+# root, because the file documents that folder's 20 maintained scripts and
 # nothing else in the repository.
 SOURCES = {
     "LaBGAScore": ("main", "dependencies.yml"),
