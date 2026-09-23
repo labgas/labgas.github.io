@@ -28,7 +28,8 @@ the repositories:
 
 - [`Second_level_analysis_template_scripts/README.md`](https://github.com/labgas/CANlab_help_examples/blob/master/Second_level_analysis_template_scripts/README.md)
   — how LaBGAS uses the CANlab framework: the two script groups, the shared `DAT` data
-  model, the 20 scripts we maintain, and the notes on TFCE and its reporting options.
+  model, the {{ site.data.dependencies.repos.CANlab_help_examples.scripts | size }} scripts
+  we maintain, and the notes on TFCE and its reporting options.
 - [`LaBGAS_fMRI_analysis_workflow.md` § Second-level analysis](https://github.com/labgas/LaBGAScore/blob/main/LaBGAS_fMRI_analysis_workflow.md#second-level-analysis)
   — the step-by-step protocol: creating the subdataset, downloading and adapting the
   scripts, and running them (headless by default — see
