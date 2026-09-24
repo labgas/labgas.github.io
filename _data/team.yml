@@ -400,11 +400,17 @@ members:
       - title: "SEM-BEAT"
         ref: "sem-beat-glp-1-pharmacotherapy-optimisation"
 
-  # TODO (lab): Lotte's bio document arrived empty — no text to publish yet.
   - name: "Lotte Bertels"
     photo: lotte-bertels.jpg
     group: students
     title: "Master's student"
+    bio_lead: "Lotte is currently pursuing a Master of Biomedical Sciences with a minor in Clinical Sciences at KU Leuven."
+    bio:
+      - "Lotte is currently pursuing a Master of Biomedical Sciences with a minor in Clinical Sciences at KU Leuven. Throughout her studies, she has developed a growing interest in the interplay between nutrition, health, and disease, with a particular fascination for the microbiota-gut-brain axis and its connection to overall health and well-being. Her clinical experience, including an internship at the Department of Thoracic Surgery and Respiratory Medicine (BREATHE) at UZ Leuven, further strengthened her interest in translational and clinically oriented research."
+      - "Building on these interests, her current thesis focuses on Inflammatory Bowel Disease (IBD) and the mechanisms underlying fatigue, with particular attention to the complex communication between the gut and the brain. This research brings together her interests in clinical biomedical sciences, nutrition, and the gut-brain axis, making the topic a natural fit for her academic and research interests."
+    projects:
+      - title: "IBD fatigue"
+        ref: "gut-immune-brain-axis-in-ibd-fatigue"
 
   - name: "Luna Lenaerts"
     photo: luna-lenaerts.jpg
