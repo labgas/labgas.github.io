@@ -353,8 +353,14 @@ members:
         ref: "neuropsychobiology-of-human-obesity"
   - name: "Annelies Falter"
     kuleuven_id: "00183708"
+    photo: annelies-falter.jpg
     group: phd
     title: "PhD student"
+    bio_lead: "Annelies is a PhD candidate at the Mind Body Research Group, working in close collaboration with LaBGAS and the Department of Clinical and Experimental Endocrinology."
+    bio:
+      - "Annelies is a PhD candidate at the Mind Body Research Group, working in close collaboration with LaBGAS and the Department of Clinical and Experimental Endocrinology."
+      - "She qualified as a psychiatrist at KU Leuven in 2025. During her residency, she gained clinical experience across a wide range of settings in Belgium and abroad and completed postgraduate training in transcultural mental health care. Her clinical work sparked her interest in psychoneuroendocrinology, leading her to pursue a PhD in this field in 2025."
+      - "Within the SEM-BEAT project, her research focuses on the effects of the GLP-1 receptor agonist semaglutide on eating behaviour, with particular attention to binge eating and the underlying reward, emotional and homeostatic mechanisms. The project aims to better understand which patients benefit most from GLP-1 receptor agonists and why."
     projects:
       - title: "SEM-BEAT"
         url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/a-neuropsychobiological-approach-to-optimize-patient-selection-for-glp-1-based-pharmacotherapy-for-weight-management-across-the-binge-eating-spectrum"

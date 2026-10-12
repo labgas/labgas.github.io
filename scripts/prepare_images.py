@@ -89,6 +89,8 @@ CROP_OVERRIDES = {
     "febe-vanherck": (0.53, 0.455, 0.85),
     # Group snap: the default keeps a neighbour’s hand and arm in frame.
     "emily-van-der-schueren": (0.44, 0.615, 0.77),
+    # Waist-length shot: the default square leaves the face too small.
+    "annelies-falter": (0.50, 0.33, 0.62),
 }
 
 
