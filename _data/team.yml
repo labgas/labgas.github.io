@@ -461,6 +461,19 @@ members:
       - title: "IBD fatigue"
         ref: "gut-immune-brain-axis-in-ibd-fatigue"
 
+  - name: "Lotte Haven"
+    photo: lotte-haven.jpg
+    group: students
+    title: "Master's student"
+    bio_lead: "Lotte Haven is currently a second-year Master’s student in Medicine at KU Leuven."
+    bio:
+      - "Lotte Haven is currently a second-year Master’s student in Medicine at KU Leuven. During her first Master’s year, she completed an Erasmus exchange at the Universidad de Córdoba in Spain, broadening her academic experience in an international setting."
+      - "Throughout her studies, she has developed a strong interest in neuroscience, particularly in the bidirectional communication between the gut and the brain. She is also fascinated by the role of the immune system and inflammation in health and disease, with a particular interest in understanding the underlying mechanisms of chronic conditions. This interest in disease mechanisms was already reflected in her Bachelor’s thesis, which explored heat shock protein induction and protein degradation as potential therapeutic targets in Alzheimer’s disease."
+      - "For her Master’s thesis at LaBGAS, she will investigate GDF15 under the supervision of Dr. Maaike Van Den Houte and Prof. Dr. Lukas Van Oudenhove. This project brings together several of her research interests, particularly the complex interactions between physiological processes and the brain."
+    projects:
+      - title: "Biopsychosocial mechanisms of chronic fatigue syndrome"
+        ref: "biopsychosocial-mechanisms-of-chronic-fatigue-syndrome"
+
   - name: "Luna Lenaerts"
     photo: luna-lenaerts.jpg
     group: students
