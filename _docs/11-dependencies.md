@@ -41,7 +41,7 @@ Linux command line, which publishes through `LaBGAScore_prov_publish` and additi
 checks that the run actually worked:
 
 ```bash
-labgascore_run_headless.sh -d /data/proj_xxx \
+/data/master_github_repos/LaBGAScore/clean/labgascore_run_headless.sh -d /data/proj_xxx \
     -s proj_secondlevel_m1_s0_a_set_up_paths_always_run_first \
     -a data_objects.mat \
     proj_secondlevel_m1_s4_prep_2_load_image_data_and_save
