@@ -8,6 +8,10 @@
 # `line` maps a project onto one of the three research lines used on the
 # Research page: symptoms | appetite | microbiota
 #
+# `status: completed` moves a project out of its line and into the "Completed
+# projects" section at the bottom of the Research page. Keep its `line` anyway:
+# it still records which research line the work belongs to.
+#
 # `detail.source` records where the harvested description came from and is not
 # rendered. `detail.participants_url` is — it points at a plain-language study
 # site for people considering taking part, and is shown as a call to action.
@@ -99,6 +103,7 @@ projects:
 
   - name: "From Pavlov to visceroception"
     line: symptoms
+    status: completed
     tagline: "Fear learning and the perception of visceral sensations"
     funder: "FWO — Research Project"
     period: "2018 – 2021"
@@ -208,6 +213,7 @@ projects:
 
   - name: "Erythritol: satiation and reward without the calories?"
     line: appetite
+    status: completed
     tagline: "A natural sweetener as an alternative to sugar"
     funder: "FWO — Research Project (with SNSF)"
     period: "2020 – 2024"

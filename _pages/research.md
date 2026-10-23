@@ -65,14 +65,22 @@ academic stress, and the role of microbial metabolites in anorexia nervosa.
 
 ## Projects
 
-{% assign line_ids = "symptoms,appetite,microbiota" | split: "," %}
-{% assign line_names = "Symptom perception projects|Appetite &amp; reward projects|Microbiota &amp; mind projects" | split: "|" %}
+{%- comment -%}
+  Completed projects keep their research line in the data but are listed in a
+  section of their own at the bottom, not under that line.
+{%- endcomment -%}
+{% assign line_ids = "symptoms,appetite,microbiota,completed" | split: "," %}
+{% assign line_names = "Symptom perception projects|Appetite &amp; reward projects|Microbiota &amp; mind projects|Completed projects" | split: "|" %}
 
 {% for lid in line_ids %}
 {% assign idx = forloop.index0 %}
 ### {{ line_names[idx] }}
 
-{% assign items = site.data.projects.projects | where: "line", lid %}
+{% if lid == "completed" %}
+{% assign items = site.data.projects.projects | where: "status", "completed" %}
+{% else %}
+{% assign items = site.data.projects.projects | where: "line", lid | where_exp: "p", "p.status != 'completed'" %}
+{% endif %}
 {% for p in items %}
 {%- comment -%}
   Harvested detail wins over the hand-written funder/period: the project pages

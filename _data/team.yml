@@ -33,6 +33,8 @@ groups:
     label: "Master's students & interns"
   - id: alumni
     label: "Alumni"
+  - id: former_phd
+    label: "Former PhD students"
 
 members:
   # --- PI --------------------------------------------------------------
@@ -193,18 +195,6 @@ members:
       - title: "MoodBugs"
         url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/Moodbugs"
         ref: "moodbugs"
-  - name: "Nele Mattelaer"
-    kuleuven_id: "00144787"
-    photo: nele-mattelaer.jpg
-    group: phd
-    title: "PhD student"
-    bio_lead: "Nele graduated as a master of Biomedical Sciences (Basic and Translational Research) in 2021. During her master, her interest in the brain sparked at an internship she did at the Laboratory for Neuro- and Psychophysiology."
-    bio:
-      - "Nele graduated as a master of Biomedical Sciences (Basic and Translational Research) in 2021. During her master, her interest in the brain sparked at an internship she did at the Laboratory for Neuro- and Psychophysiology. Because of this experience, she chose to do her master thesis at the Center for Clinical Psychiatry, where she investigated how different variables influence face perception, specifically focusing on the influence of depressive symptoms. In her thesis she got some practical experience in interviewing, VR, MRI, EEG and eye-tracking. In October 2021, Nele started her PhD at the research group of Clinical and Experimental Endocrinology and LaBGAS. During her PhD, she will investigate how bariatric surgery influences food reward by exploring the brain, but also metabolic and endocrine factors. Specifically, she will focus on central and peripheral endocannabinoids and dopamine. By investigating how these are affected in obesity and after bariatric surgery (using PET and blood and urine samples), she aims to elucidate some of the observed changes in food behaviour after surgery."
-    projects:
-      - title: "Food reward after bariatric surgery"
-        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1"
-        ref: "food-reward-after-bariatric-surgery"
   - name: "Tabea Eimer"
     kuleuven_id: "00148935"
     photo: tabea-eimer.jpg
@@ -499,3 +489,17 @@ members:
 
   # --- Alumni -----------------------------------------------------------
   # TODO (lab): add former members here — same fields, group: alumni.
+
+  # --- Former PhD students ---------------------------------------------
+  - name: "Nele Mattelaer"
+    kuleuven_id: "00144787"
+    photo: nele-mattelaer.jpg
+    group: former_phd
+    title: "PhD (2026)"
+    bio_lead: "Nele graduated as a master of Biomedical Sciences (Basic and Translational Research) in 2021. During her master, her interest in the brain sparked at an internship she did at the Laboratory for Neuro- and Psychophysiology."
+    bio:
+      - "Nele graduated as a master of Biomedical Sciences (Basic and Translational Research) in 2021. During her master, her interest in the brain sparked at an internship she did at the Laboratory for Neuro- and Psychophysiology. Because of this experience, she chose to do her master thesis at the Center for Clinical Psychiatry, where she investigated how different variables influence face perception, specifically focusing on the influence of depressive symptoms. In her thesis she got some practical experience in interviewing, VR, MRI, EEG and eye-tracking. In October 2021, Nele started her PhD at the research group of Clinical and Experimental Endocrinology and LaBGAS. During her PhD, she will investigate how bariatric surgery influences food reward by exploring the brain, but also metabolic and endocrine factors. Specifically, she will focus on central and peripheral endocannabinoids and dopamine. By investigating how these are affected in obesity and after bariatric surgery (using PET and blood and urine samples), she aims to elucidate some of the observed changes in food behaviour after surgery."
+    projects:
+      - title: "Food reward after bariatric surgery"
+        url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/gut-brain-mechanisms-mediating-the-effect-of-bariatric-surgery-on-food-reward-1"
+        ref: "food-reward-after-bariatric-surgery"
