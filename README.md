@@ -195,7 +195,7 @@ Append to the `members:` list in `_data/team.yml`:
 ```yaml
   - name: "Given Family"
     kuleuven_id: "00123456"     # optional; 8-digit KU Leuven person number
-    group: phd          # pi | guest | coordinator | postdoc | phd | students | alumni
+    group: phd          # pi | guest | coordinator | assistant | postdoc | phd | clinical_phd | students | alumni | former_phd
     title: "PhD student"
     focus: >-
       One or two sentences. Optional.
@@ -211,6 +211,10 @@ in the URL of that person's entry on the LaBGAS members page or in any who's who
 
 Without a `photo`, the page renders an initials avatar — so you can add people now and photos
 later.
+
+Groups render in the order of the `groups:` list at the top of `_data/team.yml`, and a group with
+no members is skipped. When a PhD student defends, move them to `group: former_phd` and set
+`title` to `"PhD (year)"`; bio, photo and project chips stay as they are.
 
 ### Editing a biography
 
@@ -266,6 +270,20 @@ under `detail:` is what opens when it is clicked:
 
 `detail.duration` and `detail.funding` override the `period` and `funder` fields on the
 collapsed card when both are present.
+
+### Marking a project as completed
+
+Add `status: completed` to the project in `_data/projects.yml`:
+
+```yaml
+  - name: "From Pavlov to visceroception"
+    line: symptoms
+    status: completed
+```
+
+It then moves out of its research line into the **Completed projects** section at the bottom of
+the Research page. Keep `line` — it still records which research line the work belongs to. The
+project's anchor does not change, so team members' project chips keep working.
 
 ### About the harvest scripts
 
