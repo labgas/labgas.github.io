@@ -25,6 +25,7 @@ editorial and scripts must never touch them. Getting this backwards silently des
 |---|---|---|
 | `_data/dependencies.yml` | **generated** | `scripts/refresh_dependencies.py`, fetching from GitHub |
 | `_data/repos.yml` — `pushed`, `language` | **generated** | `scripts/refresh_repos.py`, daily via Actions |
+| `_data/presentations.yml` | **generated** | `scripts/refresh_presentations.py`, daily via Actions, from LaBGAScore `conference_presentations/` |
 | `_data/repos.yml` — `category`, `desc` | **editorial**, never touched by the script | humans |
 | `_data/team.yml`, `projects.yml` | editorial, now the source of truth | humans, in the browser |
 | `_data/publications.yml` | editorial, refreshable from PubMed | `scripts/enrich_publications.py` |
@@ -32,9 +33,15 @@ editorial and scripts must never touch them. Getting this backwards silently des
 ## Scripts
 
 - `refresh_repos.py` — repo index (last-push date, language) from the GitHub API. Scheduled
-  daily by `.github/workflows/refresh-repo-index.yml`, the only workflow here. Also reports
+  daily by `.github/workflows/refresh-repo-index.yml`, the only workflow here (it also runs
+  `refresh_presentations.py`). Also reports
   what it cannot fix alone: a new org repository with no entry, an entry whose repo is gone,
   and any LaBGAScore script name cited in `_docs/`/`_pages/` that no longer exists upstream.
+- `refresh_presentations.py` — conference posters/talks for the Team page, from LaBGAScore's
+  `conference_presentations/<year>/<meeting>/<First_Author_Name>_<topic>_<meeting>_<year>.pdf`.
+  Links each PDF to its first author by matching the file name against `_data/team.yml` names,
+  and reports files it cannot place. Runs in the same daily workflow as `refresh_repos.py`.
+  Reads GitHub, not the local clone — an unpushed PDF is invisible to it.
 - `refresh_dependencies.py` — **fetches**, does not build. See the ordering trap below.
 - `enrich_publications.py` — reads PubMed; unaffected by the KU Leuven site retirement.
 - `fetch_team_bios.py`, `fetch_project_details.py` — **do not run these.** They harvested

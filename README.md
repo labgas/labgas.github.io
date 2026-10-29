@@ -90,6 +90,13 @@ The short text on the collapsed card is `tagline` and `summary`; everything unde
 what appears when someone clicks it — description, duration, funding, investigators, team and key
 publications. Add a paragraph by adding another `- "…"` line under `description:`.
 
+### Share a poster or talk
+
+Conference presentations are not added here. Push the PDF to the
+[`conference_presentations/`](https://github.com/labgas/LaBGAScore/tree/main/conference_presentations)
+folder of LaBGAScore, named as its README describes, and within a day a link appears under your
+name on the Team page, in a "Conference presentations" row.
+
 ### Things that will break the site
 
 The files are YAML, which is fussy about two things:
@@ -123,6 +130,7 @@ layout or HTML.
 | Project descriptions, funding, people | `_data/projects.yml` (`detail:`) |
 | The repository index on the Tools page | `_data/repos.yml` (`category`, `desc`; the rest refreshes itself — below) |
 | Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
+| Conference presentations on the Team page | nothing here — push the PDF to LaBGAScore (below) |
 | Masthead and docs sidebar navigation | `_data/navigation.yml` |
 | Site title, description, social links | `_config.yml` |
 
@@ -148,6 +156,31 @@ The script also reports what it cannot fix alone: a new repository in the organi
 entry yet (adding one needs a category and a description), an entry whose repository has gone,
 and any LaBGAScore script name cited in `_docs/` or `_pages/` that no longer exists upstream.
 Those appear in the workflow's run summary on the Actions tab.
+
+### Conference presentations come from LaBGAScore
+
+Posters and talks are shared in LaBGAScore's
+[`conference_presentations/`](https://github.com/labgas/LaBGAScore/tree/main/conference_presentations)
+folder as `<year>/<meeting>/<First_Author_Name>_<topic>_<meeting>_<year>.pdf`. That folder's
+README is the guide for lab members.
+
+`scripts/refresh_presentations.py` lists the folder through the GitHub API, matches the start of
+each file name against the names in `_data/team.yml` (case, accents, spaces and hyphens
+ignored), and writes `_data/presentations.yml`. **That file is generated — do not edit it.** The
+Team page shows each person's entries as chips labelled `topic · meeting year`, newest first,
+linking to the PDF on GitHub. Only the first author is linked.
+
+The same daily workflow as the repository index runs it, so a pushed PDF appears within a day.
+Run it yourself to publish one sooner:
+
+```bash
+python scripts/refresh_presentations.py            # rewrite _data/presentations.yml
+python scripts/refresh_presentations.py --check    # report drift only, exit 1 if drifted
+```
+
+Files it cannot place — a name that breaks the convention, or a first author who is not on the
+Team page — are listed in the output and in the workflow's run summary, never guessed. Renaming
+someone in `_data/team.yml` unlinks their presentations until the file names match again.
 
 ### The dependency page is fetched, not built
 
@@ -394,7 +427,7 @@ index.md            home page
 _pages/             research, team, publications, tools, docs, join, search, 404, news
 _docs/              pipeline documentation (a Jekyll collection)
 _posts/             news
-_data/              team, projects, repos, publications, navigation
+_data/              team, projects, repos, publications, presentations, navigation
 _sass/              custom skin and components
 _includes/head/     favicon and theme-colour tags
 assets/images/      logo, social image, team photos
