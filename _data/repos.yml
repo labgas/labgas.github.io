@@ -146,11 +146,6 @@ repos:
     updated: "2022-03-04"
     desc: "Graph-theoretical measures on brain connectivity data in IBS."
 
-  - name: proj_discoverie_code
-    category: study
-    updated: "2021-11-29"
-    desc: "DISCOvERIE H2020 project, work package 4 — code subdataset."
-
   - name: proj-whiplash
     category: study
     lang: MATLAB
