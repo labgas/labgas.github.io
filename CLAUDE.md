@@ -28,13 +28,14 @@ editorial and scripts must never touch them. Getting this backwards silently des
 | `_data/presentations.yml` | **generated** | `scripts/refresh_presentations.py`, daily via Actions, from LaBGAScore `conference_presentations/` |
 | `_data/repos.yml` — `category`, `desc` | **editorial**, never touched by the script | humans |
 | `_data/team.yml`, `projects.yml` | editorial, now the source of truth | humans, in the browser |
-| `_data/publications.yml` | editorial, refreshable from PubMed | `scripts/enrich_publications.py` |
+| `_data/publications.yml` | **generated** from the editorial `scripts/curated_titles.yml` | `scripts/enrich_publications.py`, via Actions on every change to `curated_titles.yml` |
+| `_data/recent_publications.yml` | **generated** | `scripts/refresh_recent_publications.py`, daily via Actions |
 
 ## Scripts
 
 - `refresh_repos.py` — repo index (last-push date, language) from the GitHub API. Scheduled
-  daily by `.github/workflows/refresh-repo-index.yml`, the only workflow here (it also runs
-  `refresh_presentations.py`). Also reports
+  daily by `.github/workflows/refresh-repo-index.yml` (which also runs
+  `refresh_presentations.py` and `refresh_recent_publications.py`). Also reports
   what it cannot fix alone: a new org repository with no entry, an entry whose repo is gone,
   and any LaBGAScore script name cited in `_docs/`/`_pages/` that no longer exists upstream.
 - `refresh_presentations.py` — conference posters/talks for the Team page, from LaBGAScore's
@@ -43,7 +44,14 @@ editorial and scripts must never touch them. Getting this backwards silently des
   and reports files it cannot place. Runs in the same daily workflow as `refresh_repos.py`.
   Reads GitHub, not the local clone — an unpushed PDF is invisible to it.
 - `refresh_dependencies.py` — **fetches**, does not build. See the ordering trap below.
-- `enrich_publications.py` — reads PubMed; unaffected by the KU Leuven site retirement.
+- `enrich_publications.py` — reads PubMed; unaffected by the KU Leuven site retirement. Run by
+  `.github/workflows/enrich-publications.yml` whenever `scripts/curated_titles.yml` changes; that
+  workflow refuses to commit if any title fails to resolve.
+- `refresh_recent_publications.py` — the last 12 months from PubMed for the "Recent publications"
+  section, and the source of the daily GitHub issue (assigned to lukasvo76) listing new papers
+  with a keyword-suggested research line. `reported:` in its output file is its memory of what
+  was already raised. Verifies the author is Lukas by forename or own affiliation: there are two
+  namesakes (an entomologist, and Lore Van Oudenhove in Ghent).
 - `fetch_team_bios.py`, `fetch_project_details.py` — **do not run these.** They harvested
   `gbiomed.kuleuven.be`, which is being retired, and they rewrite `bio`/`projects`/`detail`
   wholesale while reporting per-person errors rather than failing outright. Against a dead

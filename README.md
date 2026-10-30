@@ -129,7 +129,8 @@ layout or HTML.
 | Projects on the Research page — name, tagline, summary | `_data/projects.yml` |
 | Project descriptions, funding, people | `_data/projects.yml` (`detail:`) |
 | The repository index on the Tools page | `_data/repos.yml` (`category`, `desc`; the rest refreshes itself — below) |
-| Publication highlights | `scripts/curated_titles.yml`, then re-run the script (below) |
+| Publication highlights | `scripts/curated_titles.yml` — the page rebuilds itself (below) |
+| Recent publications (last 12 months) | nothing — refreshed daily from PubMed (below) |
 | Conference presentations on the Team page | nothing here — push the PDF to LaBGAScore (below) |
 | Masthead and docs sidebar navigation | `_data/navigation.yml` |
 | Site title, description, social links | `_config.yml` |
@@ -349,21 +350,46 @@ photo. Portraits are rendered in black and white, which is what lets photos shot
 different light sit in one grid; pass `--colour` if you would rather they were true to the
 originals.
 
-### Adding a publication
+### Publications: recent ones arrive by themselves, highlights are chosen
 
-Add the title under the appropriate research line in `scripts/curated_titles.yml`, then:
+The Publications page has two parts.
+
+**Recent publications**, at the top, lists every PubMed paper from the last 12 months with Van
+Oudenhove L as author and a Leuven affiliation. `scripts/refresh_recent_publications.py` writes it
+to `_data/recent_publications.yml` (generated — do not edit) in the same daily workflow as the
+repository index. Nothing to do here.
+
+**The research-line sections** are curated highlights. When the daily run finds a paper it has
+not reported before, it opens a **GitHub issue assigned to Lukas** listing each one with a
+suggested research line and the line to paste. The suggestion comes from keyword rules
+(`LINE_KEYWORDS` in the script) — check it. To make a paper a highlight, add its title under the
+right line in `scripts/curated_titles.yml`, in the browser, and commit. The
+[`enrich-publications`](.github/workflows/enrich-publications.yml) workflow then runs
+`scripts/enrich_publications.py` and commits the rebuilt `_data/publications.yml` — nothing to
+run locally. A highlight from the last 12 months appears in both parts, by design. Close the
+issue when done; skipped papers need nothing.
+
+Which papers have been reported is kept in `reported:` at the bottom of
+`_data/recent_publications.yml`; delete a PMID there to have it raised again.
+
+To rebuild the highlights by hand:
 
 ```bash
 python scripts/enrich_publications.py
 ```
 
-The script resolves each title against the PubMed API and regenerates `_data/publications.yml`
-with authors, journal, year, volume, pages, PMID and DOI. Do not edit that file by hand — it is
-overwritten on every run.
+It resolves each title against the PubMed API and regenerates `_data/publications.yml` with
+authors, journal, year, volume, pages, PMID and DOI. Do not edit that file by hand — it is
+overwritten on every run. The workflow refuses to commit if any title fails to resolve, so a
+PubMed hiccup cannot strip existing entries; the run log names the title.
 
 It checks that Van Oudenhove actually appears in the author list of each match and reports
 anything it could not resolve. This matters: a plain PubMed search for `Van Oudenhove L` also
 returns work by an unrelated researcher in entomology, so unverified matches are a real risk.
+There is a second namesake, Lore Van Oudenhove (Ghent), and a Leuven co-author can let her
+papers through an affiliation filter. `refresh_recent_publications.py` therefore also checks
+the author's forename — or, where PubMed gives only an initial, Leuven in that author's own
+affiliation.
 
 ### Adding a news post
 
@@ -427,7 +453,7 @@ index.md            home page
 _pages/             research, team, publications, tools, docs, join, search, 404, news
 _docs/              pipeline documentation (a Jekyll collection)
 _posts/             news
-_data/              team, projects, repos, publications, presentations, navigation
+_data/              team, projects, repos, publications, recent_publications, presentations, navigation
 _sass/              custom skin and components
 _includes/head/     favicon and theme-colour tags
 assets/images/      logo, social image, team photos
