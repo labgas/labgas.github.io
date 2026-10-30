@@ -15,6 +15,26 @@ lines:
 
 items:
   - line: symptoms
+    title: "Bodily Maps of Emotions in Irritable Bowel Syndrome: A Case-Control Study"
+    journal: "Neurogastroenterology and motility"
+    year: "2026"
+    volume: "38"
+    issue: "6"
+    pages: "e70366"
+    pmid: "42226507"
+    doi: "10.1111/nmo.70366"
+    verified: true
+    authors:
+      - "Dens K"
+      - "Van Den Houte M"
+      - "Tack J"
+      - "Toelen J"
+      - "Dupont P"
+      - "Van Oudenhove L"
+    lab_authors:
+      - "Van Den Houte M"
+      - "Van Oudenhove L"
+  - line: symptoms
     title: "Multimodal approach to identify neuropsychophysiological subgroups in myalgic encephalomyelitis/chronic fatigue syndrome and their relevance for rehabilitation: protocol for a mechanistic cross-sectional and longitudinal study"
     journal: "Brain, behavior, & immunity - health"
     year: "2026"
