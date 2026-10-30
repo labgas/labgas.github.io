@@ -50,8 +50,11 @@ editorial and scripts must never touch them. Getting this backwards silently des
 - `refresh_recent_publications.py` — the last 12 months from PubMed for the "Recent publications"
   section, and the source of the daily GitHub issue (assigned to lukasvo76) listing new papers
   with a keyword-suggested research line. `reported:` in its output file is its memory of what
-  was already raised. Verifies the author is Lukas by forename or own affiliation: there are two
-  namesakes (an entomologist, and Lore Van Oudenhove in Ghent).
+  was already raised.
+- Both publication scripts verify the author is Lukas via `details()` in
+  `enrich_publications.py` (forename, else Leuven in the author's own affiliation, else — for
+  pre-2014 records with none — anywhere in the record). A surname check is not enough: there
+  are two namesakes (an entomologist, and Lore Van Oudenhove in Ghent).
 - `fetch_team_bios.py`, `fetch_project_details.py` — **do not run these.** They harvested
   `gbiomed.kuleuven.be`, which is being retired, and they rewrite `bio`/`projects`/`detail`
   wholesale while reporting per-person errors rather than failing outright. Against a dead

@@ -383,13 +383,19 @@ authors, journal, year, volume, pages, PMID and DOI. Do not edit that file by ha
 overwritten on every run. The workflow refuses to commit if any title fails to resolve, so a
 PubMed hiccup cannot strip existing entries; the run log names the title.
 
-It checks that Van Oudenhove actually appears in the author list of each match and reports
-anything it could not resolve. This matters: a plain PubMed search for `Van Oudenhove L` also
-returns work by an unrelated researcher in entomology, so unverified matches are a real risk.
-There is a second namesake, Lore Van Oudenhove (Ghent), and a Leuven co-author can let her
-papers through an affiliation filter. `refresh_recent_publications.py` therefore also checks
-the author's forename — or, where PubMed gives only an initial, Leuven in that author's own
-affiliation.
+Both publication scripts check that each paper is really by Lukas, and report anything they
+could not resolve or verify. This matters: a plain PubMed search for `Van Oudenhove L` also
+returns work by two namesakes — an unrelated researcher in entomology, and Lore Van Oudenhove
+in Ghent, whose papers can even pass a Leuven affiliation filter through a Leuven co-author.
+Checking the surname is therefore not enough. The check reads the full PubMed record:
+
+- a forename starting "Luk" counts;
+- an initial only, with that author's own affiliation given, counts only if it mentions
+  Leuven;
+- an initial only and no affiliation of their own counts if any affiliation in the record
+  mentions Leuven. Records from before about 2014 usually look like this.
+
+It lives in `details()` in `enrich_publications.py`, and both scripts use it.
 
 ### Adding a news post
 

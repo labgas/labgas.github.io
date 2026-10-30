@@ -11,8 +11,8 @@ keeps that list current.
                                                                        # body for new papers
 
 Search: Van Oudenhove L as author, Leuven in an affiliation, publication date within
-the last 12 months. Each record's full entry is then checked to be Lukas — forename,
-or Leuven in that author's own affiliation — because "Van Oudenhove L" also fits an
+the last 12 months. Each record's full entry is then checked to be Lukas, by
+`details()` in enrich_publications.py, because "Van Oudenhove L" also fits an
 unrelated entomologist and Lore Van Oudenhove in Ghent. Errata are dropped.
 
 New papers. The file also keeps `reported:`, every PMID already raised for curation.
@@ -34,12 +34,10 @@ import re
 import sys
 import time
 import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
 
 from enrich_publications import (
     DELAY, EMAIL, EUTILS, LINE_LABELS, LINE_ORDER, ROOT, TOOL,
-    _get, lab_authors, load_lab_members, yq,
+    _get, details, lab_authors, load_lab_members, yq,
 )
 
 OUT = os.path.join(ROOT, "_data", "recent_publications.yml")
@@ -99,38 +97,6 @@ def esummary(pmids: "list[str]") -> dict:
     url = (f"{EUTILS}/esummary.fcgi?db=pubmed&retmode=json"
            f"&tool={TOOL}&email={EMAIL}&id={','.join(pmids)}")
     return _get(url).get("result", {})
-
-
-def details(pmids: "list[str]") -> dict:
-    """PMID -> (abstract text, whether the Van Oudenhove author is Lukas).
-
-    The summary record only carries "Van Oudenhove L", which also fits Lore Van
-    Oudenhove (a Ghent biotech researcher) — and Leuven[ad] does not exclude her,
-    since it matches any author's affiliation. The full record has the forename
-    and per-author affiliations, so decide here: forename "Luk…", or an initial
-    only with Leuven in that author's own affiliation.
-    """
-    if not pmids:
-        return {}
-    url = (f"{EUTILS}/efetch.fcgi?db=pubmed&retmode=xml"
-           f"&tool={TOOL}&email={EMAIL}&id={','.join(pmids)}")
-    req = urllib.request.Request(url, headers={"User-Agent": f"{TOOL} ({EMAIL})"})
-    with urllib.request.urlopen(req, timeout=60) as fh:
-        root = ET.fromstring(fh.read())
-    out = {}
-    for art in root.iter("PubmedArticle"):
-        pmid = art.findtext(".//PMID", default="")
-        abstract = " ".join("".join(t.itertext()) for t in art.iter("AbstractText"))
-        is_lukas = False
-        for a in art.iter("Author"):
-            if "oudenhove" not in (a.findtext("LastName") or "").lower():
-                continue
-            fore = (a.findtext("ForeName") or "").strip()
-            affil = " ".join(x.text or "" for x in a.iter("Affiliation"))
-            if fore.lower().startswith("luk") or (len(fore.rstrip(".")) <= 1 and "leuven" in affil.lower()):
-                is_lukas = True
-        out[pmid] = (abstract, is_lukas)
-    return out
 
 
 def record(pmid: str, d: dict, members) -> dict:

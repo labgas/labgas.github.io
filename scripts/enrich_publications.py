@@ -5,11 +5,13 @@ each title, queries the NCBI E-utilities API for the matching PubMed record. Wri
 authors, journal, year, PMID and DOI so the Publications page never has to carry
 hand-transcribed citation metadata.
 
-Every hit is checked for "Van Oudenhove" in the author list. This guards against the
-well-known namesake problem: a bare PubMed search for "Van Oudenhove L" also returns
-work by an unrelated entomologist. Titles that do not resolve, or that resolve to a
-record without him as an author, are reported and written with `verified: false` so
-they are visible rather than silently wrong.
+Every hit is checked for "Van Oudenhove" in the author list, and the chosen match is
+then confirmed to be Lukas from the full record (forename, or Leuven in that author's
+own affiliation). This guards against two namesakes: a bare PubMed search for
+"Van Oudenhove L" also returns work by an unrelated entomologist and by Lore Van
+Oudenhove in Ghent. Titles that do not resolve, or that resolve to a record by a
+namesake, are reported and written with `verified: false` so they are visible rather
+than silently wrong.
 
 Usage:  python scripts/enrich_publications.py
 No third-party dependencies; stdlib only.
@@ -24,6 +26,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -223,6 +226,54 @@ def resolve(title: str) -> "tuple[str, dict] | tuple[None, None]":
     return None, None
 
 
+def is_lukas(pmid: str) -> bool:
+    """Whether the Van Oudenhove author of this record is Lukas; see `details`."""
+    time.sleep(DELAY)
+    return details([pmid]).get(pmid, ("", False))[1]
+
+
+def details(pmids: "list[str]") -> dict:
+    """PMID -> (abstract text, whether the Van Oudenhove author is Lukas).
+
+    Shared with refresh_recent_publications.py. The summary record only carries
+    "Van Oudenhove L", which also fits Lore Van Oudenhove (a Ghent biotech
+    researcher) — and Leuven[ad] does not exclude her, since it matches any
+    author's affiliation. The full record has the forename and per-author
+    affiliations, so decide here:
+
+      * forename "Luk…" — Lukas;
+      * initial only, with an affiliation of their own — that affiliation must
+        mention Leuven (this is what excludes Lore, whose own is Ghent);
+      * initial only and no affiliation of their own — usual in records from
+        before ~2014, which gave one affiliation for the whole paper — accept if
+        any affiliation in the record mentions Leuven.
+    """
+    if not pmids:
+        return {}
+    url = (f"{EUTILS}/efetch.fcgi?db=pubmed&retmode=xml"
+           f"&tool={TOOL}&email={EMAIL}&id={','.join(pmids)}")
+    req = urllib.request.Request(url, headers={"User-Agent": f"{TOOL} ({EMAIL})"})
+    with urllib.request.urlopen(req, timeout=60) as fh:
+        root = ET.fromstring(fh.read())
+    out = {}
+    for art in root.iter("PubmedArticle"):
+        pmid = art.findtext(".//PMID", default="")
+        abstract = " ".join("".join(t.itertext()) for t in art.iter("AbstractText"))
+        record_leuven = any("leuven" in (x.text or "").lower() for x in art.iter("Affiliation"))
+        is_lukas = False
+        for a in art.iter("Author"):
+            if "oudenhove" not in (a.findtext("LastName") or "").lower():
+                continue
+            fore = (a.findtext("ForeName") or "").strip()
+            own = " ".join(x.text or "" for x in a.iter("Affiliation")).lower()
+            if fore.lower().startswith("luk"):
+                is_lukas = True
+            elif len(fore.rstrip(".")) <= 1:
+                is_lukas = is_lukas or ("leuven" in own if own.strip() else record_leuven)
+        out[pmid] = (abstract, is_lukas)
+    return out
+
+
 def summary(pmid: str) -> dict:
     url = f"{EUTILS}/esummary.fcgi?db=pubmed&retmode=json&tool={TOOL}&email={EMAIL}&id={pmid}"
     return _get(url).get("result", {}).get(pmid, {})
@@ -267,12 +318,14 @@ def main() -> int:
                         "pages": d.get("pages", ""),
                         "pmid": pmid,
                         "doi": doi,
-                        "verified": any("oudenhove" in a.lower() for a in authors),
+                        # Surname alone also fits Lore Van Oudenhove (Ghent); the
+                        # full record's forename / own affiliation settles it.
+                        "verified": is_lukas(pmid),
                         "lab_authors": lab_authors(authors, members),
                     }
                 )
                 if not rec["verified"]:
-                    problems.append((title, f"PMID {pmid} has no Van Oudenhove in author list"))
+                    problems.append((title, f"PMID {pmid}: the Van Oudenhove author is not Lukas"))
             else:
                 problems.append((title, "no PubMed match"))
         except Exception as exc:  # network hiccup, malformed record, ...
