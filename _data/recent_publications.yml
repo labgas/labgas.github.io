@@ -279,23 +279,6 @@ items:
       - "Vanuytsel T"
     lab_authors:
       - "Van Oudenhove L"
-  - title: "The psychobiological model of disorders of gut-brain interaction: introduction of a novel, integrated, and testable model"
-    journal: "The lancet. Gastroenterology & hepatology"
-    year: "2025"
-    volume: "10"
-    issue: "11"
-    pages: "1041-1052"
-    pmid: "40886718"
-    doi: "10.1016/S2468-1253(25)00205-5"
-    authors:
-      - "Guadagnoli L"
-      - "Heathcote LC"
-      - "Van Oudenhove L"
-      - "Elsenbruch S"
-      - "Keefer L"
-    lab_authors:
-      - "Guadagnoli L"
-      - "Van Oudenhove L"
 
 reported:
   - "41099753"
