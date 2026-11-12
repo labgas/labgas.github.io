@@ -8,6 +8,25 @@
 # paper is raised twice. Deleting a PMID from it raises that paper again.
 
 items:
+  - title: "Exclude or expose in irritable bowel syndrome study: what works for whom and how? Protocol for a randomised controlled trial of internet-delivered FODMAP diet versus exposure-based cognitive behavioural therapy"
+    journal: "BMJ open"
+    year: "2026"
+    volume: "16"
+    issue: "11"
+    pages: "e126664"
+    pmid: "43015024"
+    doi: "10.1136/bmjopen-2026-126664"
+    authors:
+      - "Anderson JL"
+      - "Lj\u00f3tsson B"
+      - "Burton-Murray H"
+      - "West ML"
+      - "Yao CK"
+      - "Basnayake C"
+      - "Van Oudenhove L"
+      - "Biesiekierski JR"
+    lab_authors:
+      - "Van Oudenhove L"
   - title: "Intestinal Permeability in Irritable Bowel Syndrome With and Without Comorbid Conditions: Results From the European DISCOvERIE Cohort"
     journal: "United European gastroenterology journal"
     year: "2026"
@@ -339,3 +358,4 @@ reported:
   - "42526739"
   - "42838312"
   - "42973115"
+  - "43015024"
