@@ -14,3 +14,14 @@ people:
       meeting: "FNM"
       topic: "TSPO IBS"
       url: "https://github.com/labgas/LaBGAScore/blob/main/conference_presentations/2026/FNM/Maaike_Van_Den_Houte_TSPO_IBS_FNM_2026.pdf"
+  "Casper Vananderoye":
+    - label: "fMRIeBPT · LBPGP 2026"
+      year: 2026
+      meeting: "LBPGP"
+      topic: "fMRIeBPT"
+      url: "https://github.com/labgas/LaBGAScore/blob/main/conference_presentations/2026/LBPGP/Casper_Vananderoye_fMRIeBPT_LBPGP_2026.pdf"
+    - label: "SynapsWP1 · LBPGP 2026"
+      year: 2026
+      meeting: "LBPGP"
+      topic: "SynapsWP1"
+      url: "https://github.com/labgas/LaBGAScore/blob/main/conference_presentations/2026/LBPGP/Casper_Vananderoye_SynapsWP1_LBPGP_2026.pdf"
