@@ -15,6 +15,26 @@ lines:
 
 items:
   - line: symptoms
+    title: "Anticipated Threat Amplifies Esophageal Perception in the Absence of Peripheral Change"
+    journal: "Neurogastroenterology and motility"
+    year: "2026"
+    volume: "38"
+    issue: "11"
+    pages: ""
+    pmid: "43017835"
+    doi: "10.1111/nmo.70503"
+    verified: true
+    authors:
+      - "Guadagnoli L"
+      - "Zaman J"
+      - "Windey J"
+      - "van Ryckeghem D"
+      - "Van Damme S"
+      - "Van Oudenhove L"
+    lab_authors:
+      - "Guadagnoli L"
+      - "Van Oudenhove L"
+  - line: symptoms
     title: "Bodily Maps of Emotions in Irritable Bowel Syndrome: A Case-Control Study"
     journal: "Neurogastroenterology and motility"
     year: "2026"
@@ -65,6 +85,7 @@ items:
       - "Dooms Y"
       - "Qiu L"
       - "Coppieters I"
+      - "Hehl M"
       - "Van Oudenhove L"
       - "Van Den Houte M"
   - line: symptoms
