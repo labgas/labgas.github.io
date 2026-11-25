@@ -177,6 +177,19 @@ members:
         url: "https://gbiomed.kuleuven.be/english/research/50000625/50000628/labgas/projects/the-effects-of-gut-bacterial-metabolites-short-chain-fatty-acids-on-stress-induced-impairment-in-core-executive-functions"
         ref: "gutsie"
 
+  - name: "Melina Hehl"
+    photo: melina-hehl.jpg
+    group: postdoc
+    title: "Post-doctoral researcher"
+    bio_lead: "Melina graduated with her PhD in Biomedical Sciences in October 2024 from KU Leuven and Hasselt University (joint degree), funded by the Research Foundation – Flanders."
+    bio:
+      - "Melina graduated with her PhD in Biomedical Sciences in October 2024 from KU Leuven and Hasselt University (joint degree), funded by the Research Foundation – Flanders. Her doctoral research combined multimodal brain imaging and non-invasive brain stimulation (PET, MRI, MRS and dual-site TMS) to investigate the neuroplastic adaptations underlying bimanual motor learning, and included a three-month research stay at the PET Center of Yale University. During the final year of her PhD, Melina successfully applied for a one-year postdoctoral mandate (PDM) at KU Leuven, which she spent in the Translational MRI group of Prof. Stefan Sunaert. There she expanded her methodological toolkit to advanced diffusion-weighted imaging and arterial spin labelling analyses. Throughout these projects she built up a particular expertise in magnetic resonance spectroscopy (MRS), which she applies among other things to study neuroinflammation, and which she has been implementing within LaBGAS since 2023. Melina officially joined LaBGAS in November 2026, where she works on the PEARL study, investigating the mechanisms underlying fatigue in inflammatory bowel disease and how these change with a psychological intervention."
+    projects:
+      - title: "PEARL"
+        ref: "pearl"
+      - title: "Gut-immune-brain axis in IBD fatigue"
+        ref: "gut-immune-brain-axis-in-ibd-fatigue"
+
   # --- PhD students -----------------------------------------------------
   - name: "Daniëlle Jongen"
     kuleuven_id: "00112751"

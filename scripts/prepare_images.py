@@ -91,6 +91,8 @@ CROP_OVERRIDES = {
     "emily-van-der-schueren": (0.44, 0.615, 0.77),
     # Waist-length shot: the default square leaves the face too small.
     "annelies-falter": (0.50, 0.33, 0.62),
+    # Tall portrait: the default cuts off the top of the head.
+    "melina-hehl": (0.50, 0.375, 1.0),
 }
 
 
